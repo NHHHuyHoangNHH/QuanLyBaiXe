@@ -1,0 +1,33 @@
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\bin\Debug\QuanLyBaiXe.exe.config
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\bin\Debug\QuanLyBaiXe.exe
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\bin\Debug\QuanLyBaiXe.pdb
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.AssemblyReference.cache
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.SuggestedBindingRedirects.cache
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.Properties.Resources.resources
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vInOut.resources
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vLog.resources
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vLogin.resources
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vRevenue.resources
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vSearch.resources
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vVIP.resources
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.GenerateResource.cache
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.CoreCompileInputs.cache
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.exe
+D:\UIT\Năm 2 kì 2\Nhập môn công nghệ phần mềm\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.pdb
+D:\Hoctap\QuanLyBaiXe\bin\Debug\QuanLyBaiXe.exe.config
+D:\Hoctap\QuanLyBaiXe\bin\Debug\QuanLyBaiXe.exe
+D:\Hoctap\QuanLyBaiXe\bin\Debug\QuanLyBaiXe.pdb
+D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.AssemblyReference.cache
+D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.SuggestedBindingRedirects.cache
+D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.Properties.Resources.resources
+D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vInOut.resources
+D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vLog.resources
+D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vLogin.resources
+D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vRevenue.resources
+D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vSearch.resources
+D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vVIP.resources
+D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.GenerateResource.cache
+D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.CoreCompileInputs.cache
+D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.exe
+D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.pdb
+D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.VControls.VTextbox.resources
