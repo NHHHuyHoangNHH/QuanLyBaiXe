@@ -19,6 +19,9 @@ namespace QuanLyBaiXe
             InitializeComponent();
             Icon = Properties.Resources.icon;
             LoadVIP();
+
+            this.FormClosing += new FormClosingEventHandler(vVIP_FormClosing);
+            this.FormClosed += new FormClosedEventHandler(vVIP_FormClosed);
         }
 
         #region Method
@@ -33,7 +36,6 @@ namespace QuanLyBaiXe
         {
             vInOut v = new vInOut();
             this.Hide();
-            this.Close();
             v.ShowDialog();
         }
 
@@ -41,7 +43,6 @@ namespace QuanLyBaiXe
         {
             vSearch v = new vSearch();
             this.Hide();
-            this.Close();
             v.ShowDialog();
         }
 
@@ -49,7 +50,6 @@ namespace QuanLyBaiXe
         {
             vRevenue v = new vRevenue();
             this.Hide();
-            this.Close();
             v.ShowDialog();
         }
 
@@ -57,21 +57,30 @@ namespace QuanLyBaiXe
         {
             vLog v = new vLog();
             this.Hide();
-            this.Close();
             v.ShowDialog();
         }
 
         private void bt_LogOut_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
         }
 
         private void vVIP_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
             {
                 e.Cancel = true;
             }
+        }
+
+        private void vVIP_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
         }
 
         private void bt_them_VIP_Click(object sender, EventArgs e)

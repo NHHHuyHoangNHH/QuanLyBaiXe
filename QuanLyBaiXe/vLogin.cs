@@ -23,8 +23,7 @@ namespace QuanLyBaiXe
             vInOut v = new vInOut();
             this.Hide();
             v.ShowDialog();
-            this.Show();
-            this.Close();
         }
+
     }
 }

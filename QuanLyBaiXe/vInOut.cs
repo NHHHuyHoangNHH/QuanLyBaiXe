@@ -16,13 +16,15 @@ namespace QuanLyBaiXe
         {
             InitializeComponent();
             Icon = Properties.Resources.icon;
+
+            this.FormClosing += new FormClosingEventHandler(vInOut_FormClosing);
+            this.FormClosed += new FormClosedEventHandler(vInOut_FormClosed);
         }
 
         private void bt_VIP_Click(object sender, EventArgs e)
         {
             vVIP v = new vVIP();
             this.Hide();
-            this.Close();
             v.ShowDialog();
 
         }
@@ -31,7 +33,6 @@ namespace QuanLyBaiXe
         {
             vSearch v = new vSearch();
             this.Hide();
-            this.Close();
             v.ShowDialog();
         }
 
@@ -39,7 +40,7 @@ namespace QuanLyBaiXe
         {
             vRevenue v = new vRevenue();
             this.Hide();
-            this.Close();
+
             v.ShowDialog();
         }
 
@@ -47,22 +48,30 @@ namespace QuanLyBaiXe
         {
             vLog v = new vLog();
             this.Hide();
-            this.Close();
             v.ShowDialog();
         }
 
         private void bt_LogOut_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
         }
 
         private void vInOut_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
             {
                 e.Cancel = true;
             }
         }
 
+        private void vInOut_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

@@ -18,8 +18,10 @@ namespace QuanLyBaiXe
         public vRevenue()
         {
             InitializeComponent();
-
             LoadRevenue();
+
+            this.FormClosing += new FormClosingEventHandler(vRevenue_FormClosing);
+            this.FormClosed += new FormClosedEventHandler(vRevenue_FormClosed);
         }
 
         #region Method
@@ -39,7 +41,6 @@ namespace QuanLyBaiXe
         {
             vInOut v = new vInOut();
             this.Hide();
-            this.Close();
             v.ShowDialog();
         }
 
@@ -47,7 +48,6 @@ namespace QuanLyBaiXe
         {
             vVIP v = new vVIP();
             this.Hide();
-            this.Close();
             v.ShowDialog();
         }
 
@@ -55,7 +55,6 @@ namespace QuanLyBaiXe
         {
             vSearch v = new vSearch();
             this.Hide();
-            this.Close();
             v.ShowDialog();
         }
 
@@ -63,21 +62,30 @@ namespace QuanLyBaiXe
         {
             vLog v = new vLog();
             this.Hide();
-            this.Close();
             v.ShowDialog(); ;
         }
 
         private void bt_LogOut_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
         }
 
         private void vRevenue_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
             {
                 e.Cancel = true;
             }
+        }
+
+        private void vRevenue_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
         }
 
         #endregion
