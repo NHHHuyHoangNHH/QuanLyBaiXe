@@ -22,32 +22,32 @@ namespace QuanLyBaiXe
         {
             vInOut v = new vInOut();
             this.Hide();
+            this.Close();
             v.ShowDialog();
-            this.Show();
         }
 
         private void bt_VIP_Click(object sender, EventArgs e)
         {
             vVIP v = new vVIP();
             this.Hide();
+            this.Close();
             v.ShowDialog();
-            this.Show();
         }
 
         private void bt_Search_Click(object sender, EventArgs e)
         {
             vSearch v = new vSearch();
             this.Hide();
+            this.Close();
             v.ShowDialog();
-            this.Show();
         }
 
         private void bt_Revenue_Click(object sender, EventArgs e)
         {
             vRevenue v = new vRevenue();
             this.Hide();
+            this.Close();
             v.ShowDialog();
-            this.Show();
         }
 
         private void bt_LogOut_Click(object sender, EventArgs e)
@@ -57,7 +57,8 @@ namespace QuanLyBaiXe
 
         private void vLog_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question); 
+            if (result == DialogResult.No)
             {
                 e.Cancel = true;
             }

@@ -24,6 +24,7 @@ namespace QuanLyBaiXe
             this.Hide();
             v.ShowDialog();
             this.Show();
+            this.Close();
         }
     }
 }

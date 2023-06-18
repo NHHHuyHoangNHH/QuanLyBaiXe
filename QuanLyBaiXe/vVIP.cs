@@ -33,36 +33,32 @@ namespace QuanLyBaiXe
         {
             vInOut v = new vInOut();
             this.Hide();
-            v.ShowDialog();
-            this.Show();
             this.Close();
+            v.ShowDialog();
         }
 
         private void bt_Search_Click(object sender, EventArgs e)
         {
             vSearch v = new vSearch();
             this.Hide();
-            v.ShowDialog();
-            this.Show();
             this.Close();
+            v.ShowDialog();
         }
 
         private void bt_Revenue_Click(object sender, EventArgs e)
         {
             vRevenue v = new vRevenue();
             this.Hide();
+            this.Close();
             v.ShowDialog();
-            this.Show();
-            this.Close();   
         }
 
         private void bt_Log_Click(object sender, EventArgs e)
         {
             vLog v = new vLog();
             this.Hide();
+            this.Close();
             v.ShowDialog();
-            this.Show();
-            this.Close();   
         }
 
         private void bt_LogOut_Click(object sender, EventArgs e)
