@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyBaiXe.DAO;
+using QuanLyBaiXe.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,14 +18,24 @@ namespace QuanLyBaiXe
         {
             InitializeComponent();
             Icon = Properties.Resources.icon;
+            LoadVIP();
         }
 
+        #region Method
+        void LoadVIP()
+        {
+            data_VIP.DataSource = VIPDAO.Instance.LoadVIPtable();
+        }
+        #endregion
+
+        #region Event
         private void bt_InOut_Click(object sender, EventArgs e)
         {
             vInOut v = new vInOut();
             this.Hide();
             v.ShowDialog();
             this.Show();
+            this.Close();
         }
 
         private void bt_Search_Click(object sender, EventArgs e)
@@ -32,6 +44,7 @@ namespace QuanLyBaiXe
             this.Hide();
             v.ShowDialog();
             this.Show();
+            this.Close();
         }
 
         private void bt_Revenue_Click(object sender, EventArgs e)
@@ -40,6 +53,7 @@ namespace QuanLyBaiXe
             this.Hide();
             v.ShowDialog();
             this.Show();
+            this.Close();   
         }
 
         private void bt_Log_Click(object sender, EventArgs e)
@@ -48,6 +62,7 @@ namespace QuanLyBaiXe
             this.Hide();
             v.ShowDialog();
             this.Show();
+            this.Close();   
         }
 
         private void bt_LogOut_Click(object sender, EventArgs e)
@@ -62,5 +77,31 @@ namespace QuanLyBaiXe
                 e.Cancel = true;
             }
         }
+
+        private void bt_them_VIP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_xoa_VIP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_tim_VIP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_sua_VIP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_luu_VIP_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
     }
 }
