@@ -429,62 +429,63 @@ end
 go
 
 ---------------------------Trigger-----------------------------
-/*them log khi insert vao XE*/
-create trigger LOGXE on XE
-for insert
-as
-begin
-	declare @BienSo nvarchar(15);
-	select @BienSo = inserted.BienSo from inserted;
-	insert into LOGG(ThongTin) values ( N'Thêm ' + @BienSo + N' vào bãi')
-end
-go
-
-/*them log khi insert vao DOANHTHU*/
---create trigger LOGDOANHTHU on DOANHTHU
---after insert, update
+--/*them log khi insert vao XE*/
+--create trigger LOGXE on XE
+--for insert
 --as
 --begin
---	declare @Tien1 int, @Tien2 int;
---	select @Tien1 = SoTien from inserted
---	select @Tien2 = SoTien from DOANHTHU
-
-
+--	declare @BienSo nvarchar(15);
+--	select @BienSo = inserted.BienSo from inserted;
+--	insert into LOGG(ThongTin) values ( N'Thêm ' + @BienSo + N' vào bãi')
 --end
 --go
 
-/*them log khi insert vao VIP*/
-create trigger LOGVIP on VIP
-for insert
-as
-begin
-	declare @BienSo varchar(15);
-	declare @HoTen nvarchar(50);
-	declare @SDT varchar(15);
-	select @BienSo = inserted.BienSo from inserted;
-	select @HoTen = inserted.HoTen from inserted;
-	select @SDT = inserted.SDT from inserted;
-	insert into LOGG(ThongTin) values ( N'Thêm ' + @BienSo + N' vào VIP' )
-end
-go
-
-/*them log khi insert vao DONGTIEN*/
-create trigger LOGDONGTIEN on DONGTIEN
-for insert
-as
-begin
-	declare @BienSo varchar(15);
-	declare @SoThang int;
-	select @BienSo = inserted.BienSo from inserted;
-	select @SoThang = inserted.SoThang from inserted;
-	insert into LOGG(ThongTin) values ( N'Xe ' + @BienSo + N' đóng ' + convert(nvarchar(15),@SoThang) + N' tháng' )
-end 
-go
+--/*them log khi insert vao DOANHTHU*/
+----create trigger LOGDOANHTHU on DOANHTHU
+----after insert, update
+----as
+----begin
+----	declare @Tien1 int, @Tien2 int;
+----	select @Tien1 = SoTien from inserted
+----	select @Tien2 = SoTien from DOANHTHU
 
 
-exec PDInsertXE 'ABC123'
-exec PDInsertVIP 'ABC123', 'ABC', 1234567890
-exec PDInsertDONGTIEN 'ABC123', 5
+----end
+----go
+
+--/*them log khi insert vao VIP*/
+--create trigger LOGVIP on VIP
+--for insert
+--as
+--begin
+--	declare @BienSo varchar(15);
+--	declare @HoTen nvarchar(50);
+--	declare @SDT varchar(15);
+--	select @BienSo = inserted.BienSo from inserted;
+--	select @HoTen = inserted.HoTen from inserted;
+--	select @SDT = inserted.SDT from inserted;
+--	insert into LOGG(ThongTin) values ( N'Thêm ' + @BienSo + N' vào VIP' )
+--end
+--go
+
+--/*them log khi insert vao DONGTIEN*/
+--create trigger LOGDONGTIEN on DONGTIEN
+--for insert
+--as
+--begin
+--	declare @BienSo varchar(15);
+--	declare @SoThang int;
+--	select @BienSo = inserted.BienSo from inserted;
+--	select @SoThang = inserted.SoThang from inserted;
+--	insert into LOGG(ThongTin) values ( N'Xe ' + @BienSo + N' đóng ' + convert(nvarchar(15),@SoThang) + N' tháng' )
+--end 
+--go
+
+--select * from sys.triggers
+
+--exec PDInsertXE 'ABC123'
+--exec PDInsertVIP 'ABC123', 'ABC', 1234567890
+--exec PDInsertDONGTIEN 'ABC123', 5
 -------------------------------------------------Cac lenh lien quan----------------------------
 ----Xem dang bat hay tat----
 select name,
@@ -511,7 +512,7 @@ select * from DONGTIEN
 select * from THAMSO
 select * from VIP
 
-
+----Xem tat ca procedures----
 select name
 from sys.procedures
 where type = 'P'
