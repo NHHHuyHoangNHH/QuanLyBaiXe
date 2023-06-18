@@ -18,34 +18,29 @@ namespace QuanLyBaiXe.DAO
             private set { ThamSoDAO.instance = value; }
         }
 
-        public static int TableWidth = 90;
-        public static int TableHeight = 90;
+        public static int Width = 90;
+        public static int Height = 90;
 
         private ThamSoDAO() { }
 
-        public void AddXe(string bienso)
+        public int UpdateThamSo(ThamSo add)
         {
-            DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind", new object[] { bienso });
+            return DataProvider.Instance.ExecuteNonQuery("exec PDUpdateTHAMSO @MocTien1 , @MocTien2, @TienVIP , @TienCocVIP", new object[] { add.MocTien1, add.MocTien2, add.TienVip, add.TienCocVip });
         }
 
-        public void UpdateMocTien1(int tien)
+        public ThamSo GetThamSo() 
         {
-            DataProvider.Instance.ExecuteQuery("proc??? @", new object[] { tien });
-        }
+            List<ThamSo> ThamSoList = new List<ThamSo>();
 
-        public void UpdateMocTien2(int tien)
-        {
-            DataProvider.Instance.ExecuteQuery("proc??? @", new object[] { tien });
-        }
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from THAMSO");
 
-        public void UpdateTienVip(int tien)
-        {
-            DataProvider.Instance.ExecuteQuery("proc??? @", new object[] { tien });
-        }
+            foreach (DataRow item in data.Rows)
+            {
+                ThamSo ThamSo = new ThamSo(item);
+                ThamSoList.Add(ThamSo);
+            }
 
-        public void UpdateTienCocVip(int tien)
-        {
-            DataProvider.Instance.ExecuteQuery("proc??? @", new object[] { tien });
+            return ThamSoList[0];
         }
     }
 }

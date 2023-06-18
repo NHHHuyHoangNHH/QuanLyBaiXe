@@ -18,36 +18,21 @@ namespace QuanLyBaiXe.DAO
             private set { DoanhThuDAO.instance = value; }
         }
 
-        public static int TableWidth = 90;
-        public static int TableHeight = 90;
+        public static int Width = 90;
+        public static int Height = 90;
 
         private DoanhThuDAO() { }
 
-        public void UpdateDoanhThu(int year, int month)
+        public int UpdateDoanhThu(int Tien)
         {
-            DataProvider.Instance.ExecuteQuery("proc??? @", new object[] { year, month });
+            return DataProvider.Instance.ExecuteNonQuery("exec PDUpdateDOANHTHU @Tien", new object[] { Tien });
         }
 
-        public List<DoanhThu> LoadDoanhThuByYear(int year)
+        public List<DoanhThu> LoadDoanhThu()
         {
             List<DoanhThu> DoanhThuList = new List<DoanhThu>();
 
-            DataTable data = DataProvider.Instance.ExecuteQuery("proc???");
-
-            foreach (DataRow item in data.Rows)
-            {
-                DoanhThu DoanhThu = new DoanhThu(item);
-                DoanhThuList.Add(DoanhThu);
-            }
-
-            return DoanhThuList;
-        }
-
-        public List<DoanhThu> LoadDoanhThuByMonth(int year, int month)
-        {
-            List<DoanhThu> DoanhThuList = new List<DoanhThu>();
-
-            DataTable data = DataProvider.Instance.ExecuteQuery("proc???");
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from DOANHTHU");
 
             foreach (DataRow item in data.Rows)
             {

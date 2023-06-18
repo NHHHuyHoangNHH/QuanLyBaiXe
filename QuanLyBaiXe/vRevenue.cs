@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyBaiXe.DAO;
+using QuanLyBaiXe.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +14,27 @@ namespace QuanLyBaiXe
 {
     public partial class vRevenue : Form
     {
+        int month = 0, year = 0;
         public vRevenue()
         {
             InitializeComponent();
+
+            LoadRevenue();
         }
 
+        #region Method
+        void LoadRevenue()
+        {
+            List < DoanhThu > DTList = DoanhThuDAO.Instance.LoadDoanhThu();
+
+            foreach ( DoanhThu thu in DTList )
+            {
+                
+            }
+        }
+        #endregion
+
+        #region Events
         private void bt_InOut_Click(object sender, EventArgs e)
         {
             vInOut v = new vInOut();
@@ -61,5 +79,7 @@ namespace QuanLyBaiXe
                 e.Cancel = true;
             }
         }
+
+        #endregion
     }
 }

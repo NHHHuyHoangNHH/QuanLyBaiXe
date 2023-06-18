@@ -18,8 +18,8 @@ namespace QuanLyBaiXe.DAO
             private set { DongTienDAO.instance = value; }
         }
 
-        public static int TableWidth = 90;
-        public static int TableHeight = 90;
+        public static int Width = 90;
+        public static int Height = 90;
 
         private DongTienDAO() { }
 

@@ -18,24 +18,24 @@ namespace QuanLyBaiXe.DAO
             private set { XeDAO.instance = value; }
         }
 
-        public static int TableWidth = 90;
-        public static int TableHeight = 90;
+        public static int Width = 90;
+        public static int Height = 90;
 
         private XeDAO() { }
 
-        public void AddXe(string bienso)
+        public int AddXe(string bienso)
         {
-            DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind", new object[] { bienso });
+            return DataProvider.Instance.ExecuteNonQuery("exec PDInsertXE @bienso", new object[] { bienso });
         }
 
-        public void DeteleXe(string biensofind)
+        public int DeteleXe(string bienso)
         {
-            DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind", new object[] { biensofind });
+            return DataProvider.Instance.ExecuteNonQuery("exec PDInsertXE @bienso", new object[] { bienso });
         }
 
-        public void UpdateXe(string biensofind, string biensoupdate, DateTime? ngayupdate)
+        public int UpdateXe(string biensofind, string biensoupdate)
         {
-            DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind @ @", new object[] { biensofind, biensoupdate, ngayupdate });
+            return DataProvider.Instance.ExecuteNonQuery("exec PDUpdateXE , @BienSoFind , @BienSoUpdate", new object[] { biensofind, biensoupdate });
         }
 
         public void FindXe(string biensofind)
@@ -47,7 +47,7 @@ namespace QuanLyBaiXe.DAO
         {
             List<Xe> XeList = new List<Xe>();
 
-            DataTable data = DataProvider.Instance.ExecuteQuery("proc???");
+            DataTable data = DataProvider.Instance.ExecuteQuery("exec PDUpdateXE");
 
             foreach (DataRow item in data.Rows)
             {

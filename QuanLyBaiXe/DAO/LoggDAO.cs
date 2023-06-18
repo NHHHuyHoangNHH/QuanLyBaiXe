@@ -18,16 +18,21 @@ namespace QuanLyBaiXe.DAO
             private set { LoggDAO.instance = value; }
         }
 
-        public static int TableWidth = 90;
-        public static int TableHeight = 90;
+        public static int Width = 90;
+        public static int Height = 90;
 
         private LoggDAO() { }
 
-        public List<Logg> LoadLoggByDate(DateTime? First, DateTime? Second)
+        public int AddLogg(string thongtin)
+        {   
+            return DataProvider.Instance.ExecuteNonQuery("exec PDInsertLOGG @ThongTin", new object[] { thongtin });
+        }
+
+        public List<Logg> GetLogg(DateTime? First, DateTime? Second)
         {
             List<Logg> LoggList = new List<Logg>();
 
-            DataTable data = DataProvider.Instance.ExecuteQuery("proc???");
+            DataTable data = DataProvider.Instance.ExecuteQuery("exec PDGetLOGG @First , @Second", new object[] { First, Second } );
 
             foreach (DataRow item in data.Rows)
             {
@@ -42,7 +47,7 @@ namespace QuanLyBaiXe.DAO
         {
             List<Logg> LoggList = new List<Logg>();
 
-            DataTable data = DataProvider.Instance.ExecuteQuery("proc???");
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from LOGG");
 
             foreach (DataRow item in data.Rows)
             {

@@ -95,6 +95,16 @@ end
 go
 
 /*
+	PD load thong tin xe
+*/
+create procedure PDLoadXe
+as
+begin
+	select * from XE
+end
+go
+
+/*
 	PD xoa XE 
 	return 1 vao @out : thanh cong
 	return 0 vao @out : khong thanh cong
@@ -181,7 +191,7 @@ go
 	return 1 vao @out: thanh cong
 	return 0 voa @out: khong thanh cong
 */
-create procedure PDAddDOANHTHU
+create procedure PDUpdateDOANHTHU
 	@Tien		int,
 	@out		int = NULL output
 as
@@ -202,7 +212,7 @@ begin
 	begin
 		declare @res int
 		exec @res = PDInsertDOANHTHU
-		exec @res = PDAddDOANHTHU @Tien
+		exec @res = PDUpdateDOANHTHU @Tien
 		return @res
 	end
 end
@@ -302,6 +312,20 @@ create procedure PDInsertLOGG
 as
 begin
 	insert into LOGG(ThongTin) values(@ThongTin)
+end
+go
+
+/*
+	Lay Logg trong 2 moc thoi gian
+*/
+create procedure PDGetLOGG
+    @First		smalldatetime,
+	@Second		smalldatetime
+as
+begin
+	select *
+	from LOGG
+	where ThoiGian between @first and @second
 end
 go
 
