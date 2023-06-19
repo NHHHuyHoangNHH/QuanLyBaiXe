@@ -21,19 +21,28 @@ namespace QuanLyBaiXe.DAO
 
         private VIPDAO() { }
 
-        public void AddVIP(string bienso)
+        public bool AddVIP(string bienso, string hoten, string sdt)
         {
-            DataProvider.Instance.ExecuteQuery("Exec PDInsertVIP @BienSoFind", new object[] { bienso });
+            string query = string.Format("EXEC PDInsertVIP '{0}', '{1}', '{2}'", bienso, hoten, sdt);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
         }
 
-        public void DeteleVIP(string biensofind)
+        public bool DeteleVIP(string biensofind)
         {
-            DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind", new object[] { biensofind });
+            string query = string.Format("EXEC PDDeleteVIP '{0}'", biensofind);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
         }
 
-        public void UpdateVIP(string biensofind, string biensoupdate, DateTime? ngayupdate)
+        public bool UpdateVIP(string biensofind, string hoten, string sdt)
         {
-            DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind @ @", new object[] { biensofind, biensoupdate, ngayupdate });
+            string query = string.Format("EXEC PDUpdateVIP '{0}', '{1}', '{2}'", biensofind, hoten, sdt);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
         }
 
         public void FindVIP(string biensofind)
