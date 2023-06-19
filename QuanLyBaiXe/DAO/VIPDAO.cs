@@ -23,7 +23,7 @@ namespace QuanLyBaiXe.DAO
 
         public void AddVIP(string bienso)
         {
-            DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind", new object[] { bienso });
+            DataProvider.Instance.ExecuteQuery("Exec PDInsertVIP @BienSoFind", new object[] { bienso });
         }
 
         public void DeteleVIP(string biensofind)
@@ -36,26 +36,11 @@ namespace QuanLyBaiXe.DAO
             DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind @ @", new object[] { biensofind, biensoupdate, ngayupdate });
         }
 
-        //public void FindVIP(string biensofind)
-        //{
-        //    DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind", new object[] { biensofind });
-        //}
+        public void FindVIP(string biensofind)
+        {
+            DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind", new object[] { biensofind });
+        }
 
-        //public List<VIP> LoadVIPList()
-        //{
-        //    List<VIP> VIPList = new List<VIP>();
-
-        //    DataTable data = DataProvider.Instance.ExecuteQuery("select * from dbo.VIP");
-
-        //    foreach (DataRow item in data.Rows)
-        //    {
-        //        VIP VIP = new VIP(item);
-        //        VIPList.Add(VIP);
-        //    }
-
-        //    return VIPList;
-        //}
-        
         public DataTable LoadVIPtable()
         {
             return DataProvider.Instance.ExecuteQuery("select * from VIP");

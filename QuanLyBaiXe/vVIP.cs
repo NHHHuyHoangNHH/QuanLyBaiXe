@@ -18,20 +18,35 @@ namespace QuanLyBaiXe
         {
             InitializeComponent();
             Icon = Properties.Resources.icon;
-            LoadVIP();
+            Loading();
+
 
             this.FormClosing += new FormClosingEventHandler(vVIP_FormClosing);
             this.FormClosed += new FormClosedEventHandler(vVIP_FormClosed);
         }
 
         #region Method
+        void Loading()
+        {
+            LoadVIP();
+            LoadVIPBinding();
+        }
+    
         void LoadVIP()
         {
             data_VIP.DataSource = VIPDAO.Instance.LoadVIPtable();
         }
+
+        void LoadVIPBinding()
+        {
+            tb_biensoxe_VIP.DataBindings.Add(new Binding("Texts", data_VIP.DataSource, "BienSo"));
+            tb_sdt_VIP.DataBindings.Add(new Binding("Texts", data_VIP.DataSource, "SDT"));
+            tb_tenkh_VIP.DataBindings.Add(new Binding("Texts", data_VIP.DataSource, "HoTen"));
+        }
         #endregion
 
         #region Event
+        //Nut chuyen trang
         private void bt_InOut_Click(object sender, EventArgs e)
         {
             vInOut v = new vInOut();
@@ -60,32 +75,10 @@ namespace QuanLyBaiXe
             v.ShowDialog();
         }
 
-        private void bt_LogOut_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                Environment.Exit(0);
-            }
-        }
-
-        private void vVIP_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-        }
-
-        private void vVIP_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
+        //Nut chuc nang them + xoa + sua + luu
         private void bt_them_VIP_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void bt_xoa_VIP_Click(object sender, EventArgs e)
@@ -106,6 +99,30 @@ namespace QuanLyBaiXe
         private void bt_luu_VIP_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //Dang xuat + Thoat
+        private void vVIP_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void bt_LogOut_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
+        }
+
+        private void vVIP_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
         #endregion
     }
