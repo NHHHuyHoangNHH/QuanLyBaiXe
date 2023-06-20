@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyBaiXe.DAO;
+using QuanLyBaiXe.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +18,27 @@ namespace QuanLyBaiXe
         {
             InitializeComponent();
             Icon = Properties.Resources.icon;
+            LoadLogg();
 
             this.FormClosing += new FormClosingEventHandler(vLog_FormClosing);
             this.FormClosed += new FormClosedEventHandler(vLog_FormClosed);
         }
+
+        #region Method
+        void LoadLogg()
+        {
+            lsvLog.Items.Clear();
+            List<Logg> LoggList = LoggDAO.Instance.LoadLogg();
+
+            foreach (Logg item in LoggList)
+            {
+                ListViewItem listItem = new ListViewItem(item.ThoiGian.ToString("dd/MM/yyyy mm:hh"));
+                listItem.SubItems.Add(item.ThongTin);
+
+                lsvLog.Items.Add(listItem);
+            }
+        }
+        #endregion
 
         private void bt_InOut_Click(object sender, EventArgs e)
         {

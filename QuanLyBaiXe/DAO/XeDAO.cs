@@ -25,29 +25,42 @@ namespace QuanLyBaiXe.DAO
 
         public int AddXe(string bienso)
         {
+            DataProvider.Instance.ExecuteNonQuery("exec PDInsertLogg @ThongTin", new object[] { "Thêm " + bienso });
             return DataProvider.Instance.ExecuteNonQuery("exec PDInsertXE @bienso", new object[] { bienso });
         }
 
         public int DeteleXe(string bienso)
         {
+            DataProvider.Instance.ExecuteNonQuery("exec PDInsertLogg @ThongTin", new object[] { "Xóa " + bienso });
             return DataProvider.Instance.ExecuteNonQuery("exec PDInsertXE @bienso", new object[] { bienso });
         }
 
         public int UpdateXe(string biensofind, string biensoupdate)
         {
-            return DataProvider.Instance.ExecuteNonQuery("exec PDUpdateXE , @BienSoFind , @BienSoUpdate", new object[] { biensofind, biensoupdate });
+            DataProvider.Instance.ExecuteNonQuery("exec PDInsertLogg @ThongTin", new object[] { "Sửa " + biensofind + " thành " + biensoupdate });
+            return DataProvider.Instance.ExecuteNonQuery("exec PDUpdateXE @BienSoFind , @BienSoUpdate", new object[] { biensofind, biensoupdate });
         }
 
-        public void FindXe(string biensofind)
+        public List<Xe> FindXe(string biensofind)
         {
-            DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind", new object[] { biensofind });
+            List<Xe> XeList = new List<Xe>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("exec PDFindXE @bienso", new object[] { biensofind });
+
+            foreach (DataRow item in data.Rows)
+            {
+                Xe Xe = new Xe(item);
+                XeList.Add(Xe);
+            }
+
+            return XeList;
         }
 
         public List<Xe> LoadXeList()
         {
             List<Xe> XeList = new List<Xe>();
 
-            DataTable data = DataProvider.Instance.ExecuteQuery("exec PDUpdateXE");
+            DataTable data = DataProvider.Instance.ExecuteQuery("exec PDLoadXe");
 
             foreach (DataRow item in data.Rows)
             {

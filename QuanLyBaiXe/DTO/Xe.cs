@@ -9,7 +9,7 @@ namespace QuanLyBaiXe.DTO
 {
     public class Xe
     {
-        public Xe(string bienso, DateTime? ngayvao)
+        public Xe(string bienso, DateTime ngayvao)
         {
             this.BienSo = bienso;
             this.NgayVao = ngayvao;
@@ -18,7 +18,7 @@ namespace QuanLyBaiXe.DTO
         public Xe(DataRow row)
         {
             this.BienSo = row["BIENSO"].ToString();
-            this.NgayVao = (DateTime?) row["NGAYVAO"];
+            this.NgayVao = (DateTime) row["ThoiGian"];
         }
 
         private string bienso;
@@ -29,9 +29,9 @@ namespace QuanLyBaiXe.DTO
             set { bienso = value; }
         }
 
-        private DateTime? ngayvao;
+        private DateTime ngayvao;
 
-        public DateTime? NgayVao
+        public DateTime NgayVao
         {
             get { return ngayvao; }
             set { ngayvao = value; }

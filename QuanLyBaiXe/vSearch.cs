@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyBaiXe.DAO;
+using QuanLyBaiXe.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,11 +18,29 @@ namespace QuanLyBaiXe
         {
             InitializeComponent();
             Icon = Properties.Resources.icon;
+            LoadXe();
 
             this.FormClosing += new FormClosingEventHandler(vSearch_FormClosing);
             this.FormClosed += new FormClosedEventHandler(vSearch_FormClosed);
         }
 
+        #region Method
+        void LoadXe()
+        {
+            lsvSearch.Items.Clear();
+            List<Xe> XeList = XeDAO.Instance.LoadXeList();
+
+            foreach (Xe item in XeList)
+            {
+                ListViewItem listItem = new ListViewItem(item.BienSo);
+                listItem.SubItems.Add(item.NgayVao.ToString("dd/MM/yyyy"));
+
+                lsvSearch.Items.Add(listItem);
+            }
+        }
+        #endregion
+
+        #region Events
         private void bt_InOut_Click(object sender, EventArgs e)
         {
             vInOut v = new vInOut();
@@ -71,5 +91,28 @@ namespace QuanLyBaiXe
             Environment.Exit(0);
         }
 
+        private void bt_tim_Search_Click(object sender, EventArgs e)
+        {
+            string bienso = tb_biensoxe_Search.Texts;
+
+            List<Xe> XeList = XeDAO.Instance.FindXe(bienso);
+
+            if (XeList.Count == 0) 
+            {
+                DialogResult result = MessageBox.Show("Không tìm thấy xe", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; 
+            }
+
+            lsvSearch.Items.Clear();
+            foreach (Xe item in XeList)
+            {
+                ListViewItem listItem = new ListViewItem(item.BienSo);
+                listItem.SubItems.Add(item.NgayVao.ToString("dd/MM/yyyy"));
+                item.NgayVao.ToString();
+
+                lsvSearch.Items.Add(listItem);
+            }
+        }
+        #endregion
     }
 }

@@ -9,7 +9,7 @@ namespace QuanLyBaiXe.DTO
 {
     public class VIP
     {
-        public VIP(string bienso, string hoten, string sdt, DateTime? ngaydk)
+        public VIP(string bienso, string hoten, string sdt, DateTime ngaydk)
         {
             this.BienSo = bienso;
             this.Hoten = hoten;
@@ -22,7 +22,7 @@ namespace QuanLyBaiXe.DTO
             this.BienSo = row["BIENSO"].ToString();
             this.Hoten = row["HOTEN"].ToString();
             this.SDT = row["SDT"].ToString();
-            this.NgayDK = (DateTime?)row["NGAYVAO"];
+            this.NgayDK = (DateTime)row["NGAYVAO"];
         }
 
         private string bienso;
@@ -49,9 +49,9 @@ namespace QuanLyBaiXe.DTO
             set { sdt = value; }
         }
 
-        private DateTime? ngaydk;
+        private DateTime ngaydk;
 
-        public DateTime? NgayDK
+        public DateTime NgayDK
         {
             get { return ngaydk; }
             set { ngaydk = value; }

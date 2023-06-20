@@ -9,7 +9,7 @@ namespace QuanLyBaiXe.DTO
 {
     public class Logg
     {
-        public Logg(DateTime? thoigian, string thongtin)
+        public Logg(DateTime thoigian, string thongtin)
         {
             this.ThoiGian = thoigian;
             this.ThongTin = thongtin;
@@ -17,13 +17,13 @@ namespace QuanLyBaiXe.DTO
 
         public Logg(DataRow row)
         {
-            this.ThoiGian = (DateTime?) row["ThoiGian"];
+            this.ThoiGian = (DateTime) row["ThoiGian"];
             this.ThongTin = row["ThongTin"].ToString();
         }
 
-        private DateTime? thoigian;
+        private DateTime thoigian;
 
-        public DateTime? ThoiGian
+        public DateTime ThoiGian
         {
             get { return thoigian; }
             set { thoigian = value; }

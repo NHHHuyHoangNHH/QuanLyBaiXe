@@ -33,6 +33,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lsvRevenue = new System.Windows.Forms.ListView();
+            this.Nam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Thang = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Vaule = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -41,16 +45,15 @@
             this.button14 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.bt_LogOut = new QuanLyBaiXe.VControls.VButton();
             this.bt_Log = new QuanLyBaiXe.VControls.VButton();
             this.bt_Revenue = new QuanLyBaiXe.VControls.VButton();
             this.bt_Search = new QuanLyBaiXe.VControls.VButton();
             this.bt_VIP = new QuanLyBaiXe.VControls.VButton();
             this.bt_InOut = new QuanLyBaiXe.VControls.VButton();
-            this.dt_thang_Revenue = new QuanLyBaiXe.VControls.VDateTimePicker();
-            this.dt_nam_Revenue = new QuanLyBaiXe.VControls.VDateTimePicker();
             this.bt_tim_Revenue = new QuanLyBaiXe.VControls.VButton();
+            this.dt_nam_Revenue = new QuanLyBaiXe.VControls.VDateTimePicker();
+            this.dt_thang_Revenue = new QuanLyBaiXe.VControls.VDateTimePicker();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -67,7 +70,7 @@
             this.panel2.Controls.Add(this.bt_VIP);
             this.panel2.Controls.Add(this.bt_InOut);
             this.panel2.Location = new System.Drawing.Point(9, 10);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(129, 346);
             this.panel2.TabIndex = 14;
@@ -76,7 +79,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(129, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -95,9 +98,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.dt_thang_Revenue);
             this.panel1.Controls.Add(this.dt_nam_Revenue);
+            this.panel1.Controls.Add(this.lsvRevenue);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button10);
@@ -108,15 +111,48 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Location = new System.Drawing.Point(9, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(582, 346);
             this.panel1.TabIndex = 13;
             // 
+            // lsvRevenue
+            // 
+            this.lsvRevenue.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid;
+            this.lsvRevenue.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Nam,
+            this.Thang,
+            this.Vaule});
+            this.lsvRevenue.FullRowSelect = true;
+            this.lsvRevenue.GridLines = true;
+            this.lsvRevenue.HideSelection = false;
+            this.lsvRevenue.Location = new System.Drawing.Point(131, 80);
+            this.lsvRevenue.Name = "lsvRevenue";
+            this.lsvRevenue.Size = new System.Drawing.Size(448, 260);
+            this.lsvRevenue.TabIndex = 35;
+            this.lsvRevenue.UseCompatibleStateImageBehavior = false;
+            this.lsvRevenue.View = System.Windows.Forms.View.Details;
+            this.lsvRevenue.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // Nam
+            // 
+            this.Nam.Text = "Năm";
+            this.Nam.Width = 81;
+            // 
+            // Thang
+            // 
+            this.Thang.Text = "Tháng";
+            this.Thang.Width = 70;
+            // 
+            // Vaule
+            // 
+            this.Vaule.Text = "Doanh Thu";
+            this.Vaule.Width = 105;
+            // 
             // button9
             // 
             this.button9.Location = new System.Drawing.Point(2, 299);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(127, 46);
             this.button9.TabIndex = 22;
@@ -126,7 +162,7 @@
             // button10
             // 
             this.button10.Location = new System.Drawing.Point(2, 125);
-            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(127, 46);
             this.button10.TabIndex = 18;
@@ -136,7 +172,7 @@
             // button11
             // 
             this.button11.Location = new System.Drawing.Point(2, 256);
-            this.button11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(127, 46);
             this.button11.TabIndex = 21;
@@ -146,7 +182,7 @@
             // button12
             // 
             this.button12.Location = new System.Drawing.Point(2, 81);
-            this.button12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(127, 46);
             this.button12.TabIndex = 17;
@@ -156,7 +192,7 @@
             // button13
             // 
             this.button13.Location = new System.Drawing.Point(2, 212);
-            this.button13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(127, 46);
             this.button13.TabIndex = 20;
@@ -166,7 +202,7 @@
             // button14
             // 
             this.button14.Location = new System.Drawing.Point(2, 169);
-            this.button14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button14.Margin = new System.Windows.Forms.Padding(2);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(127, 46);
             this.button14.TabIndex = 19;
@@ -187,17 +223,10 @@
             // 
             this.panel7.Controls.Add(this.bt_tim_Revenue);
             this.panel7.Location = new System.Drawing.Point(131, 42);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(448, 34);
             this.panel7.TabIndex = 4;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(131, 80);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(448, 266);
-            this.flowLayoutPanel1.TabIndex = 35;
             // 
             // bt_LogOut
             // 
@@ -324,38 +353,6 @@
             this.bt_InOut.UseVisualStyleBackColor = false;
             this.bt_InOut.Click += new System.EventHandler(this.bt_InOut_Click);
             // 
-            // dt_thang_Revenue
-            // 
-            this.dt_thang_Revenue.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.dt_thang_Revenue.BorderSize = 2;
-            this.dt_thang_Revenue.CustomFormat = "MMMM, yyy";
-            this.dt_thang_Revenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dt_thang_Revenue.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_thang_Revenue.Location = new System.Drawing.Point(412, 4);
-            this.dt_thang_Revenue.Margin = new System.Windows.Forms.Padding(2);
-            this.dt_thang_Revenue.MinimumSize = new System.Drawing.Size(4, 30);
-            this.dt_thang_Revenue.Name = "dt_thang_Revenue";
-            this.dt_thang_Revenue.Size = new System.Drawing.Size(162, 30);
-            this.dt_thang_Revenue.SkinColor = System.Drawing.Color.White;
-            this.dt_thang_Revenue.TabIndex = 34;
-            this.dt_thang_Revenue.TextColor = System.Drawing.Color.DimGray;
-            // 
-            // dt_nam_Revenue
-            // 
-            this.dt_nam_Revenue.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.dt_nam_Revenue.BorderSize = 2;
-            this.dt_nam_Revenue.CustomFormat = "yyy";
-            this.dt_nam_Revenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dt_nam_Revenue.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_nam_Revenue.Location = new System.Drawing.Point(168, 4);
-            this.dt_nam_Revenue.Margin = new System.Windows.Forms.Padding(2);
-            this.dt_nam_Revenue.MinimumSize = new System.Drawing.Size(4, 30);
-            this.dt_nam_Revenue.Name = "dt_nam_Revenue";
-            this.dt_nam_Revenue.Size = new System.Drawing.Size(162, 30);
-            this.dt_nam_Revenue.SkinColor = System.Drawing.Color.White;
-            this.dt_nam_Revenue.TabIndex = 33;
-            this.dt_nam_Revenue.TextColor = System.Drawing.Color.DimGray;
-            // 
             // bt_tim_Revenue
             // 
             this.bt_tim_Revenue.BackColor = System.Drawing.Color.SteelBlue;
@@ -367,14 +364,50 @@
             this.bt_tim_Revenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_tim_Revenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_tim_Revenue.ForeColor = System.Drawing.Color.White;
-            this.bt_tim_Revenue.Location = new System.Drawing.Point(185, 1);
+            this.bt_tim_Revenue.Location = new System.Drawing.Point(170, 1);
             this.bt_tim_Revenue.Margin = new System.Windows.Forms.Padding(2);
             this.bt_tim_Revenue.Name = "bt_tim_Revenue";
-            this.bt_tim_Revenue.Size = new System.Drawing.Size(78, 32);
+            this.bt_tim_Revenue.Size = new System.Drawing.Size(72, 32);
             this.bt_tim_Revenue.TabIndex = 5;
             this.bt_tim_Revenue.Text = "TÌM";
             this.bt_tim_Revenue.TextColor = System.Drawing.Color.White;
             this.bt_tim_Revenue.UseVisualStyleBackColor = false;
+            this.bt_tim_Revenue.Click += new System.EventHandler(this.bt_tim_Revenue_Click);
+            // 
+            // dt_nam_Revenue
+            // 
+            this.dt_nam_Revenue.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.dt_nam_Revenue.BorderSize = 2;
+            this.dt_nam_Revenue.Checked = false;
+            this.dt_nam_Revenue.CustomFormat = "yyy";
+            this.dt_nam_Revenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dt_nam_Revenue.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dt_nam_Revenue.Location = new System.Drawing.Point(170, 1);
+            this.dt_nam_Revenue.Margin = new System.Windows.Forms.Padding(2);
+            this.dt_nam_Revenue.MinimumSize = new System.Drawing.Size(4, 30);
+            this.dt_nam_Revenue.Name = "dt_nam_Revenue";
+            this.dt_nam_Revenue.Size = new System.Drawing.Size(162, 30);
+            this.dt_nam_Revenue.SkinColor = System.Drawing.Color.White;
+            this.dt_nam_Revenue.TabIndex = 38;
+            this.dt_nam_Revenue.TextColor = System.Drawing.Color.DimGray;
+            this.dt_nam_Revenue.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
+            // 
+            // dt_thang_Revenue
+            // 
+            this.dt_thang_Revenue.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.dt_thang_Revenue.BorderSize = 2;
+            this.dt_thang_Revenue.CustomFormat = "MMMM";
+            this.dt_thang_Revenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dt_thang_Revenue.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dt_thang_Revenue.Location = new System.Drawing.Point(415, 1);
+            this.dt_thang_Revenue.Margin = new System.Windows.Forms.Padding(2);
+            this.dt_thang_Revenue.MinimumSize = new System.Drawing.Size(4, 30);
+            this.dt_thang_Revenue.Name = "dt_thang_Revenue";
+            this.dt_thang_Revenue.Size = new System.Drawing.Size(162, 30);
+            this.dt_thang_Revenue.SkinColor = System.Drawing.Color.White;
+            this.dt_thang_Revenue.TabIndex = 39;
+            this.dt_thang_Revenue.TextColor = System.Drawing.Color.DimGray;
+            this.dt_thang_Revenue.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             // 
             // vRevenue
             // 
@@ -384,7 +417,7 @@
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "vRevenue";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "vRevenue";
@@ -417,9 +450,12 @@
         private VControls.VButton bt_VIP;
         private VControls.VButton bt_InOut;
         private VControls.VButton bt_tim_Revenue;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ListView lsvRevenue;
+        private System.Windows.Forms.ColumnHeader Nam;
+        private System.Windows.Forms.ColumnHeader Thang;
+        private System.Windows.Forms.ColumnHeader Vaule;
         private VControls.VDateTimePicker dt_thang_Revenue;
         private VControls.VDateTimePicker dt_nam_Revenue;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

@@ -9,7 +9,7 @@ namespace QuanLyBaiXe.DTO
 {
     public class DongTien
     {
-        public DongTien(string bienso, DateTime? ngaydong, int sothang)
+        public DongTien(string bienso, DateTime ngaydong, int sothang)
         {
             this.BienSo = bienso;
             this.NgayDong = ngaydong;
@@ -19,7 +19,7 @@ namespace QuanLyBaiXe.DTO
         public DongTien(DataRow row)
         {
             this.BienSo = row["BienSo"].ToString(); ;
-            this.NgayDong = (DateTime?)row["NgayDong"];
+            this.NgayDong = (DateTime)row["NgayDong"];
             this.SoThang = (int) row["SoThang"];
         }
 
@@ -31,9 +31,9 @@ namespace QuanLyBaiXe.DTO
             set { bienso = value; }
         }
 
-        private DateTime? ngaydong;
+        private DateTime ngaydong;
 
-        public DateTime? NgayDong
+        public DateTime NgayDong
         {
             get { return ngaydong; }
             set { ngaydong = value; }

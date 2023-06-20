@@ -25,6 +25,7 @@ namespace QuanLyBaiXe.DAO
 
         public int UpdateThamSo(ThamSo add)
         {
+            DataProvider.Instance.ExecuteNonQuery("exec PDInsertLogg @ThongTin", new object[] { "Sửa giá tiền: " + add.MocTien1 + " " + add.MocTien2 + " " + add.TienVip + " " + add.TienCocVip + " " });
             return DataProvider.Instance.ExecuteNonQuery("exec PDUpdateTHAMSO @MocTien1 , @MocTien2, @TienVIP , @TienCocVIP", new object[] { add.MocTien1, add.MocTien2, add.TienVip, add.TienCocVip });
         }
 

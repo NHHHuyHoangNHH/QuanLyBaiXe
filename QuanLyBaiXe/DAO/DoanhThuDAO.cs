@@ -42,5 +42,35 @@ namespace QuanLyBaiXe.DAO
 
             return DoanhThuList;
         }
+
+        public List<DoanhThu> LoadDoanhThuByYear(int nam)
+        {
+            List<DoanhThu> DoanhThuList = new List<DoanhThu>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from DOANHTHU where nam = " + nam.ToString());
+
+            foreach (DataRow item in data.Rows)
+            {
+                DoanhThu DoanhThu = new DoanhThu(item);
+                DoanhThuList.Add(DoanhThu);
+            }
+
+            return DoanhThuList;
+        }
+
+        public List<DoanhThu> LoadDoanhThuByMonth(int nam, int thang)
+        {
+            List<DoanhThu> DoanhThuList = new List<DoanhThu>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from DOANHTHU where nam = " + nam.ToString() + "and thang = " + thang.ToString());
+
+            foreach (DataRow item in data.Rows)
+            {
+                DoanhThu DoanhThu = new DoanhThu(item);
+                DoanhThuList.Add(DoanhThu);
+            }
+
+            return DoanhThuList;
+        }
     }
 }

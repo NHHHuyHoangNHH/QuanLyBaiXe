@@ -95,6 +95,19 @@ end
 go
 
 /*
+	PD tim XE 
+*/
+create procedure PDFindXE
+	@BienSo		varchar(15)
+as
+begin
+	select *
+	from XE
+	where BienSo = @BienSo
+end
+go
+
+/*
 	PD load thong tin xe
 */
 create procedure PDLoadXe
@@ -165,6 +178,7 @@ go
 	return 1 vao @out : thanh cong
 	return 0 vao @out : khong thanh cong
 */
+
 create procedure PDInsertDOANHTHU
 	@out				int = NULL output
 as

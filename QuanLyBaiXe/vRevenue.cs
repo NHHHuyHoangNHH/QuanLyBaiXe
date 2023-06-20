@@ -14,7 +14,6 @@ namespace QuanLyBaiXe
 {
     public partial class vRevenue : Form
     {
-        int month = 0, year = 0;
         public vRevenue()
         {
             InitializeComponent();
@@ -27,12 +26,17 @@ namespace QuanLyBaiXe
         #region Method
         void LoadRevenue()
         {
+            lsvRevenue.Items.Clear();
             List < DoanhThu > DTList = DoanhThuDAO.Instance.LoadDoanhThu();
 
-            foreach ( DoanhThu thu in DTList )
+            foreach ( DoanhThu item in DTList )
             {
-                
-            }
+                ListViewItem listItem = new ListViewItem(item.Nam.ToString());
+                listItem.SubItems.Add(item.Thang.ToString());
+                listItem.SubItems.Add(item.SoTien.ToString());
+
+                lsvRevenue.Items.Add(listItem);
+            }    
         }
         #endregion
 
@@ -81,6 +85,39 @@ namespace QuanLyBaiXe
             {
                 e.Cancel = true;
             }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_tim_Revenue_Click(object sender, EventArgs e)
+        {
+            int nam = dt_nam_Revenue.Value.Year;
+            int month = dt_nam_Revenue.Value.Month;
+
+            lsvRevenue.Items.Clear();
+            List<DoanhThu> DTList = DoanhThuDAO.Instance.LoadDoanhThu();
+
+            foreach (DoanhThu item in DTList)
+            {
+                ListViewItem listItem = new ListViewItem(item.Nam.ToString());
+                listItem.SubItems.Add(item.Thang.ToString());
+                listItem.SubItems.Add(item.SoTien.ToString());
+
+                lsvRevenue.Items.Add(listItem);
+            }
+        }
+
+        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void vRevenue_FormClosed(object sender, FormClosedEventArgs e)
