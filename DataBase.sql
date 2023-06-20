@@ -244,10 +244,10 @@ create procedure PDInsertVIP
 	@out		int = NULL output
 as
 begin
-	if exists
+	if not exists
 		(
 			select *
-			from XE
+			from VIP
 			where BienSo = @BienSo
 		)
 	begin
@@ -260,6 +260,8 @@ begin
 end
 go
 
+
+
 /*
 	PD sua VIP
 	return 1 vao @out: thanh cong
@@ -267,7 +269,6 @@ go
 */
 create procedure PDUpdateVIP
 	@BienSoFind			varchar(15)		,
-	@BienSoUpdate		varchar(15)		,
 	@HoTen				nvarchar(50)	,
 	@SDT				varchar(15)		,
 	@out				int = NULL output
@@ -281,8 +282,7 @@ begin
 		)
 	begin
 		update VIP 
-		set BienSo	= @BienSoUpdate,
-			HoTen	= @HoTen,
+		set HoTen	= @HoTen,
 			SDT		= @SDT
 		where BienSo = @BienSoFind
 		return 1
@@ -299,7 +299,7 @@ go
 */
 create procedure PDDeleteVIP
 	@BienSo		varchar(15),
-	@out		int NULL output
+	@out		int = NULL output
 as
 begin
 	if exists
@@ -497,9 +497,6 @@ go
 
 --select * from sys.triggers
 
---exec PDInsertXE 'ABC123'
---exec PDInsertVIP 'ABC123', 'ABC', 1234567890
---exec PDInsertDONGTIEN 'ABC123', 5
 -------------------------------------------------Cac lenh lien quan----------------------------
 ----Xem dang bat hay tat----
 select name,
@@ -525,11 +522,6 @@ select * from LOGG
 select * from DONGTIEN
 select * from THAMSO
 select * from VIP
-
-----Xem tat ca procedures----
-select name
-from sys.procedures
-where type = 'P'
 
 set dateformat mdy
 -----------XE--------------
@@ -585,3 +577,12 @@ insert into DONGTIEN values ('40L-829.40', '1/18/2023 17:26:17', 2)
 insert into DONGTIEN values ('26Z-396.26', '5/25/2023 10:1:32', 3)
 insert into DONGTIEN values ('67O-807.67', '11/27/2023 13:9:21', 1)
 insert into DONGTIEN values ('62D-972.62', '11/25/2023 20:12:37', 4)
+
+delete from VIP where BienSo = '15I-665.15d'
+delete from VIP where BienSo = 'ABC123'
+delete from DONGTIEN where BienSo = 'ABC123'
+exec PDInsertXE 'ABC123'
+exec PDInsertVIP '213A-123', 'ABC', 1234567890
+exec PDInsertDONGTIEN 'ABC123', 5
+select * from VIP
+exec PDUpdateVIP '213A-123', 'asc123', 'ABC', 01234567890

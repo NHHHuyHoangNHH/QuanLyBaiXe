@@ -22,7 +22,11 @@ namespace QuanLyBaiXe.DTO
             this.BienSo = row["BIENSO"].ToString();
             this.Hoten = row["HOTEN"].ToString();
             this.SDT = row["SDT"].ToString();
+<<<<<<< HEAD
             this.NgayDK = (DateTime)row["NGAYVAO"];
+=======
+            this.NgayDK = (DateTime?)row["NGAYDK"];
+>>>>>>> b6311ec60561f2d3e3052c7c6e77029964c9760a
         }
 
         private string bienso;

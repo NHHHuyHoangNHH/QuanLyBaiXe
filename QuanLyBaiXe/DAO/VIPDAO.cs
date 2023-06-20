@@ -21,41 +21,43 @@ namespace QuanLyBaiXe.DAO
 
         private VIPDAO() { }
 
-        public void AddVIP(string bienso)
+        public List<VIP> SearchVIP(string bienso)
         {
-            DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind", new object[] { bienso });
+            List<VIP> list = new List<VIP>();
+            string query = string.Format("select * from VIP where BienSo like '%{0}%'", bienso);
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in dt.Rows)
+            {
+                VIP vip = new VIP(item);
+                list.Add(vip);
+            }
+            return list;
         }
 
-        public void DeteleVIP(string biensofind)
+        public bool AddVIP(string bienso, string hoten, string sdt)
         {
-            DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind", new object[] { biensofind });
+            string query = string.Format("EXEC PDInsertVIP '{0}', '{1}', '{2}'", bienso, hoten, sdt);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
         }
 
-        public void UpdateVIP(string biensofind, string biensoupdate, DateTime? ngayupdate)
+        public bool DeteleVIP(string biensofind)
         {
-            DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind @ @", new object[] { biensofind, biensoupdate, ngayupdate });
+            string query = string.Format("EXEC PDDeleteVIP '{0}'", biensofind);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
         }
 
-        //public void FindVIP(string biensofind)
-        //{
-        //    DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind", new object[] { biensofind });
-        //}
+        public bool UpdateVIP(string biensofind, string hoten, string sdt)
+        {
+            string query = string.Format("EXEC PDUpdateVIP '{0}', '{1}', '{2}'", biensofind, hoten, sdt);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
 
-        //public List<VIP> LoadVIPList()
-        //{
-        //    List<VIP> VIPList = new List<VIP>();
+            return result > 0;
+        }
 
-        //    DataTable data = DataProvider.Instance.ExecuteQuery("select * from dbo.VIP");
-
-        //    foreach (DataRow item in data.Rows)
-        //    {
-        //        VIP VIP = new VIP(item);
-        //        VIPList.Add(VIP);
-        //    }
-
-        //    return VIPList;
-        //}
-        
         public DataTable LoadVIPtable()
         {
             return DataProvider.Instance.ExecuteQuery("select * from VIP");

@@ -34,11 +34,27 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dt_ngayhethan_VIP = new QuanLyBaiXe.VControls.VDateTimePicker();
+            this.dt_ngaylamve_VIP = new QuanLyBaiXe.VControls.VDateTimePicker();
+            this.tb_tenkh_VIP = new QuanLyBaiXe.VControls.VTextbox();
+            this.tb_sdt_VIP = new QuanLyBaiXe.VControls.VTextbox();
+            this.tb_biensoxe_VIP = new QuanLyBaiXe.VControls.VTextbox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bt_LogOut = new QuanLyBaiXe.VControls.VButton();
+            this.bt_Log = new QuanLyBaiXe.VControls.VButton();
+            this.bt_Revenue = new QuanLyBaiXe.VControls.VButton();
+            this.bt_Search = new QuanLyBaiXe.VControls.VButton();
+            this.bt_VIP = new QuanLyBaiXe.VControls.VButton();
+            this.bt_InOut = new QuanLyBaiXe.VControls.VButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.bt_luu_VIP = new QuanLyBaiXe.VControls.VButton();
+            this.bt_sua_VIP = new QuanLyBaiXe.VControls.VButton();
+            this.bt_tim_VIP = new QuanLyBaiXe.VControls.VButton();
+            this.bt_xoa_VIP = new QuanLyBaiXe.VControls.VButton();
+            this.bt_them_VIP = new QuanLyBaiXe.VControls.VButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -46,22 +62,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dt_ngayhethan_VIP = new QuanLyBaiXe.VControls.VDateTimePicker();
-            this.dt_ngaylamve_VIP = new QuanLyBaiXe.VControls.VDateTimePicker();
-            this.tb_tenkh_VIP = new QuanLyBaiXe.VControls.VTextbox();
-            this.tb_sdt_VIP = new QuanLyBaiXe.VControls.VTextbox();
-            this.tb_biensoxe_VIP = new QuanLyBaiXe.VControls.VTextbox();
-            this.bt_LogOut = new QuanLyBaiXe.VControls.VButton();
-            this.bt_Log = new QuanLyBaiXe.VControls.VButton();
-            this.bt_Revenue = new QuanLyBaiXe.VControls.VButton();
-            this.bt_Search = new QuanLyBaiXe.VControls.VButton();
-            this.bt_VIP = new QuanLyBaiXe.VControls.VButton();
-            this.bt_InOut = new QuanLyBaiXe.VControls.VButton();
-            this.bt_luu_VIP = new QuanLyBaiXe.VControls.VButton();
-            this.bt_sua_VIP = new QuanLyBaiXe.VControls.VButton();
-            this.bt_tim_VIP = new QuanLyBaiXe.VControls.VButton();
-            this.bt_xoa_VIP = new QuanLyBaiXe.VControls.VButton();
-            this.bt_them_VIP = new QuanLyBaiXe.VControls.VButton();
             ((System.ComponentModel.ISupportInitialize)(this.data_VIP)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -131,139 +131,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(582, 346);
             this.panel1.TabIndex = 9;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.bt_LogOut);
-            this.panel3.Controls.Add(this.bt_Log);
-            this.panel3.Controls.Add(this.bt_Revenue);
-            this.panel3.Controls.Add(this.bt_Search);
-            this.panel3.Controls.Add(this.bt_VIP);
-            this.panel3.Controls.Add(this.bt_InOut);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(129, 346);
-            this.panel3.TabIndex = 28;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 76);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(358, 12);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Ngày làm vé:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(129, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Biển số xe:";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.bt_luu_VIP);
-            this.panel7.Controls.Add(this.bt_sua_VIP);
-            this.panel7.Controls.Add(this.bt_tim_VIP);
-            this.panel7.Controls.Add(this.bt_xoa_VIP);
-            this.panel7.Controls.Add(this.bt_them_VIP);
-            this.panel7.Location = new System.Drawing.Point(131, 96);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(448, 34);
-            this.panel7.TabIndex = 4;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Location = new System.Drawing.Point(9, 10);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(128, 346);
-            this.panel2.TabIndex = 10;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(0, 299);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(127, 46);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Đăng xuất";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(0, 125);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 46);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Vé VIP";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(0, 256);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(127, 46);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Log";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 81);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 46);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Xe ra vào";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(0, 212);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(127, 46);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Doanh thu";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(0, 169);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 46);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Tìm kiếm";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // dt_ngayhethan_VIP
             // 
@@ -359,6 +226,32 @@
             this.tb_biensoxe_VIP.TabIndex = 29;
             this.tb_biensoxe_VIP.Texts = "";
             this.tb_biensoxe_VIP.UnderlinedStyle = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.bt_LogOut);
+            this.panel3.Controls.Add(this.bt_Log);
+            this.panel3.Controls.Add(this.bt_Revenue);
+            this.panel3.Controls.Add(this.bt_Search);
+            this.panel3.Controls.Add(this.bt_VIP);
+            this.panel3.Controls.Add(this.bt_InOut);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(129, 346);
+            this.panel3.TabIndex = 28;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(129, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // bt_LogOut
             // 
@@ -485,6 +378,39 @@
             this.bt_InOut.UseVisualStyleBackColor = false;
             this.bt_InOut.Click += new System.EventHandler(this.bt_InOut_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(358, 12);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Ngày làm vé:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(129, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Biển số xe:";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.bt_luu_VIP);
+            this.panel7.Controls.Add(this.bt_sua_VIP);
+            this.panel7.Controls.Add(this.bt_tim_VIP);
+            this.panel7.Controls.Add(this.bt_xoa_VIP);
+            this.panel7.Controls.Add(this.bt_them_VIP);
+            this.panel7.Location = new System.Drawing.Point(131, 96);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(448, 34);
+            this.panel7.TabIndex = 4;
+            // 
             // bt_luu_VIP
             // 
             this.bt_luu_VIP.BackColor = System.Drawing.Color.SteelBlue;
@@ -501,7 +427,7 @@
             this.bt_luu_VIP.Name = "bt_luu_VIP";
             this.bt_luu_VIP.Size = new System.Drawing.Size(78, 32);
             this.bt_luu_VIP.TabIndex = 5;
-            this.bt_luu_VIP.Text = "LƯU";
+            this.bt_luu_VIP.Text = "XEM";
             this.bt_luu_VIP.TextColor = System.Drawing.Color.White;
             this.bt_luu_VIP.UseVisualStyleBackColor = false;
             this.bt_luu_VIP.Click += new System.EventHandler(this.bt_luu_VIP_Click);
@@ -590,6 +516,80 @@
             this.bt_them_VIP.UseVisualStyleBackColor = false;
             this.bt_them_VIP.Click += new System.EventHandler(this.bt_them_VIP_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Location = new System.Drawing.Point(9, 10);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(128, 346);
+            this.panel2.TabIndex = 10;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(0, 299);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(127, 46);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Đăng xuất";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(0, 125);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 46);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Vé VIP";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(0, 256);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(127, 46);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Log";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 81);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 46);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Xe ra vào";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(0, 212);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(127, 46);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Doanh thu";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(0, 169);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(127, 46);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Tìm kiếm";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // vVIP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -637,7 +637,6 @@
         private VControls.VButton bt_Search;
         private VControls.VButton bt_VIP;
         private VControls.VButton bt_InOut;
-        private VControls.VTextbox tb_biensoxe_VIP;
         private VControls.VTextbox tb_tenkh_VIP;
         private VControls.VTextbox tb_sdt_VIP;
         private VControls.VDateTimePicker dt_ngayhethan_VIP;
@@ -648,5 +647,6 @@
         private VControls.VButton bt_them_VIP;
         private VControls.VButton bt_luu_VIP;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private VControls.VTextbox tb_biensoxe_VIP;
     }
 }
