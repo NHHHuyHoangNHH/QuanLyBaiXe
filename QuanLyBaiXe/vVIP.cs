@@ -24,7 +24,7 @@ namespace QuanLyBaiXe
         }
 
         #region Method
-        void CloseForm()
+        void CloseForm() 
         {
             this.FormClosing += new FormClosingEventHandler(vVIP_FormClosing);
             this.FormClosed += new FormClosedEventHandler(vVIP_FormClosed);
@@ -48,6 +48,13 @@ namespace QuanLyBaiXe
             tb_sdt_VIP.DataBindings.Add(new Binding("Texts", data_VIP.DataSource, "SDT", true, DataSourceUpdateMode.Never));
             tb_tenkh_VIP.DataBindings.Add(new Binding("Texts", data_VIP.DataSource, "HoTen", true, DataSourceUpdateMode.Never));
             dt_ngaylamve_VIP.DataBindings.Add(new Binding("Value", data_VIP.DataSource, "NgayDK", true, DataSourceUpdateMode.Never));
+        }
+
+        List<VIP> SearchVIP(string bienso)
+        {
+            List<VIP> listVIP = VIPDAO.Instance.SearchVIP(bienso);
+            
+            return listVIP;
         }
         #endregion
 
@@ -115,7 +122,7 @@ namespace QuanLyBaiXe
 
         private void bt_tim_VIP_Click(object sender, EventArgs e)
         {
-
+            VIPLIST.DataSource = SearchVIP(tb_biensoxe_VIP.Texts);
         }
 
         private void bt_sua_VIP_Click(object sender, EventArgs e)

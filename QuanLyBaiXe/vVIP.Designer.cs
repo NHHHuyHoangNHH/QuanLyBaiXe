@@ -427,7 +427,7 @@
             this.bt_luu_VIP.Name = "bt_luu_VIP";
             this.bt_luu_VIP.Size = new System.Drawing.Size(78, 32);
             this.bt_luu_VIP.TabIndex = 5;
-            this.bt_luu_VIP.Text = "LƯU";
+            this.bt_luu_VIP.Text = "XEM";
             this.bt_luu_VIP.TextColor = System.Drawing.Color.White;
             this.bt_luu_VIP.UseVisualStyleBackColor = false;
             this.bt_luu_VIP.Click += new System.EventHandler(this.bt_luu_VIP_Click);

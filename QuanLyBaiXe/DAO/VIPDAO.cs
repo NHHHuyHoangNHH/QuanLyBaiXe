@@ -21,6 +21,19 @@ namespace QuanLyBaiXe.DAO
 
         private VIPDAO() { }
 
+        public List<VIP> SearchVIP(string bienso)
+        {
+            List<VIP> list = new List<VIP>();
+            string query = string.Format("select * from VIP where BienSo like '%{0}%'", bienso);
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in dt.Rows)
+            {
+                VIP vip = new VIP(item);
+                list.Add(vip);
+            }
+            return list;
+        }
+
         public bool AddVIP(string bienso, string hoten, string sdt)
         {
             string query = string.Format("EXEC PDInsertVIP '{0}', '{1}', '{2}'", bienso, hoten, sdt);
@@ -43,11 +56,6 @@ namespace QuanLyBaiXe.DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
-        }
-
-        public void FindVIP(string biensofind)
-        {
-            DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind", new object[] { biensofind });
         }
 
         public DataTable LoadVIPtable()
