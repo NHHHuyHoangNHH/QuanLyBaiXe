@@ -273,6 +273,8 @@ create procedure PDUpdateVIP
 	@SDT				varchar(15)		,
 	@out				int = NULL output
 as
+declare @NgayUpdate date 
+select @NgayUpdate = getdate()
 begin
 	if exists
 		(
@@ -283,7 +285,8 @@ begin
 	begin
 		update VIP 
 		set HoTen	= @HoTen,
-			SDT		= @SDT
+			SDT		= @SDT,
+			NgayDK = @NgayUpdate
 		where BienSo = @BienSoFind
 		return 1
 	end
