@@ -65,3 +65,4 @@ D:\zUIT\2_HKII\Software\UITParking\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe
 D:\zUIT\2_HKII\Software\UITParking\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.CoreCompileInputs.cache
 D:\zUIT\2_HKII\Software\UITParking\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.exe
 D:\zUIT\2_HKII\Software\UITParking\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.pdb
+D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vDetail.resources

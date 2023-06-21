@@ -17,6 +17,7 @@ namespace QuanLyBaiXe
         public vRevenue()
         {
             InitializeComponent();
+            Icon = Properties.Resources.icon;
             LoadRevenue();
 
             this.FormClosing += new FormClosingEventHandler(vRevenue_FormClosing);
@@ -126,5 +127,19 @@ namespace QuanLyBaiXe
         }
 
         #endregion
+
+        private void vRevenue_Load(object sender, EventArgs e)
+        {
+            int currentYear = DateTime.Now.Year;
+            for (int year = currentYear; year >= currentYear - 100; year--)
+            {
+                cb_year.Items.Add(year);
+            }
+            cb_year.SelectedItem = currentYear;
+
+            string[] months = { "Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12" };
+            cb_month.Items.AddRange(months);
+            cb_month.SelectedIndex = 0;
+        }
     }
 }
