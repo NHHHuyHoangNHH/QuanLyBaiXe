@@ -101,6 +101,12 @@
     <Compile Include="vInOut.Designer.cs">
       <DependentUpon>vInOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="vLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vLoading.Designer.cs">
+      <DependentUpon>vLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="vLog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     <EmbeddedResource Include="vInOut.resx">
       <DependentUpon>vInOut.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vLoading.resx">
+      <DependentUpon>vLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vLog.resx">
       <DependentUpon>vLog.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +199,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\money.png" />
+    <None Include="Resources\pen.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\view.png" />
     <None Include="Resources\icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

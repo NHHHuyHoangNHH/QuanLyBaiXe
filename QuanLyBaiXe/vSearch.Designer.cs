@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vSearch));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic_SLogo = new System.Windows.Forms.PictureBox();
             this.bt_LogOut = new QuanLyBaiXe.VControls.VButton();
             this.bt_Log = new QuanLyBaiXe.VControls.VButton();
             this.bt_Revenue = new QuanLyBaiXe.VControls.VButton();
@@ -51,15 +51,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.bt_tim_Search = new QuanLyBaiXe.VControls.VButton();
+            this.bt_xem_Search = new QuanLyBaiXe.VControls.VButton();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SLogo)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.pic_SLogo);
             this.panel2.Controls.Add(this.bt_LogOut);
             this.panel2.Controls.Add(this.bt_Log);
             this.panel2.Controls.Add(this.bt_Revenue);
@@ -72,16 +73,16 @@
             this.panel2.Size = new System.Drawing.Size(172, 426);
             this.panel2.TabIndex = 12;
             // 
-            // pictureBox1
+            // pic_SLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
+            this.pic_SLogo.Image = ((System.Drawing.Image)(resources.GetObject("pic_SLogo.Image")));
+            this.pic_SLogo.Location = new System.Drawing.Point(0, 0);
+            this.pic_SLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_SLogo.Name = "pic_SLogo";
+            this.pic_SLogo.Size = new System.Drawing.Size(172, 94);
+            this.pic_SLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pic_SLogo.TabIndex = 20;
+            this.pic_SLogo.TabStop = false;
             // 
             // bt_LogOut
             // 
@@ -236,7 +237,7 @@
             this.lsvSearch.GridLines = true;
             this.lsvSearch.HideSelection = false;
             this.lsvSearch.Location = new System.Drawing.Point(179, 102);
-            this.lsvSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lsvSearch.Margin = new System.Windows.Forms.Padding(4);
             this.lsvSearch.Name = "lsvSearch";
             this.lsvSearch.Size = new System.Drawing.Size(591, 322);
             this.lsvSearch.TabIndex = 23;
@@ -265,7 +266,7 @@
             this.tb_biensoxe_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_biensoxe_Search.Multiline = false;
             this.tb_biensoxe_Search.Name = "tb_biensoxe_Search";
-            this.tb_biensoxe_Search.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tb_biensoxe_Search.Padding = new System.Windows.Forms.Padding(7);
             this.tb_biensoxe_Search.PasswordChar = false;
             this.tb_biensoxe_Search.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tb_biensoxe_Search.PlaceholderText = "";
@@ -345,6 +346,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.bt_xem_Search);
             this.panel7.Controls.Add(this.bt_tim_Search);
             this.panel7.Location = new System.Drawing.Point(173, 49);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -356,22 +358,42 @@
             // 
             this.bt_tim_Search.BackColor = System.Drawing.Color.SteelBlue;
             this.bt_tim_Search.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.bt_tim_Search.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bt_tim_Search.BorderRadius = 30;
-            this.bt_tim_Search.BorderSize = 0;
+            this.bt_tim_Search.BorderColor = System.Drawing.Color.Black;
+            this.bt_tim_Search.BorderRadius = 35;
+            this.bt_tim_Search.BorderSize = 1;
             this.bt_tim_Search.FlatAppearance.BorderSize = 0;
             this.bt_tim_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_tim_Search.Font = new System.Drawing.Font("UTM Avo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_tim_Search.ForeColor = System.Drawing.Color.White;
-            this.bt_tim_Search.Location = new System.Drawing.Point(247, 1);
+            this.bt_tim_Search.Image = global::QuanLyBaiXe.Properties.Resources.search;
+            this.bt_tim_Search.Location = new System.Drawing.Point(207, 1);
             this.bt_tim_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_tim_Search.Name = "bt_tim_Search";
-            this.bt_tim_Search.Size = new System.Drawing.Size(104, 39);
+            this.bt_tim_Search.Size = new System.Drawing.Size(80, 39);
             this.bt_tim_Search.TabIndex = 4;
-            this.bt_tim_Search.Text = "TÌM";
             this.bt_tim_Search.TextColor = System.Drawing.Color.White;
             this.bt_tim_Search.UseVisualStyleBackColor = false;
             this.bt_tim_Search.Click += new System.EventHandler(this.bt_tim_Search_Click);
+            // 
+            // bt_xem_Search
+            // 
+            this.bt_xem_Search.BackColor = System.Drawing.Color.SteelBlue;
+            this.bt_xem_Search.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.bt_xem_Search.BorderColor = System.Drawing.Color.Black;
+            this.bt_xem_Search.BorderRadius = 35;
+            this.bt_xem_Search.BorderSize = 1;
+            this.bt_xem_Search.FlatAppearance.BorderSize = 0;
+            this.bt_xem_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_xem_Search.Font = new System.Drawing.Font("UTM Avo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_xem_Search.ForeColor = System.Drawing.Color.White;
+            this.bt_xem_Search.Image = global::QuanLyBaiXe.Properties.Resources.view;
+            this.bt_xem_Search.Location = new System.Drawing.Point(311, 1);
+            this.bt_xem_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_xem_Search.Name = "bt_xem_Search";
+            this.bt_xem_Search.Size = new System.Drawing.Size(80, 39);
+            this.bt_xem_Search.TabIndex = 8;
+            this.bt_xem_Search.TextColor = System.Drawing.Color.White;
+            this.bt_xem_Search.UseVisualStyleBackColor = false;
             // 
             // vSearch
             // 
@@ -383,9 +405,9 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "vSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "vSearch";
+            this.Text = "Tìm kiếm";
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SLogo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -411,10 +433,11 @@
         private VControls.VButton bt_InOut;
         private VControls.VButton bt_tim_Search;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic_SLogo;
         private System.Windows.Forms.ListView lsvSearch;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         public VControls.VTextbox tb_biensoxe_Search;
+        private VControls.VButton bt_xem_Search;
     }
 }

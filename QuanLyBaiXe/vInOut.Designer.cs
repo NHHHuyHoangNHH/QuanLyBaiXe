@@ -36,7 +36,7 @@
             this.bt_Search = new QuanLyBaiXe.VControls.VButton();
             this.bt_VIP = new QuanLyBaiXe.VControls.VButton();
             this.bt_InOut = new QuanLyBaiXe.VControls.VButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic_SLogo = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -56,7 +56,7 @@
             this.tb_biensoxera = new QuanLyBaiXe.VControls.VTextbox();
             this.tb_biensoxevao = new QuanLyBaiXe.VControls.VTextbox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SLogo)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +69,7 @@
             this.panel2.Controls.Add(this.bt_Search);
             this.panel2.Controls.Add(this.bt_VIP);
             this.panel2.Controls.Add(this.bt_InOut);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.pic_SLogo);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
@@ -201,16 +201,16 @@
             this.bt_InOut.TextColor = System.Drawing.Color.White;
             this.bt_InOut.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // pic_SLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pic_SLogo.Image = ((System.Drawing.Image)(resources.GetObject("pic_SLogo.Image")));
+            this.pic_SLogo.Location = new System.Drawing.Point(0, 0);
+            this.pic_SLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_SLogo.Name = "pic_SLogo";
+            this.pic_SLogo.Size = new System.Drawing.Size(172, 94);
+            this.pic_SLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pic_SLogo.TabIndex = 0;
+            this.pic_SLogo.TabStop = false;
             // 
             // panel6
             // 
@@ -401,7 +401,7 @@
             this.tb_tienthu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_tienthu.Multiline = false;
             this.tb_tienthu.Name = "tb_tienthu";
-            this.tb_tienthu.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tb_tienthu.Padding = new System.Windows.Forms.Padding(7);
             this.tb_tienthu.PasswordChar = false;
             this.tb_tienthu.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tb_tienthu.PlaceholderText = "";
@@ -422,7 +422,7 @@
             this.tb_biensoxera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_biensoxera.Multiline = false;
             this.tb_biensoxera.Name = "tb_biensoxera";
-            this.tb_biensoxera.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tb_biensoxera.Padding = new System.Windows.Forms.Padding(7);
             this.tb_biensoxera.PasswordChar = false;
             this.tb_biensoxera.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tb_biensoxera.PlaceholderText = "";
@@ -443,7 +443,7 @@
             this.tb_biensoxevao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_biensoxevao.Multiline = false;
             this.tb_biensoxevao.Name = "tb_biensoxevao";
-            this.tb_biensoxevao.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tb_biensoxevao.Padding = new System.Windows.Forms.Padding(7);
             this.tb_biensoxevao.PasswordChar = false;
             this.tb_biensoxevao.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tb_biensoxevao.PlaceholderText = "";
@@ -464,7 +464,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Màn hình chính";
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SLogo)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -487,7 +487,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic_SLogo;
         private VControls.VButton bt_LogOut;
         private VControls.VButton bt_Log;
         private VControls.VButton bt_Revenue;

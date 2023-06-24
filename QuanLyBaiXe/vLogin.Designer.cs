@@ -32,14 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic_BLogo = new System.Windows.Forms.PictureBox();
             this.bt_dangnhap = new QuanLyBaiXe.VControls.VButton();
             this.tb_matkhau = new QuanLyBaiXe.VControls.VTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_BLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,7 +53,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.pic_BLogo);
             this.panel2.Controls.Add(this.bt_dangnhap);
             this.panel2.Controls.Add(this.tb_matkhau);
             this.panel2.Controls.Add(this.label1);
@@ -63,16 +63,16 @@
             this.panel2.Size = new System.Drawing.Size(771, 267);
             this.panel2.TabIndex = 0;
             // 
-            // pictureBox1
+            // pic_BLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(295, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pic_BLogo.Image = ((System.Drawing.Image)(resources.GetObject("pic_BLogo.Image")));
+            this.pic_BLogo.Location = new System.Drawing.Point(295, 0);
+            this.pic_BLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_BLogo.Name = "pic_BLogo";
+            this.pic_BLogo.Size = new System.Drawing.Size(172, 94);
+            this.pic_BLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pic_BLogo.TabIndex = 3;
+            this.pic_BLogo.TabStop = false;
             // 
             // bt_dangnhap
             // 
@@ -107,7 +107,7 @@
             this.tb_matkhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_matkhau.Multiline = false;
             this.tb_matkhau.Name = "tb_matkhau";
-            this.tb_matkhau.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tb_matkhau.Padding = new System.Windows.Forms.Padding(7);
             this.tb_matkhau.PasswordChar = true;
             this.tb_matkhau.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tb_matkhau.PlaceholderText = "";
@@ -142,11 +142,11 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "vLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "vLogin";
+            this.Text = "Dăng nhập";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_BLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -159,6 +159,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private VControls.VButton bt_dangnhap;
         private VControls.VTextbox tb_matkhau;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic_BLogo;
     }
 }

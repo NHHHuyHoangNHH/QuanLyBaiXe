@@ -36,7 +36,7 @@
             this.dt_ngaycantrichxuat2 = new QuanLyBaiXe.VControls.VDateTimePicker();
             this.dt_ngaycantrichxuat1 = new QuanLyBaiXe.VControls.VDateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic_SLogo = new System.Windows.Forms.PictureBox();
             this.bt_LogOut = new QuanLyBaiXe.VControls.VButton();
             this.bt_Log = new QuanLyBaiXe.VControls.VButton();
             this.bt_Revenue = new QuanLyBaiXe.VControls.VButton();
@@ -53,9 +53,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.bt_xem_Log = new QuanLyBaiXe.VControls.VButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SLogo)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -84,7 +85,7 @@
             this.lsvLog.GridLines = true;
             this.lsvLog.HideSelection = false;
             this.lsvLog.Location = new System.Drawing.Point(175, 102);
-            this.lsvLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lsvLog.Margin = new System.Windows.Forms.Padding(4);
             this.lsvLog.Name = "lsvLog";
             this.lsvLog.Size = new System.Drawing.Size(591, 333);
             this.lsvLog.TabIndex = 31;
@@ -135,7 +136,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.pic_SLogo);
             this.panel3.Controls.Add(this.bt_LogOut);
             this.panel3.Controls.Add(this.bt_Log);
             this.panel3.Controls.Add(this.bt_Revenue);
@@ -148,16 +149,16 @@
             this.panel3.Size = new System.Drawing.Size(172, 426);
             this.panel3.TabIndex = 29;
             // 
-            // pictureBox1
+            // pic_SLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.pic_SLogo.Image = ((System.Drawing.Image)(resources.GetObject("pic_SLogo.Image")));
+            this.pic_SLogo.Location = new System.Drawing.Point(0, 0);
+            this.pic_SLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_SLogo.Name = "pic_SLogo";
+            this.pic_SLogo.Size = new System.Drawing.Size(172, 94);
+            this.pic_SLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pic_SLogo.TabIndex = 12;
+            this.pic_SLogo.TabStop = false;
             // 
             // bt_LogOut
             // 
@@ -295,6 +296,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.bt_xem_Log);
             this.panel7.Controls.Add(this.bt_tim_Log);
             this.panel7.Location = new System.Drawing.Point(175, 50);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -306,19 +308,19 @@
             // 
             this.bt_tim_Log.BackColor = System.Drawing.Color.SteelBlue;
             this.bt_tim_Log.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.bt_tim_Log.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bt_tim_Log.BorderRadius = 30;
-            this.bt_tim_Log.BorderSize = 0;
+            this.bt_tim_Log.BorderColor = System.Drawing.Color.Black;
+            this.bt_tim_Log.BorderRadius = 35;
+            this.bt_tim_Log.BorderSize = 1;
             this.bt_tim_Log.FlatAppearance.BorderSize = 0;
             this.bt_tim_Log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_tim_Log.Font = new System.Drawing.Font("UTM Avo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_tim_Log.ForeColor = System.Drawing.Color.White;
-            this.bt_tim_Log.Location = new System.Drawing.Point(247, 1);
+            this.bt_tim_Log.Image = global::QuanLyBaiXe.Properties.Resources.search;
+            this.bt_tim_Log.Location = new System.Drawing.Point(205, 1);
             this.bt_tim_Log.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_tim_Log.Name = "bt_tim_Log";
-            this.bt_tim_Log.Size = new System.Drawing.Size(104, 39);
+            this.bt_tim_Log.Size = new System.Drawing.Size(80, 39);
             this.bt_tim_Log.TabIndex = 6;
-            this.bt_tim_Log.Text = "TÌM";
             this.bt_tim_Log.TextColor = System.Drawing.Color.White;
             this.bt_tim_Log.UseVisualStyleBackColor = false;
             // 
@@ -396,6 +398,26 @@
             this.button3.Text = "Tìm kiếm";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // bt_xem_Log
+            // 
+            this.bt_xem_Log.BackColor = System.Drawing.Color.SteelBlue;
+            this.bt_xem_Log.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.bt_xem_Log.BorderColor = System.Drawing.Color.Black;
+            this.bt_xem_Log.BorderRadius = 35;
+            this.bt_xem_Log.BorderSize = 1;
+            this.bt_xem_Log.FlatAppearance.BorderSize = 0;
+            this.bt_xem_Log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_xem_Log.Font = new System.Drawing.Font("UTM Avo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_xem_Log.ForeColor = System.Drawing.Color.White;
+            this.bt_xem_Log.Image = global::QuanLyBaiXe.Properties.Resources.view;
+            this.bt_xem_Log.Location = new System.Drawing.Point(308, 1);
+            this.bt_xem_Log.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_xem_Log.Name = "bt_xem_Log";
+            this.bt_xem_Log.Size = new System.Drawing.Size(80, 39);
+            this.bt_xem_Log.TabIndex = 7;
+            this.bt_xem_Log.TextColor = System.Drawing.Color.White;
+            this.bt_xem_Log.UseVisualStyleBackColor = false;
+            // 
             // vLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -407,11 +429,11 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "vLog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "vLog";
+            this.Text = "Log";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SLogo)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -439,10 +461,11 @@
         private VControls.VButton bt_InOut;
         private VControls.VDateTimePicker dt_ngaycantrichxuat1;
         private VControls.VButton bt_tim_Log;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic_SLogo;
         private VControls.VDateTimePicker dt_ngaycantrichxuat2;
         private System.Windows.Forms.ListView lsvLog;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private VControls.VButton bt_xem_Log;
     }
 }

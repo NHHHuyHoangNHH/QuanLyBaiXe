@@ -131,7 +131,7 @@ namespace QuanLyBaiXe
         private void vRevenue_Load(object sender, EventArgs e)
         {
             int currentYear = DateTime.Now.Year;
-            for (int year = currentYear; year >= currentYear - 100; year--)
+            for (int year = currentYear; year >= 2020; year--)
             {
                 cb_year.Items.Add(year);
             }

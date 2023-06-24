@@ -40,7 +40,7 @@
             this.tb_sdt_VIP = new QuanLyBaiXe.VControls.VTextbox();
             this.tb_biensoxe_VIP = new QuanLyBaiXe.VControls.VTextbox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic_SLogo = new System.Windows.Forms.PictureBox();
             this.bt_LogOut = new QuanLyBaiXe.VControls.VButton();
             this.bt_Log = new QuanLyBaiXe.VControls.VButton();
             this.bt_Revenue = new QuanLyBaiXe.VControls.VButton();
@@ -50,7 +50,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.bt_luu_VIP = new QuanLyBaiXe.VControls.VButton();
+            this.bt_dongtien_VIP = new QuanLyBaiXe.VControls.VButton();
+            this.bt_xem_VIP = new QuanLyBaiXe.VControls.VButton();
             this.bt_sua_VIP = new QuanLyBaiXe.VControls.VButton();
             this.bt_tim_VIP = new QuanLyBaiXe.VControls.VButton();
             this.bt_xoa_VIP = new QuanLyBaiXe.VControls.VButton();
@@ -65,7 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.data_VIP)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SLogo)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -173,7 +174,7 @@
             this.tb_tenkh_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_tenkh_VIP.Multiline = false;
             this.tb_tenkh_VIP.Name = "tb_tenkh_VIP";
-            this.tb_tenkh_VIP.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tb_tenkh_VIP.Padding = new System.Windows.Forms.Padding(7);
             this.tb_tenkh_VIP.PasswordChar = false;
             this.tb_tenkh_VIP.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tb_tenkh_VIP.PlaceholderText = "";
@@ -194,7 +195,7 @@
             this.tb_sdt_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_sdt_VIP.Multiline = false;
             this.tb_sdt_VIP.Name = "tb_sdt_VIP";
-            this.tb_sdt_VIP.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tb_sdt_VIP.Padding = new System.Windows.Forms.Padding(7);
             this.tb_sdt_VIP.PasswordChar = false;
             this.tb_sdt_VIP.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tb_sdt_VIP.PlaceholderText = "";
@@ -215,7 +216,7 @@
             this.tb_biensoxe_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_biensoxe_VIP.Multiline = false;
             this.tb_biensoxe_VIP.Name = "tb_biensoxe_VIP";
-            this.tb_biensoxe_VIP.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tb_biensoxe_VIP.Padding = new System.Windows.Forms.Padding(7);
             this.tb_biensoxe_VIP.PasswordChar = false;
             this.tb_biensoxe_VIP.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tb_biensoxe_VIP.PlaceholderText = "";
@@ -226,7 +227,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.pic_SLogo);
             this.panel3.Controls.Add(this.bt_LogOut);
             this.panel3.Controls.Add(this.bt_Log);
             this.panel3.Controls.Add(this.bt_Revenue);
@@ -239,16 +240,16 @@
             this.panel3.Size = new System.Drawing.Size(172, 426);
             this.panel3.TabIndex = 28;
             // 
-            // pictureBox1
+            // pic_SLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.pic_SLogo.Image = ((System.Drawing.Image)(resources.GetObject("pic_SLogo.Image")));
+            this.pic_SLogo.Location = new System.Drawing.Point(0, 0);
+            this.pic_SLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_SLogo.Name = "pic_SLogo";
+            this.pic_SLogo.Size = new System.Drawing.Size(172, 94);
+            this.pic_SLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pic_SLogo.TabIndex = 12;
+            this.pic_SLogo.TabStop = false;
             // 
             // bt_LogOut
             // 
@@ -395,7 +396,8 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.bt_luu_VIP);
+            this.panel7.Controls.Add(this.bt_dongtien_VIP);
+            this.panel7.Controls.Add(this.bt_xem_VIP);
             this.panel7.Controls.Add(this.bt_sua_VIP);
             this.panel7.Controls.Add(this.bt_tim_VIP);
             this.panel7.Controls.Add(this.bt_xoa_VIP);
@@ -406,44 +408,64 @@
             this.panel7.Size = new System.Drawing.Size(597, 42);
             this.panel7.TabIndex = 4;
             // 
-            // bt_luu_VIP
+            // bt_dongtien_VIP
             // 
-            this.bt_luu_VIP.BackColor = System.Drawing.Color.SteelBlue;
-            this.bt_luu_VIP.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.bt_luu_VIP.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bt_luu_VIP.BorderRadius = 30;
-            this.bt_luu_VIP.BorderSize = 0;
-            this.bt_luu_VIP.FlatAppearance.BorderSize = 0;
-            this.bt_luu_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_luu_VIP.Font = new System.Drawing.Font("UTM Avo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_luu_VIP.ForeColor = System.Drawing.Color.White;
-            this.bt_luu_VIP.Location = new System.Drawing.Point(491, 1);
-            this.bt_luu_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_luu_VIP.Name = "bt_luu_VIP";
-            this.bt_luu_VIP.Size = new System.Drawing.Size(104, 39);
-            this.bt_luu_VIP.TabIndex = 5;
-            this.bt_luu_VIP.Text = "XEM";
-            this.bt_luu_VIP.TextColor = System.Drawing.Color.White;
-            this.bt_luu_VIP.UseVisualStyleBackColor = false;
-            this.bt_luu_VIP.Click += new System.EventHandler(this.bt_luu_VIP_Click);
+            this.bt_dongtien_VIP.BackColor = System.Drawing.Color.SteelBlue;
+            this.bt_dongtien_VIP.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.bt_dongtien_VIP.BorderColor = System.Drawing.Color.Black;
+            this.bt_dongtien_VIP.BorderRadius = 35;
+            this.bt_dongtien_VIP.BorderSize = 1;
+            this.bt_dongtien_VIP.FlatAppearance.BorderSize = 0;
+            this.bt_dongtien_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_dongtien_VIP.Font = new System.Drawing.Font("UTM Avo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_dongtien_VIP.ForeColor = System.Drawing.Color.White;
+            this.bt_dongtien_VIP.Image = global::QuanLyBaiXe.Properties.Resources.money;
+            this.bt_dongtien_VIP.Location = new System.Drawing.Point(510, 2);
+            this.bt_dongtien_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_dongtien_VIP.Name = "bt_dongtien_VIP";
+            this.bt_dongtien_VIP.Size = new System.Drawing.Size(70, 39);
+            this.bt_dongtien_VIP.TabIndex = 6;
+            this.bt_dongtien_VIP.TextColor = System.Drawing.Color.White;
+            this.bt_dongtien_VIP.UseVisualStyleBackColor = false;
+            // 
+            // bt_xem_VIP
+            // 
+            this.bt_xem_VIP.BackColor = System.Drawing.Color.SteelBlue;
+            this.bt_xem_VIP.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.bt_xem_VIP.BorderColor = System.Drawing.Color.Black;
+            this.bt_xem_VIP.BorderRadius = 35;
+            this.bt_xem_VIP.BorderSize = 1;
+            this.bt_xem_VIP.FlatAppearance.BorderSize = 0;
+            this.bt_xem_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_xem_VIP.Font = new System.Drawing.Font("UTM Avo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_xem_VIP.ForeColor = System.Drawing.Color.White;
+            this.bt_xem_VIP.Image = global::QuanLyBaiXe.Properties.Resources.view;
+            this.bt_xem_VIP.Location = new System.Drawing.Point(413, 2);
+            this.bt_xem_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_xem_VIP.Name = "bt_xem_VIP";
+            this.bt_xem_VIP.Size = new System.Drawing.Size(70, 39);
+            this.bt_xem_VIP.TabIndex = 5;
+            this.bt_xem_VIP.TextColor = System.Drawing.Color.White;
+            this.bt_xem_VIP.UseVisualStyleBackColor = false;
+            this.bt_xem_VIP.Click += new System.EventHandler(this.bt_luu_VIP_Click);
             // 
             // bt_sua_VIP
             // 
             this.bt_sua_VIP.BackColor = System.Drawing.Color.SteelBlue;
             this.bt_sua_VIP.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.bt_sua_VIP.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bt_sua_VIP.BorderRadius = 30;
-            this.bt_sua_VIP.BorderSize = 0;
+            this.bt_sua_VIP.BorderColor = System.Drawing.Color.Black;
+            this.bt_sua_VIP.BorderRadius = 35;
+            this.bt_sua_VIP.BorderSize = 1;
             this.bt_sua_VIP.FlatAppearance.BorderSize = 0;
             this.bt_sua_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_sua_VIP.Font = new System.Drawing.Font("UTM Avo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_sua_VIP.ForeColor = System.Drawing.Color.White;
-            this.bt_sua_VIP.Location = new System.Drawing.Point(372, 1);
+            this.bt_sua_VIP.Image = global::QuanLyBaiXe.Properties.Resources.pen;
+            this.bt_sua_VIP.Location = new System.Drawing.Point(214, 1);
             this.bt_sua_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_sua_VIP.Name = "bt_sua_VIP";
-            this.bt_sua_VIP.Size = new System.Drawing.Size(104, 39);
+            this.bt_sua_VIP.Size = new System.Drawing.Size(70, 39);
             this.bt_sua_VIP.TabIndex = 4;
-            this.bt_sua_VIP.Text = "SỬA";
             this.bt_sua_VIP.TextColor = System.Drawing.Color.White;
             this.bt_sua_VIP.UseVisualStyleBackColor = false;
             this.bt_sua_VIP.Click += new System.EventHandler(this.bt_sua_VIP_Click);
@@ -452,19 +474,19 @@
             // 
             this.bt_tim_VIP.BackColor = System.Drawing.Color.SteelBlue;
             this.bt_tim_VIP.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.bt_tim_VIP.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bt_tim_VIP.BorderRadius = 30;
-            this.bt_tim_VIP.BorderSize = 0;
+            this.bt_tim_VIP.BorderColor = System.Drawing.Color.Black;
+            this.bt_tim_VIP.BorderRadius = 35;
+            this.bt_tim_VIP.BorderSize = 1;
             this.bt_tim_VIP.FlatAppearance.BorderSize = 0;
             this.bt_tim_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_tim_VIP.Font = new System.Drawing.Font("UTM Avo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_tim_VIP.ForeColor = System.Drawing.Color.White;
-            this.bt_tim_VIP.Location = new System.Drawing.Point(249, 1);
+            this.bt_tim_VIP.Image = global::QuanLyBaiXe.Properties.Resources.search;
+            this.bt_tim_VIP.Location = new System.Drawing.Point(315, 1);
             this.bt_tim_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_tim_VIP.Name = "bt_tim_VIP";
-            this.bt_tim_VIP.Size = new System.Drawing.Size(104, 39);
+            this.bt_tim_VIP.Size = new System.Drawing.Size(70, 39);
             this.bt_tim_VIP.TabIndex = 3;
-            this.bt_tim_VIP.Text = "TÌM";
             this.bt_tim_VIP.TextColor = System.Drawing.Color.White;
             this.bt_tim_VIP.UseVisualStyleBackColor = false;
             this.bt_tim_VIP.Click += new System.EventHandler(this.bt_tim_VIP_Click);
@@ -473,19 +495,19 @@
             // 
             this.bt_xoa_VIP.BackColor = System.Drawing.Color.SteelBlue;
             this.bt_xoa_VIP.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.bt_xoa_VIP.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bt_xoa_VIP.BorderRadius = 30;
-            this.bt_xoa_VIP.BorderSize = 0;
+            this.bt_xoa_VIP.BorderColor = System.Drawing.Color.Black;
+            this.bt_xoa_VIP.BorderRadius = 35;
+            this.bt_xoa_VIP.BorderSize = 1;
             this.bt_xoa_VIP.FlatAppearance.BorderSize = 0;
             this.bt_xoa_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_xoa_VIP.Font = new System.Drawing.Font("UTM Avo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_xoa_VIP.ForeColor = System.Drawing.Color.White;
-            this.bt_xoa_VIP.Location = new System.Drawing.Point(124, 1);
+            this.bt_xoa_VIP.Image = global::QuanLyBaiXe.Properties.Resources.delete;
+            this.bt_xoa_VIP.Location = new System.Drawing.Point(111, 1);
             this.bt_xoa_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_xoa_VIP.Name = "bt_xoa_VIP";
-            this.bt_xoa_VIP.Size = new System.Drawing.Size(104, 39);
+            this.bt_xoa_VIP.Size = new System.Drawing.Size(70, 39);
             this.bt_xoa_VIP.TabIndex = 2;
-            this.bt_xoa_VIP.Text = "XÓA";
             this.bt_xoa_VIP.TextColor = System.Drawing.Color.White;
             this.bt_xoa_VIP.UseVisualStyleBackColor = false;
             this.bt_xoa_VIP.Click += new System.EventHandler(this.bt_xoa_VIP_Click);
@@ -494,19 +516,19 @@
             // 
             this.bt_them_VIP.BackColor = System.Drawing.Color.SteelBlue;
             this.bt_them_VIP.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.bt_them_VIP.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bt_them_VIP.BorderRadius = 30;
-            this.bt_them_VIP.BorderSize = 0;
+            this.bt_them_VIP.BorderColor = System.Drawing.Color.Black;
+            this.bt_them_VIP.BorderRadius = 35;
+            this.bt_them_VIP.BorderSize = 1;
             this.bt_them_VIP.FlatAppearance.BorderSize = 0;
             this.bt_them_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_them_VIP.Font = new System.Drawing.Font("UTM Avo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_them_VIP.ForeColor = System.Drawing.Color.White;
-            this.bt_them_VIP.Location = new System.Drawing.Point(3, 1);
+            this.bt_them_VIP.Image = global::QuanLyBaiXe.Properties.Resources.plus;
+            this.bt_them_VIP.Location = new System.Drawing.Point(14, 1);
             this.bt_them_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_them_VIP.Name = "bt_them_VIP";
-            this.bt_them_VIP.Size = new System.Drawing.Size(104, 39);
+            this.bt_them_VIP.Size = new System.Drawing.Size(70, 39);
             this.bt_them_VIP.TabIndex = 1;
-            this.bt_them_VIP.Text = "THÊM";
             this.bt_them_VIP.TextColor = System.Drawing.Color.White;
             this.bt_them_VIP.UseVisualStyleBackColor = false;
             this.bt_them_VIP.Click += new System.EventHandler(this.bt_them_VIP_Click);
@@ -596,12 +618,12 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "vVIP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "vVIP";
+            this.Text = "Vé VIP";
             ((System.ComponentModel.ISupportInitialize)(this.data_VIP)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SLogo)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -640,8 +662,9 @@
         private VControls.VButton bt_tim_VIP;
         private VControls.VButton bt_xoa_VIP;
         private VControls.VButton bt_them_VIP;
-        private VControls.VButton bt_luu_VIP;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private VControls.VButton bt_xem_VIP;
+        private System.Windows.Forms.PictureBox pic_SLogo;
         private VControls.VTextbox tb_biensoxe_VIP;
+        private VControls.VButton bt_dongtien_VIP;
     }
 }

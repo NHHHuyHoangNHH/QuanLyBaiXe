@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vRevenue));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic_SLogo = new System.Windows.Forms.PictureBox();
             this.bt_LogOut = new QuanLyBaiXe.VControls.VButton();
             this.bt_Log = new QuanLyBaiXe.VControls.VButton();
             this.bt_Revenue = new QuanLyBaiXe.VControls.VButton();
@@ -39,6 +39,7 @@
             this.bt_InOut = new QuanLyBaiXe.VControls.VButton();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cb_month = new QuanLyBaiXe.VControls.vComboBox();
             this.dt_thang_Revenue = new QuanLyBaiXe.VControls.VDateTimePicker();
             this.dt_nam_Revenue = new QuanLyBaiXe.VControls.VDateTimePicker();
             this.lsvRevenue = new System.Windows.Forms.ListView();
@@ -53,18 +54,18 @@
             this.button14 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.bt_tim_Revenue = new QuanLyBaiXe.VControls.VButton();
             this.cb_year = new QuanLyBaiXe.VControls.vComboBox();
-            this.cb_month = new QuanLyBaiXe.VControls.vComboBox();
+            this.bt_tim_Revenue = new QuanLyBaiXe.VControls.VButton();
+            this.bt_xem_Revenue = new QuanLyBaiXe.VControls.VButton();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SLogo)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.pic_SLogo);
             this.panel2.Controls.Add(this.bt_LogOut);
             this.panel2.Controls.Add(this.bt_Log);
             this.panel2.Controls.Add(this.bt_Revenue);
@@ -77,16 +78,16 @@
             this.panel2.Size = new System.Drawing.Size(172, 426);
             this.panel2.TabIndex = 14;
             // 
-            // pictureBox1
+            // pic_SLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.pic_SLogo.Image = ((System.Drawing.Image)(resources.GetObject("pic_SLogo.Image")));
+            this.pic_SLogo.Location = new System.Drawing.Point(0, 0);
+            this.pic_SLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_SLogo.Name = "pic_SLogo";
+            this.pic_SLogo.Size = new System.Drawing.Size(172, 94);
+            this.pic_SLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pic_SLogo.TabIndex = 13;
+            this.pic_SLogo.TabStop = false;
             // 
             // bt_LogOut
             // 
@@ -224,6 +225,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cb_year);
+            this.panel1.Controls.Add(this.cb_month);
             this.panel1.Controls.Add(this.dt_thang_Revenue);
             this.panel1.Controls.Add(this.dt_nam_Revenue);
             this.panel1.Controls.Add(this.lsvRevenue);
@@ -241,6 +244,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(776, 426);
             this.panel1.TabIndex = 13;
+            // 
+            // cb_month
+            // 
+            this.cb_month.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cb_month.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cb_month.BorderSize = 1;
+            this.cb_month.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cb_month.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cb_month.ForeColor = System.Drawing.Color.DimGray;
+            this.cb_month.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cb_month.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cb_month.ListTextColor = System.Drawing.Color.DimGray;
+            this.cb_month.Location = new System.Drawing.Point(568, 26);
+            this.cb_month.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cb_month.Name = "cb_month";
+            this.cb_month.Padding = new System.Windows.Forms.Padding(1);
+            this.cb_month.Size = new System.Drawing.Size(200, 30);
+            this.cb_month.TabIndex = 7;
+            this.cb_month.Texts = "";
             // 
             // dt_thang_Revenue
             // 
@@ -288,7 +310,7 @@
             this.lsvRevenue.GridLines = true;
             this.lsvRevenue.HideSelection = false;
             this.lsvRevenue.Location = new System.Drawing.Point(175, 100);
-            this.lsvRevenue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lsvRevenue.Margin = new System.Windows.Forms.Padding(4);
             this.lsvRevenue.Name = "lsvRevenue";
             this.lsvRevenue.Size = new System.Drawing.Size(596, 325);
             this.lsvRevenue.TabIndex = 35;
@@ -382,35 +404,13 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.cb_month);
-            this.panel7.Controls.Add(this.cb_year);
+            this.panel7.Controls.Add(this.bt_xem_Revenue);
             this.panel7.Controls.Add(this.bt_tim_Revenue);
             this.panel7.Location = new System.Drawing.Point(175, 52);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(597, 42);
             this.panel7.TabIndex = 4;
-            // 
-            // bt_tim_Revenue
-            // 
-            this.bt_tim_Revenue.BackColor = System.Drawing.Color.SteelBlue;
-            this.bt_tim_Revenue.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.bt_tim_Revenue.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bt_tim_Revenue.BorderRadius = 30;
-            this.bt_tim_Revenue.BorderSize = 0;
-            this.bt_tim_Revenue.FlatAppearance.BorderSize = 0;
-            this.bt_tim_Revenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_tim_Revenue.Font = new System.Drawing.Font("UTM Avo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_tim_Revenue.ForeColor = System.Drawing.Color.White;
-            this.bt_tim_Revenue.Location = new System.Drawing.Point(246, 1);
-            this.bt_tim_Revenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_tim_Revenue.Name = "bt_tim_Revenue";
-            this.bt_tim_Revenue.Size = new System.Drawing.Size(104, 39);
-            this.bt_tim_Revenue.TabIndex = 5;
-            this.bt_tim_Revenue.Text = "TÌM";
-            this.bt_tim_Revenue.TextColor = System.Drawing.Color.White;
-            this.bt_tim_Revenue.UseVisualStyleBackColor = false;
-            this.bt_tim_Revenue.Click += new System.EventHandler(this.bt_tim_Revenue_Click);
             // 
             // cb_year
             // 
@@ -423,7 +423,7 @@
             this.cb_year.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.cb_year.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cb_year.ListTextColor = System.Drawing.Color.DimGray;
-            this.cb_year.Location = new System.Drawing.Point(18, 3);
+            this.cb_year.Location = new System.Drawing.Point(158, 26);
             this.cb_year.MinimumSize = new System.Drawing.Size(200, 30);
             this.cb_year.Name = "cb_year";
             this.cb_year.Padding = new System.Windows.Forms.Padding(1);
@@ -431,24 +431,46 @@
             this.cb_year.TabIndex = 6;
             this.cb_year.Texts = "";
             // 
-            // cb_month
+            // bt_tim_Revenue
             // 
-            this.cb_month.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cb_month.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cb_month.BorderSize = 1;
-            this.cb_month.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cb_month.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cb_month.ForeColor = System.Drawing.Color.DimGray;
-            this.cb_month.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cb_month.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cb_month.ListTextColor = System.Drawing.Color.DimGray;
-            this.cb_month.Location = new System.Drawing.Point(378, 3);
-            this.cb_month.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cb_month.Name = "cb_month";
-            this.cb_month.Padding = new System.Windows.Forms.Padding(1);
-            this.cb_month.Size = new System.Drawing.Size(200, 30);
-            this.cb_month.TabIndex = 7;
-            this.cb_month.Texts = "";
+            this.bt_tim_Revenue.BackColor = System.Drawing.Color.SteelBlue;
+            this.bt_tim_Revenue.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.bt_tim_Revenue.BorderColor = System.Drawing.Color.Black;
+            this.bt_tim_Revenue.BorderRadius = 35;
+            this.bt_tim_Revenue.BorderSize = 1;
+            this.bt_tim_Revenue.FlatAppearance.BorderSize = 0;
+            this.bt_tim_Revenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_tim_Revenue.Font = new System.Drawing.Font("UTM Avo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_tim_Revenue.ForeColor = System.Drawing.Color.White;
+            this.bt_tim_Revenue.Image = global::QuanLyBaiXe.Properties.Resources.search;
+            this.bt_tim_Revenue.Location = new System.Drawing.Point(210, 1);
+            this.bt_tim_Revenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_tim_Revenue.Name = "bt_tim_Revenue";
+            this.bt_tim_Revenue.Size = new System.Drawing.Size(80, 39);
+            this.bt_tim_Revenue.TabIndex = 5;
+            this.bt_tim_Revenue.TextColor = System.Drawing.Color.White;
+            this.bt_tim_Revenue.UseVisualStyleBackColor = false;
+            this.bt_tim_Revenue.Click += new System.EventHandler(this.bt_tim_Revenue_Click);
+            // 
+            // bt_xem_Revenue
+            // 
+            this.bt_xem_Revenue.BackColor = System.Drawing.Color.SteelBlue;
+            this.bt_xem_Revenue.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.bt_xem_Revenue.BorderColor = System.Drawing.Color.Black;
+            this.bt_xem_Revenue.BorderRadius = 35;
+            this.bt_xem_Revenue.BorderSize = 1;
+            this.bt_xem_Revenue.FlatAppearance.BorderSize = 0;
+            this.bt_xem_Revenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_xem_Revenue.Font = new System.Drawing.Font("UTM Avo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_xem_Revenue.ForeColor = System.Drawing.Color.White;
+            this.bt_xem_Revenue.Image = global::QuanLyBaiXe.Properties.Resources.view;
+            this.bt_xem_Revenue.Location = new System.Drawing.Point(307, 2);
+            this.bt_xem_Revenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_xem_Revenue.Name = "bt_xem_Revenue";
+            this.bt_xem_Revenue.Size = new System.Drawing.Size(80, 39);
+            this.bt_xem_Revenue.TabIndex = 8;
+            this.bt_xem_Revenue.TextColor = System.Drawing.Color.White;
+            this.bt_xem_Revenue.UseVisualStyleBackColor = false;
             // 
             // vRevenue
             // 
@@ -461,10 +483,10 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "vRevenue";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "vRevenue";
+            this.Text = "Doanh thu";
             this.Load += new System.EventHandler(this.vRevenue_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SLogo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -492,7 +514,7 @@
         private VControls.VButton bt_VIP;
         private VControls.VButton bt_InOut;
         private VControls.VButton bt_tim_Revenue;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic_SLogo;
         private System.Windows.Forms.ListView lsvRevenue;
         private System.Windows.Forms.ColumnHeader Nam;
         private System.Windows.Forms.ColumnHeader Thang;
@@ -501,5 +523,6 @@
         private VControls.VDateTimePicker dt_nam_Revenue;
         private VControls.vComboBox cb_month;
         private VControls.vComboBox cb_year;
+        private VControls.VButton bt_xem_Revenue;
     }
 }
