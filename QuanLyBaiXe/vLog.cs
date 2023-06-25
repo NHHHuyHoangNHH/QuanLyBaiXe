@@ -18,28 +18,27 @@ namespace QuanLyBaiXe
         {
             InitializeComponent();
             Icon = Properties.Resources.icon;
-            LoadLogg();
-
-            this.FormClosing += new FormClosingEventHandler(vLog_FormClosing);
-            this.FormClosed += new FormClosedEventHandler(vLog_FormClosed);
+            Loading();
+            ClosedForm();
         }
 
         #region Method
+        void Loading()
+        {
+            LoadLogg();
+        }
         void LoadLogg()
         {
-            lsvLog.Items.Clear();
-            List<Logg> LoggList = LoggDAO.Instance.LoadLogg();
-
-            foreach (Logg item in LoggList)
-            {
-                ListViewItem listItem = new ListViewItem(item.ThoiGian.ToString("dd/MM/yyyy mm:hh"));
-                listItem.SubItems.Add(item.ThongTin);
-
-                lsvLog.Items.Add(listItem);
-            }
+            data_Logg.DataSource = LoggDAO.Instance.LoadLogTable();
+        }
+        void ClosedForm()
+        {
+            this.FormClosing += new FormClosingEventHandler(vLog_FormClosing);
+            this.FormClosed += new FormClosedEventHandler(vLog_FormClosed);
         }
         #endregion
 
+        #region Event
         private void bt_InOut_Click(object sender, EventArgs e)
         {
             vInOut v = new vInOut();
@@ -90,5 +89,7 @@ namespace QuanLyBaiXe
         {
             Environment.Exit(0);
         }
+        #endregion
+
     }
 }

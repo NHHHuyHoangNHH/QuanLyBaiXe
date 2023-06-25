@@ -14,30 +14,49 @@ namespace QuanLyBaiXe
 {
     public partial class vSearch : Form
     {
+        BindingSource XELIST = new BindingSource();
         public vSearch()
         {
             InitializeComponent();
             Icon = Properties.Resources.icon;
-            LoadXe();
+            Loading();
+            CloseForm();
+        }
 
+        #region Method
+        void Loading()
+        {
+            data_Search.DataSource = XELIST;
+
+            LoadXe();
+            LoadXeBinding();
+        }
+
+        void CloseForm()
+        {
             this.FormClosing += new FormClosingEventHandler(vSearch_FormClosing);
             this.FormClosed += new FormClosedEventHandler(vSearch_FormClosed);
         }
 
-        #region Method
         void LoadXe()
         {
-            lsvSearch.Items.Clear();
-            List<Xe> XeList = XeDAO.Instance.LoadXeList();
 
-            foreach (Xe item in XeList)
-            {
-                ListViewItem listItem = new ListViewItem(item.BienSo);
-                listItem.SubItems.Add(item.NgayVao.ToString("dd/MM/yyyy"));
-
-                lsvSearch.Items.Add(listItem);
-            }
+            XELIST.DataSource = XeDAO.Instance.LoadXeList();
         }
+
+        void LoadXeBinding()
+        {
+            tb_biensoxe_Search.DataBindings.Add(new Binding("Texts", data_Search.DataSource, "BienSo", true, DataSourceUpdateMode.Never));
+        }
+
+        List<Xe> SearchXe(string bienso)
+        {
+            List<Xe> ListXe = XeDAO.Instance.FindXe(bienso);
+
+            return ListXe;
+        }
+
+
         #endregion
 
         #region Events
@@ -93,26 +112,13 @@ namespace QuanLyBaiXe
 
         private void bt_tim_Search_Click(object sender, EventArgs e)
         {
-            string bienso = tb_biensoxe_Search.Texts;
-
-            List<Xe> XeList = XeDAO.Instance.FindXe(bienso);
-
-            if (XeList.Count == 0) 
-            {
-                DialogResult result = MessageBox.Show("Không tìm thấy xe", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; 
-            }
-
-            lsvSearch.Items.Clear();
-            foreach (Xe item in XeList)
-            {
-                ListViewItem listItem = new ListViewItem(item.BienSo);
-                listItem.SubItems.Add(item.NgayVao.ToString("dd/MM/yyyy"));
-                item.NgayVao.ToString();
-
-                lsvSearch.Items.Add(listItem);
-            }
+            XELIST.DataSource = SearchXe(tb_biensoxe_Search.Texts);
         }
         #endregion
+
+        private void bt_Reload_Search_Click(object sender, EventArgs e)
+        {
+            LoadXe();
+        }
     }
 }

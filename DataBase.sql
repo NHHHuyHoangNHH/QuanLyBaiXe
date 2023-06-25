@@ -103,7 +103,7 @@ as
 begin
 	select *
 	from XE
-	where BienSo = @BienSo
+	where BienSo like '%' + @BienSo + '%'
 end
 go
 

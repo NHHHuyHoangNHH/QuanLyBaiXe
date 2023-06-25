@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,13 +19,10 @@ namespace QuanLyBaiXe.DAO
             private set { LoggDAO.instance = value; }
         }
 
-        public static int Width = 90;
-        public static int Height = 90;
-
         private LoggDAO() { }
 
         public int AddLogg(string thongtin)
-        {   
+        {
             return DataProvider.Instance.ExecuteNonQuery("exec PDInsertLOGG @ThongTin", new object[] { thongtin });
         }
 
@@ -32,7 +30,7 @@ namespace QuanLyBaiXe.DAO
         {
             List<Logg> LoggList = new List<Logg>();
 
-            DataTable data = DataProvider.Instance.ExecuteQuery("exec PDGetLOGG @First , @Second", new object[] { First, Second } );
+            DataTable data = DataProvider.Instance.ExecuteQuery("exec PDGetLOGG @First , @Second", new object[] { First, Second });
 
             foreach (DataRow item in data.Rows)
             {
@@ -43,19 +41,9 @@ namespace QuanLyBaiXe.DAO
             return LoggList;
         }
 
-        public List<Logg> LoadLogg()
+        public DataTable LoadLogTable()
         {
-            List<Logg> LoggList = new List<Logg>();
-
-            DataTable data = DataProvider.Instance.ExecuteQuery("select * from LOGG");
-
-            foreach (DataRow item in data.Rows)
-            {
-                Logg Logg = new Logg(item);
-                LoggList.Add(Logg);
-            }
-
-            return LoggList;
+            return DataProvider.Instance.ExecuteQuery("select * from Logg");
         }
     }
 }

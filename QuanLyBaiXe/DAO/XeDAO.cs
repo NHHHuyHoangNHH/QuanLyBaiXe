@@ -41,12 +41,11 @@ namespace QuanLyBaiXe.DAO
             return DataProvider.Instance.ExecuteNonQuery("exec PDUpdateXE @BienSoFind , @BienSoUpdate", new object[] { biensofind, biensoupdate });
         }
 
-        public List<Xe> FindXe(string biensofind)
+        public List<Xe> FindXe(string bienso)
         {
             List<Xe> XeList = new List<Xe>();
-
-            DataTable data = DataProvider.Instance.ExecuteQuery("exec PDFindXE @bienso", new object[] { biensofind });
-
+            string query = string.Format("exec PDFindXE '{0}'", bienso);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
                 Xe Xe = new Xe(item);
