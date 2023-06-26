@@ -78,6 +78,7 @@
             this.data_VIP.Location = new System.Drawing.Point(134, 136);
             this.data_VIP.Margin = new System.Windows.Forms.Padding(2);
             this.data_VIP.Name = "data_VIP";
+            this.data_VIP.ReadOnly = true;
             this.data_VIP.RowHeadersWidth = 51;
             this.data_VIP.RowTemplate.Height = 24;
             this.data_VIP.Size = new System.Drawing.Size(444, 210);

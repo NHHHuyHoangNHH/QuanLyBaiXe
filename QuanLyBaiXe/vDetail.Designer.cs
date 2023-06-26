@@ -139,7 +139,6 @@
             // 
             // dt_date
             // 
-            this.dt_date.AllowDrop = true;
             this.dt_date.CustomFormat = "dd/MM/yyyy";
             this.dt_date.Enabled = false;
             this.dt_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -256,7 +255,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 276);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "vDetail";
             this.Text = "vDetail";
             this.panel1.ResumeLayout(false);

@@ -117,7 +117,7 @@ namespace QuanLyBaiXe.DAO
 
         public DataTable LoadLogTable()
         {
-            return DataProvider.Instance.ExecuteQuery("select * from Logg");
+            return DataProvider.Instance.ExecuteQuery("select * from Logg ORDER BY ThoiGian DESC");
         }
     }
 }

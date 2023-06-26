@@ -17,11 +17,30 @@ namespace QuanLyBaiXe
         {
             InitializeComponent();
             Icon = Properties.Resources.icon;
+            Loading();
+            ClosedForm();
+        }
 
+        
+        void Loading()
+        {
+            GetCurrentDate();
+        }
+
+        void ClosedForm()
+        {
             this.FormClosing += new FormClosingEventHandler(vInOut_FormClosing);
             this.FormClosed += new FormClosedEventHandler(vInOut_FormClosed);
         }
+        public void GetCurrentDate()
+        {
+            DateTimePicker dateTimePicker1 = new DateTimePicker();
 
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "dd/MM/yyyy HH:mm:ss";
+
+            dt_date.Texts = dateTimePicker1.Value.ToString(dateTimePicker1.CustomFormat);
+        }
         private void bt_VIP_Click(object sender, EventArgs e)
         {
             vVIP v = new vVIP();
@@ -79,6 +98,7 @@ namespace QuanLyBaiXe
 
         private void bt_xevao_Click(object sender, EventArgs e)
         {
+            GetCurrentDate();
             string bienso = tb_biensoxevao.Texts;
             LoggDAO.Instance.LogInOut(bienso, 0);
         }
