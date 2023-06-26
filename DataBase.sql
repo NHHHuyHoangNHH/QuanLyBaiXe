@@ -236,6 +236,33 @@ begin
 end
 go
 
+create procedure PDDeleteDOANHTHU
+	@Tien		int,
+	@out		int = NULL output
+as
+begin
+	if exists
+		(
+			select *
+			from DOANHTHU
+			where Nam = year(getdate()) and Thang = month(getdate())
+		)
+	begin
+		update DOANHTHU
+		set SoTien = SoTien - @Tien 
+		where Nam = year(getdate()) and Thang = month(getdate())
+		return 1
+	end
+	else 
+	begin
+		declare @res int
+		exec @res = PDInsertDOANHTHU
+		exec @res = PDUpdateDOANHTHU @Tien
+		return @res
+	end
+end
+go
+
 /*
 	PD them VIP
 	return 1 vao @out: thanh cong
@@ -397,7 +424,6 @@ begin
 		where BienSo = @BienSo
 	)begin
 		delete from DONGTIEN where BienSo = @BienSo
-		delete from VIP where BienSo = @BienSo
 		return 1
 	end
 	else 
@@ -534,6 +560,6 @@ EXEC sp_MSforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT all'
 select * from xe
 select * from DONGTIEN
 delete from LOGG
-select * from LOGG
+
 delete from DOANHTHU
 select * from DOANHTHU

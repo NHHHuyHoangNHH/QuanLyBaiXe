@@ -71,25 +71,30 @@ namespace QuanLyBaiXe
         #region Event
         private void bt_dongtien_Click(object sender, EventArgs e)
         {
-            string bienso = tb_bienso.Text;
-            string sothang = cb_sothang.Text;
-            int tienvip = (int)DataProvider.Instance.ExecuteScalar("select tienvip from ThamSo");
-            DateTime date = dt_date.Value;
-            DateTime exdate = ((vVIP)Application.OpenForms["vVIP"]).GetNgayHetHan();
+            DialogResult result = MessageBox.Show("Xác nhậm đóng tiền?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                string bienso = tb_bienso.Text;
+                string sothang = cb_sothang.Text;
+                int tienvip = (int)DataProvider.Instance.ExecuteScalar("select tienvip from ThamSo");
+                DateTime date = dt_date.Value;
+                DateTime exdate = ((vVIP)Application.OpenForms["vVIP"]).GetNgayHetHan();
 
 
-            if (DongTienDAO.Instance.AddDONGTIEN(bienso, int.Parse(sothang)))
-            {
-                DoanhThuDAO.Instance.UpdateDoanhThu(tienvip);
-                MessageBox.Show("Đóng tiền thành công!");
-                LoggDAO.Instance.LogDongTien(bienso, int.Parse(sothang), 0);
-                this.Close();
+                if (DongTienDAO.Instance.AddDONGTIEN(bienso, int.Parse(sothang)))
+                {
+                    DoanhThuDAO.Instance.UpdateDoanhThu(tienvip);
+                    MessageBox.Show("Đóng tiền thành công!");
+                    LoggDAO.Instance.LogDongTien(bienso, int.Parse(sothang), 0);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Đóng tiền không thành công!");
+                    LoggDAO.Instance.LogDongTien(bienso, int.Parse(sothang), 0);
+                }
             }
-            else
-            {
-                MessageBox.Show("Đóng tiền không thành công!");
-                LoggDAO.Instance.LogDongTien(bienso, int.Parse(sothang), 0);
-            }
+            
         }
         #endregion
 

@@ -120,6 +120,7 @@ namespace QuanLyBaiXe
         private void bt_tim_Search_Click(object sender, EventArgs e)
         {
             XELIST.DataSource = SearchXe(tb_biensoxe_Search.Texts);
+            DataProvider.Instance.AutoFitColumns(data_Search);
         }
 
         private void bt_Reload_Search_Click(object sender, EventArgs e)

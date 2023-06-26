@@ -26,6 +26,11 @@ namespace QuanLyBaiXe.DAO
             return DataProvider.Instance.ExecuteNonQuery("exec PDUpdateDOANHTHU @Tien", new object[] { Tien });
         }
 
+        public int DeleteDoanhThu(int Tien)
+        {
+            return DataProvider.Instance.ExecuteNonQuery("exec PDDeleteDOANHTHU @Tien", new object[] { Tien });
+        }
+
         public DataTable LoadRevenueTable()
         {
             return DataProvider.Instance.ExecuteQuery("select * from DoanhThu");

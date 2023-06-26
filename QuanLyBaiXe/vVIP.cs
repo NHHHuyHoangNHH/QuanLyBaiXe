@@ -115,6 +115,7 @@ namespace QuanLyBaiXe
 
             if (VIPDAO.Instance.AddVIP(bienso, hoten, sdt))
             {
+                DoanhThuDAO.Instance.UpdateDoanhThu((int)DataProvider.Instance.ExecuteScalar("select tiencocVIP from ThamSo"));
                 MessageBox.Show("Thêm VIP thành công");
                 LoggDAO.Instance.LogVIP(bienso, 0, 0);
                 LoadVIP();
@@ -129,8 +130,10 @@ namespace QuanLyBaiXe
         private void bt_xoa_VIP_Click(object sender, EventArgs e)
         {
             string bienso = tb_biensoxe_VIP.Texts;
+            DongTienDAO.Instance.DeteleDONGTIEN(bienso);
             if (VIPDAO.Instance.DeteleVIP(bienso))
             {
+                DoanhThuDAO.Instance.DeleteDoanhThu((int)DataProvider.Instance.ExecuteScalar("select tiencocVIP from ThamSo"));
                 MessageBox.Show("Xóa xe thành công");
                 LoggDAO.Instance.LogVIP(bienso, 1, 0);
                 LoadVIP();
