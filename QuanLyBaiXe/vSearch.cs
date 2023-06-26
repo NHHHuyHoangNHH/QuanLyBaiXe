@@ -40,7 +40,7 @@ namespace QuanLyBaiXe
 
         void LoadXe()
         {
-            XELIST.DataSource = XeDAO.Instance.LoadXeList();
+            XELIST.DataSource = XeDAO.Instance.LoadXeTable();
             DataProvider.Instance.AutoFitColumns(data_Search);
         }
 
@@ -88,6 +88,11 @@ namespace QuanLyBaiXe
             v.ShowDialog();
         }
 
+        private void bt_Money_Click(object sender, EventArgs e)
+        {
+            vThamSo v = new vThamSo();
+            v.ShowDialog();
+        }
         private void bt_LogOut_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -116,11 +121,14 @@ namespace QuanLyBaiXe
         {
             XELIST.DataSource = SearchXe(tb_biensoxe_Search.Texts);
         }
-        #endregion
 
         private void bt_Reload_Search_Click(object sender, EventArgs e)
         {
             LoadXe();
         }
+
+        #endregion
+
+
     }
 }

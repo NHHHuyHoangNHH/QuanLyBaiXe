@@ -265,6 +265,7 @@
             this.bt_Money.Text = "Giá trị tiền";
             this.bt_Money.TextColor = System.Drawing.Color.White;
             this.bt_Money.UseVisualStyleBackColor = false;
+            this.bt_Money.Click += new System.EventHandler(this.bt_Money_Click);
             // 
             // pic_SLogo
             // 

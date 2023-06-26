@@ -21,10 +21,17 @@ namespace QuanLyBaiXe
 
         private void bt_dangnhap_Click(object sender, EventArgs e)
         {
-            LoggDAO.Instance.LogDangNhap();
-            vInOut v = new vInOut();
-            this.Hide();
-            v.ShowDialog();
+            if(tb_matkhau.Texts == "u")
+            {
+                LoggDAO.Instance.LogDangNhap();
+                vInOut v = new vInOut();
+                this.Hide();
+                v.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Mật khẩu sai!");
+            }
         }
 
     }

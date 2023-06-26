@@ -88,6 +88,12 @@ namespace QuanLyBaiXe
             v.ShowDialog();
         }
 
+        private void bt_Money_Click(object sender, EventArgs e)
+        {
+            vThamSo v = new vThamSo();
+            v.ShowDialog();
+        }
+
         private void bt_Log_Click(object sender, EventArgs e)
         {
             vLog v = new vLog();
@@ -193,8 +199,8 @@ namespace QuanLyBaiXe
                 e.Cancel = true;
             }
         }
-        #endregion
 
+        #endregion
 
     }
 }

@@ -69,3 +69,4 @@ D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vDetail.resources
 D:\Hoctap\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vLoading.resources
 D:\zUIT\2_HKII\Software\UITParking\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vDetail.resources
 D:\zUIT\2_HKII\Software\UITParking\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vLoading.resources
+D:\zUIT\2_HKII\Software\UITParking\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vThamSo.resources

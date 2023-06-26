@@ -70,6 +70,11 @@ namespace QuanLyBaiXe
             this.Hide();
             v.ShowDialog();
         }
+        private void bt_Money_Click(object sender, EventArgs e)
+        {
+            vThamSo v = new vThamSo();
+            v.ShowDialog();
+        }
 
         private void bt_LogOut_Click(object sender, EventArgs e)
         {

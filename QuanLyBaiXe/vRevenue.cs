@@ -70,6 +70,11 @@ namespace QuanLyBaiXe
             v.ShowDialog(); ;
         }
 
+        private void bt_Money_Click(object sender, EventArgs e)
+        {
+            vThamSo v = new vThamSo();
+            v.ShowDialog();
+        }
         private void bt_LogOut_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -119,5 +124,6 @@ namespace QuanLyBaiXe
             LoadRevenue();
         }
         #endregion
+
     }
 }

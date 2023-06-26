@@ -55,19 +55,10 @@ namespace QuanLyBaiXe.DAO
             return XeList;
         }
 
-        public List<Xe> LoadXeList()
+        public DataTable LoadXeTable()
         {
-            List<Xe> XeList = new List<Xe>();
-
-            DataTable data = DataProvider.Instance.ExecuteQuery("exec PDLoadXe");
-
-            foreach (DataRow item in data.Rows)
-            {
-                Xe Xe = new Xe(item);
-                XeList.Add(Xe);
-            }
-
-            return XeList;
+            string query = "SELECT BienSo, CONVERT(nvarchar(19), ThoiGian, 103) + ' ' + CONVERT(nvarchar(8), ThoiGian, 108) AS ThoiGian FROM Xe ORDER BY ThoiGian DESC";
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

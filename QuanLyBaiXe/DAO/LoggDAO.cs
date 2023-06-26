@@ -117,7 +117,8 @@ namespace QuanLyBaiXe.DAO
 
         public DataTable LoadLogTable()
         {
-            return DataProvider.Instance.ExecuteQuery("select * from Logg ORDER BY ThoiGian DESC");
+            string query = "SELECT CONVERT(nvarchar(19), ThoiGian, 103) + ' ' + CONVERT(nvarchar(8), ThoiGian, 108) AS ThoiGian, ThongTin FROM Logg ORDER BY ThoiGian DESC";
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }
