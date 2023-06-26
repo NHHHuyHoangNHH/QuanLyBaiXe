@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyBaiXe.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,7 @@ namespace QuanLyBaiXe
 
         private void bt_dangnhap_Click(object sender, EventArgs e)
         {
+            LoggDAO.Instance.LogDangNhap();
             vInOut v = new vInOut();
             this.Hide();
             v.ShowDialog();

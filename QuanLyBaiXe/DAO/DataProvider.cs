@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyBaiXe.DAO
 {
@@ -118,6 +119,37 @@ namespace QuanLyBaiXe.DAO
             }
 
             return data;
+        }
+        public void AutoFitColumns(DataGridView dataGridView)
+        {
+            // Loop through all columns
+            for (int i = 0; i < dataGridView.Columns.Count; i++)
+            {
+                DataGridViewColumn column = dataGridView.Columns[i];
+                int headerWidth = TextRenderer.MeasureText(column.HeaderText, dataGridView.Font).Width;
+                int maxWidth = headerWidth;
+
+                // Loop through all rows to find the maximum cell content width
+                foreach (DataGridViewRow row in dataGridView.Rows)
+                {
+                    if (!row.IsNewRow && row.Cells[column.Index].Value != null)
+                    {
+                        int cellWidth = TextRenderer.MeasureText(row.Cells[column.Index].Value.ToString(), dataGridView.Font).Width;
+                        if (cellWidth > maxWidth)
+                        {
+                            maxWidth = cellWidth;
+                        }
+                    }
+                }
+
+                // Set the column width to the maximum of header and cell content width
+                int columnWidth = Math.Max(maxWidth + 10, headerWidth + 10);
+                column.Width = columnWidth;
+            }
+
+            // Set the AutoSizeMode property of the last column to Fill
+            DataGridViewColumn lastColumn = dataGridView.Columns[dataGridView.Columns.Count - 1];
+            lastColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
 }

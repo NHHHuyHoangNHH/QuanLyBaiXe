@@ -30,6 +30,7 @@ namespace QuanLyBaiXe
         void LoadLogg()
         {
             data_Logg.DataSource = LoggDAO.Instance.LoadLogTable();
+            DataProvider.Instance.AutoFitColumns(data_Logg);
         }
         void ClosedForm()
         {
@@ -72,6 +73,7 @@ namespace QuanLyBaiXe
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                LoggDAO.Instance.LogDangXuat();
                 Environment.Exit(0);
             }
         }
@@ -79,6 +81,7 @@ namespace QuanLyBaiXe
         private void vLog_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            LoggDAO.Instance.LogDangXuat();
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
@@ -91,5 +94,9 @@ namespace QuanLyBaiXe
         }
         #endregion
 
+        private void bt_tim_Log_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

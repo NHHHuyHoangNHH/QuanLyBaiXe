@@ -18,9 +18,6 @@ namespace QuanLyBaiXe.DAO
             private set { ThamSoDAO.instance = value; }
         }
 
-        public static int Width = 90;
-        public static int Height = 90;
-
         private ThamSoDAO() { }
 
         public int UpdateThamSo(ThamSo add)
@@ -29,7 +26,7 @@ namespace QuanLyBaiXe.DAO
             return DataProvider.Instance.ExecuteNonQuery("exec PDUpdateTHAMSO @MocTien1 , @MocTien2, @TienVIP , @TienCocVIP", new object[] { add.MocTien1, add.MocTien2, add.TienVip, add.TienCocVip });
         }
 
-        public ThamSo GetThamSo() 
+        public ThamSo GetThamSo()
         {
             List<ThamSo> ThamSoList = new List<ThamSo>();
 

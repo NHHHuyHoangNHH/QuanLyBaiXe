@@ -23,54 +23,30 @@ namespace QuanLyBaiXe.DAO
 
         private DongTienDAO() { }
 
-        public void AddDongTien(string bienso, int month)
+        public bool AddDONGTIEN(string bienso, int sothang)
         {
-            DataProvider.Instance.ExecuteQuery("proc??? @", new object[] { bienso, month });
+            string query = string.Format("EXEC PDInsertDONGTIEN '{0}', '{1}'", bienso, sothang);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
         }
 
-        public List<DongTien> LoadDongTienByBienSo(string bienso)
+        public bool DeteleDONGTIEN(string biensofind)
         {
-            List<DongTien> DongTienList = new List<DongTien>();
+            string query = string.Format("EXEC PDDeleteDONGTIEN '{0}'", biensofind);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
 
-            DataTable data = DataProvider.Instance.ExecuteQuery("proc???");
-
-            foreach (DataRow item in data.Rows)
-            {
-                DongTien DongTien = new DongTien(item);
-                DongTienList.Add(DongTien);
-            }
-
-            return DongTienList;
+            return result > 0;
         }
 
-        public List<DongTien> LoadDongTienByMonth(int year, int month)
+        public bool UpdateDONGTIEN(string bienso, int sothang)
         {
-            List<DongTien> DongTienList = new List<DongTien>();
+            string query = string.Format("EXEC PDUpdateDONGTIEN '{0}', '{1}'", bienso, sothang);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
 
-            DataTable data = DataProvider.Instance.ExecuteQuery("proc???");
+            return result > 0;
 
-            foreach (DataRow item in data.Rows)
-            {
-                DongTien DongTien = new DongTien(item);
-                DongTienList.Add(DongTien);
-            }
-
-            return DongTienList;
         }
 
-        public List<DongTien> LoadDongTienByYear(int year)
-        {
-            List<DongTien> DongTienList = new List<DongTien>();
-
-            DataTable data = DataProvider.Instance.ExecuteQuery("proc???");
-
-            foreach (DataRow item in data.Rows)
-            {
-                DongTien DongTien = new DongTien(item);
-                DongTienList.Add(DongTien);
-            }
-
-            return DongTienList;
-        }
     }
 }

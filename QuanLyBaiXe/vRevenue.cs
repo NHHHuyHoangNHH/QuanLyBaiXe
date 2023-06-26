@@ -35,6 +35,7 @@ namespace QuanLyBaiXe
         void LoadRevenue()
         {
             data_Revenue.DataSource = DoanhThuDAO.Instance.LoadRevenueTable();
+            DataProvider.Instance.AutoFitColumns(data_Revenue);
         }
 
         //        List<vRevenue> SearchVenenue(string )
@@ -74,6 +75,7 @@ namespace QuanLyBaiXe
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                LoggDAO.Instance.LogDangXuat();
                 Environment.Exit(0);
             }
         }
@@ -81,6 +83,7 @@ namespace QuanLyBaiXe
         private void vRevenue_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            LoggDAO.Instance.LogDangXuat();
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
@@ -100,7 +103,7 @@ namespace QuanLyBaiXe
         private void vRevenue_Load(object sender, EventArgs e)
         {
             int currentYear = DateTime.Now.Year;
-            for (int year = currentYear; year >= 2020; year--)
+            for (int year = currentYear; year >= currentYear - 100; year--)
             {
                 cb_year.Items.Add(year);
             }

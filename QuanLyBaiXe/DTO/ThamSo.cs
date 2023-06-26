@@ -9,7 +9,7 @@ namespace QuanLyBaiXe.DTO
 {
     public class ThamSo
     {
-        public ThamSo(float moctien1, float moctien2, float tienvip, float tiencocvip)
+        public ThamSo(int moctien1, int moctien2, int tienvip, int tiencocvip)
         {
             this.MocTien1 = moctien1;
             this.MocTien2 = moctien2;
@@ -19,7 +19,7 @@ namespace QuanLyBaiXe.DTO
 
         public ThamSo(DataRow row)
         {
-            this.MocTien1 = (float) row["MocTien1"];
+            this.MocTien1 = (float)row["MocTien1"];
             this.MocTien2 = (float)row["MocTien2"];
             this.TienVip = (float)row["TienVIP"];
             this.TienCocVip = (float)row["TienCocVIP"];

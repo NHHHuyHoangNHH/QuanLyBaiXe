@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyBaiXe.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,6 +57,7 @@ namespace QuanLyBaiXe
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                LoggDAO.Instance.LogDangXuat();
                 Environment.Exit(0);
             }
         }
@@ -63,6 +65,7 @@ namespace QuanLyBaiXe
         private void vInOut_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            LoggDAO.Instance.LogDangXuat();
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
@@ -72,6 +75,18 @@ namespace QuanLyBaiXe
         private void vInOut_FormClosed(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void bt_xevao_Click(object sender, EventArgs e)
+        {
+            string bienso = tb_biensoxevao.Texts;
+            LoggDAO.Instance.LogInOut(bienso, 0);
+        }
+
+        private void bt_xera_Click(object sender, EventArgs e)
+        {
+            string bienso = tb_biensoxera.Texts;
+            LoggDAO.Instance.LogInOut(bienso, 1);
         }
     }
 }

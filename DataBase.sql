@@ -37,6 +37,7 @@ create table VIP
 	HoTen		nvarchar(50)	not null,
 	SDT			varchar(15)		not null,
 	NgayDK		date			not null	default getdate(),
+	NgayHH		date			default getdate(),
 	constraint pk_vip primary key(BienSo)
 )
 
@@ -56,10 +57,13 @@ create table LOGG
 
 create table THAMSO
 (
-	MocTien1	int				not null	default 3000,
-	MocTien2	int				not null	default 6000,
-	TienVIP		int				not null	default 150000,
-	TienCocVIP	int				not null	default 200000,
+    MocTien1    int                not null    default 3000,
+    MocTien2    int                not null    default 6000,
+    TienVIP        int                not null    default 150000,
+    TienCocVIP    int                not null    default 200000,
+    MocTG1        int                not null    default 5,
+    MocTG2        int                not null    default 14,
+    MocTG3        int                not null    default 22,
 )
 go
 
@@ -361,6 +365,11 @@ begin
 	(
 		select * from VIP
 		where BienSo = @BienSo
+	)
+	and not exists
+	(
+		select * from DONGTIEN
+		where BienSo = @BienSo
 	)begin
 		insert into DONGTIEN (BienSo, SoThang) values (@BienSo, @SoThang)
 		return 1
@@ -430,101 +439,27 @@ go
 CapNhat THAMSO
 */
 create procedure PDUpdateTHAMSO
-    @MocTien1		int    ,
-    @MocTien2		int    ,
-    @TienVIP		int    ,
-    @TienCocVIP		int    
+    @MocTien1        int    ,
+    @MocTien2        int    ,
+    @TienVIP        int    ,
+    @TienCocVIP        int    ,
+    @MocTG1        int    ,
+    @MocTG2        int    ,
+    @MocTG3        int    
+
 as
 begin
     update THAMSO
-    set @MocTien1 = MocTien1, 
-        @MocTien2 = MocTien2, 
-        @TienVIP = TienVIP, 
-        @TienCocVIP = TienCocVIP
+    set MocTien1 = @MocTien1, 
+        MocTien2 = @MocTien2, 
+        TienVIP = @TienVIP, 
+        TienCocVIP = @TienCocVIP,
+        MocTG1 = @MocTG1,
+        MocTG2 = @MocTG2,
+        MocTG3 = @MocTG3   
 
 end
 go
-
----------------------------Trigger-----------------------------
---/*them log khi insert vao XE*/
---create trigger LOGXE on XE
---for insert
---as
---begin
---	declare @BienSo nvarchar(15);
---	select @BienSo = inserted.BienSo from inserted;
---	insert into LOGG(ThongTin) values ( N'Thêm ' + @BienSo + N' vào bãi')
---end
---go
-
---/*them log khi insert vao DOANHTHU*/
-----create trigger LOGDOANHTHU on DOANHTHU
-----after insert, update
-----as
-----begin
-----	declare @Tien1 int, @Tien2 int;
-----	select @Tien1 = SoTien from inserted
-----	select @Tien2 = SoTien from DOANHTHU
-
-
-----end
-----go
-
---/*them log khi insert vao VIP*/
---create trigger LOGVIP on VIP
---for insert
---as
---begin
---	declare @BienSo varchar(15);
---	declare @HoTen nvarchar(50);
---	declare @SDT varchar(15);
---	select @BienSo = inserted.BienSo from inserted;
---	select @HoTen = inserted.HoTen from inserted;
---	select @SDT = inserted.SDT from inserted;
---	insert into LOGG(ThongTin) values ( N'Thêm ' + @BienSo + N' vào VIP' )
---end
---go
-
---/*them log khi insert vao DONGTIEN*/
---create trigger LOGDONGTIEN on DONGTIEN
---for insert
---as
---begin
---	declare @BienSo varchar(15);
---	declare @SoThang int;
---	select @BienSo = inserted.BienSo from inserted;
---	select @SoThang = inserted.SoThang from inserted;
---	insert into LOGG(ThongTin) values ( N'Xe ' + @BienSo + N' đóng ' + convert(nvarchar(15),@SoThang) + N' tháng' )
---end 
---go
-
---select * from sys.triggers
-
--------------------------------------------------Cac lenh lien quan----------------------------
-----Xem dang bat hay tat----
-select name,
-	CASE
-		WHEN OBJECTPROPERTY(object_id, 'ExecIsTriggerDisabled') = 1 THEN 'Disabled'
-		ELSE 'Enabled'
-	END AS Status
-FROM sys.procedures
-
-----Bat/Tat khoa----
-EXEC sp_MSforeachtable 'ALTER TABLE ? CHECK CONSTRAINT all'
-EXEC sp_MSforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT all'
-
-----Delete----
-delete from LOGG
-delete from XE where bienso = 'ABC123'
-delete from VIP where bienso = 'ABC123'
-
-----Xem bang----
-select * from XE
-select * from DOANHTHU
-select * from LOGG
-select * from DONGTIEN
-select * from THAMSO
-select * from VIP
 
 set dateformat mdy
 -----------XE--------------
@@ -558,16 +493,16 @@ insert into DOANHTHU values (2023, 5, 2190000)
 insert into DOANHTHU values (2023, 6, 284000)
 
 -----------VIP-------------------
-insert into VIP values ('98K-689.98', 'Nguyen Quoc C', '0461376424', '2/21/2023 3:16:39') 
-insert into VIP values ('79Q-630.79', 'Hoang Quy Q', '0443360695', '2/16/2023 4:8:45')
-insert into VIP values ('91S-926.91', 'Ly Quoc F', '0560384724', '5/2/2023 2:49:20')
-insert into VIP values ('59L-856.59', 'Nguyen Van M', '0377369816', '4/28/2023 1:52:50') 
-insert into VIP values ('15I-665.15', 'Ly Quoc F', '0626373873', '7/14/2023 20:56:22')
-insert into VIP values ('62S-224.62', 'Nguyen Quy P', '0521371563', '1/25/2023 7:39:45')
-insert into VIP values ('40L-829.40', 'Nguyen Van P', '0530359163', '1/18/2023 17:26:17') 
-insert into VIP values ('26Z-396.26', 'Hoang Van O', '0443362499', '5/25/2023 10:1:32')
-insert into VIP values ('67O-807.67', 'Hoang Van W', '0545385475', '11/27/2023 13:9:21')
-insert into VIP values ('62D-972.62', 'Nguyen Van D', '0359370781', '11/25/2023 20:12:37')
+insert into VIP values ('98K-689.98', 'Nguyen Quoc C', '0461376424', '2/21/2023 3:16:39', '5/21/2023 3:16:39') 
+insert into VIP values ('79Q-630.79', 'Hoang Quy Q', '0443360695', '2/16/2023 4:8:45', '3/16/2023 4:8:45')
+insert into VIP values ('91S-926.91', 'Ly Quoc F', '0560384724', '5/2/2023 2:49:20', '11/2/2023 2:49:20')
+insert into VIP values ('59L-856.59', 'Nguyen Van M', '0377369816', '4/28/2023 1:52:50', '10/28/2023 1:52:50') 
+insert into VIP values ('15I-665.15', 'Ly Quoc F', '0626373873', '7/14/2023 20:56:22', '10/14/2023 20:56:22')
+insert into VIP values ('62S-224.62', 'Nguyen Quy P', '0521371563', '1/25/2023 7:39:45', '2/25/2023 7:39:45')
+insert into VIP values ('40L-829.40', 'Nguyen Van P', '0530359163', '1/18/2023 17:26:17', '3/18/2023 17:26:17') 
+insert into VIP values ('26Z-396.26', 'Hoang Van O', '0443362499', '5/25/2023 10:1:32', '8/25/2023 10:1:32')
+insert into VIP values ('67O-807.67', 'Hoang Van W', '0545385475', '11/27/2023 13:9:21', '12/27/2023 13:9:21')
+insert into VIP values ('62D-972.62', 'Nguyen Van D', '0359370781', '11/25/2023 20:12:37', '3/25/2024 20:12:37')
 
 ----------DONGTIEN----------------
 insert into DONGTIEN values ('98K-689.98', '2/21/2023 3:16:39', 3)
@@ -581,11 +516,24 @@ insert into DONGTIEN values ('26Z-396.26', '5/25/2023 10:1:32', 3)
 insert into DONGTIEN values ('67O-807.67', '11/27/2023 13:9:21', 1)
 insert into DONGTIEN values ('62D-972.62', '11/25/2023 20:12:37', 4)
 
-delete from VIP where BienSo = '15I-665.15d'
-delete from VIP where BienSo = 'ABC123'
-delete from DONGTIEN where BienSo = 'ABC123'
-exec PDInsertXE 'ABC123'
-exec PDInsertVIP '213A-123', 'ABC', 1234567890
-exec PDInsertDONGTIEN 'ABC123', 5
-select * from VIP
-exec PDUpdateVIP '213A-123', 'asc123', 'ABC', 01234567890
+
+-------------------------------------------------Cac lenh lien quan----------------------------
+----Xem dang bat hay tat----
+select name,
+	CASE
+		WHEN OBJECTPROPERTY(object_id, 'ExecIsTriggerDisabled') = 1 THEN 'Disabled'
+		ELSE 'Enabled'
+	END AS Status
+FROM sys.procedures
+
+----Bat/Tat khoa----
+EXEC sp_MSforeachtable 'ALTER TABLE ? CHECK CONSTRAINT all'
+EXEC sp_MSforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT all'
+
+
+select * from xe
+select * from DONGTIEN
+delete from LOGG
+select * from LOGG
+delete from DOANHTHU
+select * from DOANHTHU

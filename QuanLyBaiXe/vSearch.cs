@@ -40,8 +40,8 @@ namespace QuanLyBaiXe
 
         void LoadXe()
         {
-
             XELIST.DataSource = XeDAO.Instance.LoadXeList();
+            DataProvider.Instance.AutoFitColumns(data_Search);
         }
 
         void LoadXeBinding()
@@ -93,6 +93,7 @@ namespace QuanLyBaiXe
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                LoggDAO.Instance.LogDangXuat();
                 Environment.Exit(0);
             }
         }
@@ -100,6 +101,7 @@ namespace QuanLyBaiXe
         private void vSearch_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            LoggDAO.Instance.LogDangXuat();
             if (result == DialogResult.No)
             {
                 e.Cancel = true;

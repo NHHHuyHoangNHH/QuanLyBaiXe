@@ -11,7 +11,7 @@ namespace QuanLyBaiXe.DAO
 {
     public class VIPDAO
     {
-        private static  VIPDAO instance;
+        private static VIPDAO instance;
 
         public static VIPDAO Instance
         {
@@ -44,6 +44,9 @@ namespace QuanLyBaiXe.DAO
 
         public bool DeteleVIP(string biensofind)
         {
+            string query1 = string.Format("EXEC PDDeleteDONGTIEN '{0}'", biensofind);
+            DataProvider.Instance.ExecuteQuery(query1);
+
             string query = string.Format("EXEC PDDeleteVIP '{0}'", biensofind);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
