@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +33,6 @@ namespace QuanLyBaiXe
         void Loading()
         {
             data_VIP.DataSource = VIPLIST;
-
             LoadVIP();
             LoadVIPBinding();
         }
@@ -40,7 +40,6 @@ namespace QuanLyBaiXe
         void LoadVIP()
         {
             VIPLIST.DataSource = VIPDAO.Instance.LoadVIPtable();
-            DataProvider.Instance.AutoFitColumns(data_VIP);
         }
 
         void LoadVIPBinding()
@@ -55,6 +54,20 @@ namespace QuanLyBaiXe
         public DateTime GetNgayHetHan()
         {
             return dt_ngayhethan_VIP.Value;
+        }
+
+        public void DeleteExpiredXe()
+        {
+            int count =0;
+            while(VIPDAO.Instance.DeleteExpiredXe())
+            {
+                count ++;
+            }    
+            if(count > 0)
+            {
+                MessageBox.Show("Có xe hết hạn hoặc chưa đóng tiền => Đã xóa");
+                LoadVIP();
+            }  
         }
 
         List<VIP> SearchVIP(string bienso)
@@ -104,6 +117,7 @@ namespace QuanLyBaiXe
         {
             vDetail v = new vDetail();
             v.ShowDialog();
+            LoadVIP();
         }
 
         //Nut chuc nang them + xoa + sua + tim kiem
@@ -175,6 +189,7 @@ namespace QuanLyBaiXe
         private void bt_luu_VIP_Click(object sender, EventArgs e)
         {
             LoadVIP();
+            DeleteExpiredXe();
         }
 
         //Dang xuat + Thoat

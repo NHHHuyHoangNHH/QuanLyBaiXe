@@ -399,6 +399,9 @@ begin
 		where BienSo = @BienSo
 	)begin
 		insert into DONGTIEN (BienSo, SoThang) values (@BienSo, @SoThang)
+		update VIP 
+		set NgayHH = DATEADD(day, 30 * @SoThang, NgayHH)
+		where BienSo = @BienSo 
 		return 1
 	end
 	else 
@@ -452,6 +455,10 @@ begin
 		update DONGTIEN
 		set SoThang = SoThang + @SoThang
 		where BienSo = @BienSo
+		update VIP 
+		set NgayHH = DATEADD(day, 30 * @SoThang, NgayHH)
+		where BienSo = @BienSo 
+
 		return 1
 	end
 	else 
@@ -487,7 +494,35 @@ begin
 end
 go
 
-set dateformat mdy
+create procedure PDDeleteExpiredXe
+as
+begin
+	declare @cnt int = 0;
+	while 1 = 1
+	begin
+		delete from DONGTIEN
+		where BienSo = (
+			select top(1) BienSo from VIP
+			where CONVERT(date, NgayHH) < GETDATE()
+		)
+		delete from VIP
+		where BienSo not in (
+			select BienSo from DONGTIEN
+		)
+		set @cnt = @cnt + @@ROWCOUNT
+		if (@cnt = @cnt)
+		begin
+			break;
+		end
+	end
+	if (@cnt = 0 )
+		return 0;
+	return 1;
+end
+go
+
+select * from DONGTIEN
+select * from DOANHTHU
 -----------XE--------------
 insert into XE values ('69E-336.69', '5/27/2023 6:48:53') 
 insert into XE values ('52M-577.52', '6/1/2023 10:8:41')
@@ -553,13 +588,5 @@ select name,
 FROM sys.procedures
 
 ----Bat/Tat khoa----
-EXEC sp_MSforeachtable 'ALTER TABLE ? CHECK CONSTRAINT all'
 EXEC sp_MSforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT all'
-
-
-select * from xe
-select * from DONGTIEN
-delete from LOGG
-
-delete from DOANHTHU
-select * from DOANHTHU
+EXEC sp_MSforeachtable 'ALTER TABLE ? CHECK CONSTRAINT all'

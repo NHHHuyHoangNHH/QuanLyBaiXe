@@ -1,6 +1,7 @@
 ﻿using QuanLyBaiXe.DAO;
 using QuanLyBaiXe.DTO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,8 +47,9 @@ namespace QuanLyBaiXe
                 if (cb_sothang.SelectedItem != null)
                 {
                     int selectedValue = int.Parse(cb_sothang.SelectedItem.ToString());
-
-                    int calculatedValue = selectedValue * 150000;
+                    int tienvip = (int)DataProvider.Instance.ExecuteScalar("select tienvip from ThamSo");
+                    
+                    int calculatedValue = selectedValue * tienvip;
 
                     tb_tongtien.Text = calculatedValue.ToString();
                 }
@@ -80,19 +82,44 @@ namespace QuanLyBaiXe
                 DateTime date = dt_date.Value;
                 DateTime exdate = ((vVIP)Application.OpenForms["vVIP"]).GetNgayHetHan();
 
-
-                if (DongTienDAO.Instance.AddDONGTIEN(bienso, int.Parse(sothang)))
+                if (exdate.Date == date.Date)
                 {
-                    DoanhThuDAO.Instance.UpdateDoanhThu(tienvip);
-                    MessageBox.Show("Đóng tiền thành công!");
-                    LoggDAO.Instance.LogDongTien(bienso, int.Parse(sothang), 0);
-                    this.Close();
-                }
+                    if (DongTienDAO.Instance.AddDONGTIEN(bienso, int.Parse(sothang)))
+                    {
+                        DoanhThuDAO.Instance.UpdateDoanhThu(tienvip  * int.Parse(sothang));
+                        MessageBox.Show("Đóng tiền thành công!");
+                        LoggDAO.Instance.LogDongTien(bienso, int.Parse(sothang), 0);
+                        this.Close();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đóng tiền không thành công!");
+                        LoggDAO.Instance.LogDongTien(bienso, int.Parse(sothang), 1);
+                    }
+                }    
+                else if (exdate.Date > date.Date)
+                {
+                    if (DongTienDAO.Instance.UpdateDONGTIEN(bienso, int.Parse(sothang)))
+                    {
+                        DoanhThuDAO.Instance.UpdateDoanhThu(tienvip * int.Parse(sothang));
+                        MessageBox.Show("Đóng tiền thành công!");
+                        LoggDAO.Instance.LogDongTien(bienso, int.Parse(sothang), 0);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đóng tiền không thành công!");
+                        LoggDAO.Instance.LogDongTien(bienso, int.Parse(sothang), 1);
+                    }
+                }    
                 else
                 {
-                    MessageBox.Show("Đóng tiền không thành công!");
-                    LoggDAO.Instance.LogDongTien(bienso, int.Parse(sothang), 0);
-                }
+                    MessageBox.Show("Xe đã hết hạn! Vui lòng kiểm tra lại!");
+                    LoggDAO.Instance.LogDongTien(bienso, int.Parse(sothang), 1);
+                }    
+
+                
             }
             
         }
