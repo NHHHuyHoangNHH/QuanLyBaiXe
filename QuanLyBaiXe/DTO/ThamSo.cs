@@ -9,12 +9,13 @@ namespace QuanLyBaiXe.DTO
 {
     public class ThamSo
     {
-        public ThamSo(int moctien1, int moctien2, int tienvip, int tiencocvip)
+        public ThamSo(int moctien1, int moctien2, int tienvip, int tiencocvip, int moctg1, int moctg2, int moctg3)
         {
             this.MocTien1 = moctien1;
             this.MocTien2 = moctien2;
             this.TienVip = tienvip;
             this.TienCocVip = tiencocvip;
+
         }
 
         public ThamSo(DataRow row)
