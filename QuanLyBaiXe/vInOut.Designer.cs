@@ -82,7 +82,7 @@
             this.panel2.Controls.Add(this.bt_InOut);
             this.panel2.Controls.Add(this.pic_SLogo);
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(129, 346);
             this.panel2.TabIndex = 8;
@@ -98,8 +98,8 @@
             this.bt_Money.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Money.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Money.ForeColor = System.Drawing.Color.White;
-            this.bt_Money.Location = new System.Drawing.Point(0, 235);
-            this.bt_Money.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Money.Location = new System.Drawing.Point(0, 233);
+            this.bt_Money.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Money.Name = "bt_Money";
             this.bt_Money.Size = new System.Drawing.Size(129, 37);
             this.bt_Money.TabIndex = 6;
@@ -119,8 +119,8 @@
             this.bt_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_LogOut.ForeColor = System.Drawing.Color.White;
-            this.bt_LogOut.Location = new System.Drawing.Point(0, 311);
-            this.bt_LogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_LogOut.Location = new System.Drawing.Point(0, 309);
+            this.bt_LogOut.Margin = new System.Windows.Forms.Padding(2);
             this.bt_LogOut.Name = "bt_LogOut";
             this.bt_LogOut.Size = new System.Drawing.Size(129, 37);
             this.bt_LogOut.TabIndex = 5;
@@ -140,8 +140,8 @@
             this.bt_Log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Log.ForeColor = System.Drawing.Color.White;
-            this.bt_Log.Location = new System.Drawing.Point(0, 273);
-            this.bt_Log.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Log.Location = new System.Drawing.Point(0, 271);
+            this.bt_Log.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Log.Name = "bt_Log";
             this.bt_Log.Size = new System.Drawing.Size(129, 37);
             this.bt_Log.TabIndex = 4;
@@ -161,8 +161,8 @@
             this.bt_Revenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Revenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Revenue.ForeColor = System.Drawing.Color.White;
-            this.bt_Revenue.Location = new System.Drawing.Point(0, 197);
-            this.bt_Revenue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Revenue.Location = new System.Drawing.Point(0, 195);
+            this.bt_Revenue.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Revenue.Name = "bt_Revenue";
             this.bt_Revenue.Size = new System.Drawing.Size(129, 37);
             this.bt_Revenue.TabIndex = 3;
@@ -182,8 +182,8 @@
             this.bt_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Search.ForeColor = System.Drawing.Color.White;
-            this.bt_Search.Location = new System.Drawing.Point(0, 159);
-            this.bt_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Search.Location = new System.Drawing.Point(0, 157);
+            this.bt_Search.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Search.Name = "bt_Search";
             this.bt_Search.Size = new System.Drawing.Size(129, 37);
             this.bt_Search.TabIndex = 2;
@@ -203,8 +203,8 @@
             this.bt_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_VIP.ForeColor = System.Drawing.Color.White;
-            this.bt_VIP.Location = new System.Drawing.Point(0, 121);
-            this.bt_VIP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_VIP.Location = new System.Drawing.Point(0, 119);
+            this.bt_VIP.Margin = new System.Windows.Forms.Padding(2);
             this.bt_VIP.Name = "bt_VIP";
             this.bt_VIP.Size = new System.Drawing.Size(129, 37);
             this.bt_VIP.TabIndex = 1;
@@ -224,8 +224,8 @@
             this.bt_InOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_InOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_InOut.ForeColor = System.Drawing.Color.White;
-            this.bt_InOut.Location = new System.Drawing.Point(0, 83);
-            this.bt_InOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_InOut.Location = new System.Drawing.Point(0, 81);
+            this.bt_InOut.Margin = new System.Windows.Forms.Padding(2);
             this.bt_InOut.Name = "bt_InOut";
             this.bt_InOut.Size = new System.Drawing.Size(129, 37);
             this.bt_InOut.TabIndex = 0;
@@ -237,7 +237,7 @@
             // 
             this.pic_SLogo.Image = ((System.Drawing.Image)(resources.GetObject("pic_SLogo.Image")));
             this.pic_SLogo.Location = new System.Drawing.Point(0, 0);
-            this.pic_SLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_SLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pic_SLogo.Name = "pic_SLogo";
             this.pic_SLogo.Size = new System.Drawing.Size(129, 76);
             this.pic_SLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -258,7 +258,7 @@
             // 
             this.cb_vevip.AutoSize = true;
             this.cb_vevip.Location = new System.Drawing.Point(442, 331);
-            this.cb_vevip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_vevip.Margin = new System.Windows.Forms.Padding(2);
             this.cb_vevip.Name = "cb_vevip";
             this.cb_vevip.Size = new System.Drawing.Size(15, 14);
             this.cb_vevip.TabIndex = 13;
@@ -324,7 +324,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Location = new System.Drawing.Point(9, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(582, 352);
             this.panel1.TabIndex = 7;
@@ -332,7 +332,7 @@
             // btn_SuaBienSo
             // 
             this.btn_SuaBienSo.Location = new System.Drawing.Point(214, 333);
-            this.btn_SuaBienSo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_SuaBienSo.Margin = new System.Windows.Forms.Padding(2);
             this.btn_SuaBienSo.Name = "btn_SuaBienSo";
             this.btn_SuaBienSo.Size = new System.Drawing.Size(101, 19);
             this.btn_SuaBienSo.TabIndex = 24;
@@ -343,7 +343,7 @@
             // pic_AnhXeVao
             // 
             this.pic_AnhXeVao.Location = new System.Drawing.Point(133, 124);
-            this.pic_AnhXeVao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_AnhXeVao.Margin = new System.Windows.Forms.Padding(2);
             this.pic_AnhXeVao.Name = "pic_AnhXeVao";
             this.pic_AnhXeVao.Size = new System.Drawing.Size(222, 117);
             this.pic_AnhXeVao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -353,7 +353,7 @@
             // pic_AnhXeRa
             // 
             this.pic_AnhXeRa.Location = new System.Drawing.Point(357, 124);
-            this.pic_AnhXeRa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_AnhXeRa.Margin = new System.Windows.Forms.Padding(2);
             this.pic_AnhXeRa.Name = "pic_AnhXeRa";
             this.pic_AnhXeRa.Size = new System.Drawing.Size(222, 117);
             this.pic_AnhXeRa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -363,7 +363,7 @@
             // pic_CamXeRa
             // 
             this.pic_CamXeRa.Location = new System.Drawing.Point(357, 4);
-            this.pic_CamXeRa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_CamXeRa.Margin = new System.Windows.Forms.Padding(2);
             this.pic_CamXeRa.Name = "pic_CamXeRa";
             this.pic_CamXeRa.Size = new System.Drawing.Size(222, 117);
             this.pic_CamXeRa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -373,7 +373,7 @@
             // pic_CamXeVao
             // 
             this.pic_CamXeVao.Location = new System.Drawing.Point(133, 4);
-            this.pic_CamXeVao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_CamXeVao.Margin = new System.Windows.Forms.Padding(2);
             this.pic_CamXeVao.Name = "pic_CamXeVao";
             this.pic_CamXeVao.Size = new System.Drawing.Size(222, 117);
             this.pic_CamXeVao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -391,7 +391,7 @@
             this.dt_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dt_date.ForeColor = System.Drawing.Color.DimGray;
             this.dt_date.Location = new System.Drawing.Point(214, 302);
-            this.dt_date.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dt_date.Margin = new System.Windows.Forms.Padding(2);
             this.dt_date.Multiline = false;
             this.dt_date.Name = "dt_date";
             this.dt_date.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -412,7 +412,7 @@
             this.tb_tienthu.BorderSize = 2;
             this.tb_tienthu.ForeColor = System.Drawing.Color.DimGray;
             this.tb_tienthu.Location = new System.Drawing.Point(441, 302);
-            this.tb_tienthu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_tienthu.Margin = new System.Windows.Forms.Padding(2);
             this.tb_tienthu.Multiline = false;
             this.tb_tienthu.Name = "tb_tienthu";
             this.tb_tienthu.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -433,7 +433,7 @@
             this.tb_biensoxera.BorderSize = 2;
             this.tb_biensoxera.ForeColor = System.Drawing.Color.DimGray;
             this.tb_biensoxera.Location = new System.Drawing.Point(441, 276);
-            this.tb_biensoxera.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_biensoxera.Margin = new System.Windows.Forms.Padding(2);
             this.tb_biensoxera.Multiline = false;
             this.tb_biensoxera.Name = "tb_biensoxera";
             this.tb_biensoxera.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -454,7 +454,7 @@
             this.tb_biensoxevao.BorderSize = 2;
             this.tb_biensoxevao.ForeColor = System.Drawing.Color.DimGray;
             this.tb_biensoxevao.Location = new System.Drawing.Point(214, 276);
-            this.tb_biensoxevao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_biensoxevao.Margin = new System.Windows.Forms.Padding(2);
             this.tb_biensoxevao.Multiline = false;
             this.tb_biensoxevao.Name = "tb_biensoxevao";
             this.tb_biensoxevao.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -473,7 +473,7 @@
             this.panel7.Controls.Add(this.pic_Loading1);
             this.panel7.Controls.Add(this.bt_xevao);
             this.panel7.Location = new System.Drawing.Point(131, 241);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(448, 34);
             this.panel7.TabIndex = 4;
@@ -481,7 +481,7 @@
             // pic_Loading2
             // 
             this.pic_Loading2.Location = new System.Drawing.Point(422, 4);
-            this.pic_Loading2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_Loading2.Margin = new System.Windows.Forms.Padding(2);
             this.pic_Loading2.Name = "pic_Loading2";
             this.pic_Loading2.Size = new System.Drawing.Size(24, 26);
             this.pic_Loading2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -500,7 +500,7 @@
             this.bt_xera.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_xera.ForeColor = System.Drawing.Color.White;
             this.bt_xera.Location = new System.Drawing.Point(310, 1);
-            this.bt_xera.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_xera.Margin = new System.Windows.Forms.Padding(2);
             this.bt_xera.Name = "bt_xera";
             this.bt_xera.Size = new System.Drawing.Size(91, 32);
             this.bt_xera.TabIndex = 1;
@@ -512,7 +512,7 @@
             // pic_Loading1
             // 
             this.pic_Loading1.Location = new System.Drawing.Point(190, 4);
-            this.pic_Loading1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_Loading1.Margin = new System.Windows.Forms.Padding(2);
             this.pic_Loading1.Name = "pic_Loading1";
             this.pic_Loading1.Size = new System.Drawing.Size(24, 26);
             this.pic_Loading1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -531,7 +531,7 @@
             this.bt_xevao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_xevao.ForeColor = System.Drawing.Color.White;
             this.bt_xevao.Location = new System.Drawing.Point(82, 1);
-            this.bt_xevao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_xevao.Margin = new System.Windows.Forms.Padding(2);
             this.bt_xevao.Name = "bt_xevao";
             this.bt_xevao.Size = new System.Drawing.Size(91, 32);
             this.bt_xevao.TabIndex = 0;
@@ -547,7 +547,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "vInOut";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Màn hình chính";

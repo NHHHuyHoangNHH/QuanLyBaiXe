@@ -123,17 +123,22 @@ namespace QuanLyBaiXe
             string bienso = tb_biensoxe_VIP.Texts;
             string sdt = tb_sdt_VIP.Texts;
 
-            if (VIPDAO.Instance.AddVIP(bienso, hoten, sdt))
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn thêm?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            LoggDAO.Instance.LogDangXuat();
+            if (result == DialogResult.Yes)
             {
-                DoanhThuDAO.Instance.UpdateDoanhThu((int)DataProvider.Instance.ExecuteScalar("select tiencocVIP from ThamSo"));
-                MessageBox.Show("Thêm VIP thành công");
-                LoggDAO.Instance.LogVIP(bienso, 0, 0);
-                LoadVIP();
-            }
-            else
-            {
-                MessageBox.Show("Có lỗi khi thêm VIP");
-                LoggDAO.Instance.LogVIP(bienso, 0, 1);
+                if (VIPDAO.Instance.AddVIP(bienso, hoten, sdt))
+                {
+                    DoanhThuDAO.Instance.UpdateDoanhThu((int)DataProvider.Instance.ExecuteScalar("select tiencocVIP from ThamSo"));
+                    MessageBox.Show("Thêm VIP thành công");
+                    LoggDAO.Instance.LogVIP(bienso, 0, 0);
+                    LoadVIP();
+                }
+                else
+                {
+                    MessageBox.Show("Có lỗi khi thêm VIP");
+                    LoggDAO.Instance.LogVIP(bienso, 0, 1);
+                }
             }
         }
 
@@ -141,19 +146,26 @@ namespace QuanLyBaiXe
         {
             string bienso = tb_biensoxe_VIP.Texts;
             DongTienDAO.Instance.DeteleDONGTIEN(bienso);
-            if (VIPDAO.Instance.DeteleVIP(bienso))
-            {
-                DoanhThuDAO.Instance.DeleteDoanhThu((int)DataProvider.Instance.ExecuteScalar("select tiencocVIP from ThamSo"));
-                MessageBox.Show("Xóa xe thành công");
-                LoggDAO.Instance.LogVIP(bienso, 1, 0);
-                LoadVIP();
-            }
-            else
-            {
-                MessageBox.Show("Có lỗi khi xóa xe");
-                LoggDAO.Instance.LogVIP(bienso, 1, 1);
 
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            LoggDAO.Instance.LogDangXuat();
+            if (result == DialogResult.Yes)
+            {
+                if (VIPDAO.Instance.DeteleVIP(bienso))
+                {
+                    DoanhThuDAO.Instance.DeleteDoanhThu((int)DataProvider.Instance.ExecuteScalar("select tiencocVIP from ThamSo"));
+                    MessageBox.Show("Xóa xe thành công");
+                    LoggDAO.Instance.LogVIP(bienso, 1, 0);
+                    LoadVIP();
+                }
+                else
+                {
+                    MessageBox.Show("Có lỗi khi xóa xe");
+                    LoggDAO.Instance.LogVIP(bienso, 1, 1);
+
+                }
             }
+
         }
 
         private void bt_sua_VIP_Click(object sender, EventArgs e)
@@ -162,16 +174,21 @@ namespace QuanLyBaiXe
             string bienso = tb_biensoxe_VIP.Texts;
             string sdt = tb_sdt_VIP.Texts;
 
-            if (VIPDAO.Instance.UpdateVIP(bienso, hoten, sdt))
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn sửa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            LoggDAO.Instance.LogDangXuat();
+            if (result == DialogResult.Yes)
             {
-                MessageBox.Show("Sửa VIP thành công");
-                LoggDAO.Instance.LogVIP(bienso, 1, 1);
-                LoadVIP();
-            }
-            else
-            {
-                MessageBox.Show("Có lỗi khi sửa VIP");
-                LoggDAO.Instance.LogVIP(bienso, 1, 1);
+                    if (VIPDAO.Instance.UpdateVIP(bienso, hoten, sdt))
+                {
+                    MessageBox.Show("Sửa VIP thành công");
+                    LoggDAO.Instance.LogVIP(bienso, 1, 1);
+                    LoadVIP();
+                }
+                else
+                {
+                    MessageBox.Show("Có lỗi khi sửa VIP");
+                    LoggDAO.Instance.LogVIP(bienso, 1, 1);
+                }
             }
         }
 

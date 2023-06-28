@@ -34,11 +34,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pic_SLogo = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.bt_Money = new QuanLyBaiXe.VControls.VButton();
+            this.pic_SLogo = new System.Windows.Forms.PictureBox();
             this.bt_LogOut = new QuanLyBaiXe.VControls.VButton();
             this.bt_Log = new QuanLyBaiXe.VControls.VButton();
             this.bt_Revenue = new QuanLyBaiXe.VControls.VButton();
@@ -53,6 +50,9 @@
             this.tb_moctien2 = new QuanLyBaiXe.VControls.VTextbox();
             this.tb_moctien1 = new QuanLyBaiXe.VControls.VTextbox();
             this.bt_datlai = new QuanLyBaiXe.VControls.VButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.bt_luu = new QuanLyBaiXe.VControls.VButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_SLogo)).BeginInit();
@@ -135,50 +135,6 @@
             this.panel1.Size = new System.Drawing.Size(597, 367);
             this.panel1.TabIndex = 3;
             // 
-            // pic_SLogo
-            // 
-            this.pic_SLogo.Image = ((System.Drawing.Image)(resources.GetObject("pic_SLogo.Image")));
-            this.pic_SLogo.Location = new System.Drawing.Point(10, 12);
-            this.pic_SLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.pic_SLogo.Name = "pic_SLogo";
-            this.pic_SLogo.Size = new System.Drawing.Size(129, 76);
-            this.pic_SLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pic_SLogo.TabIndex = 40;
-            this.pic_SLogo.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(184, 270);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 16);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Mốc thời gian 3:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(184, 227);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 16);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Mốc thời gian 2:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(184, 185);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 16);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Mốc thời gian 1:";
-            // 
             // bt_Money
             // 
             this.bt_Money.BackColor = System.Drawing.Color.SteelBlue;
@@ -190,7 +146,7 @@
             this.bt_Money.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Money.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Money.ForeColor = System.Drawing.Color.White;
-            this.bt_Money.Location = new System.Drawing.Point(10, 247);
+            this.bt_Money.Location = new System.Drawing.Point(8, 243);
             this.bt_Money.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Money.Name = "bt_Money";
             this.bt_Money.Size = new System.Drawing.Size(129, 37);
@@ -198,6 +154,17 @@
             this.bt_Money.Text = "Giá trị tiền";
             this.bt_Money.TextColor = System.Drawing.Color.White;
             this.bt_Money.UseVisualStyleBackColor = false;
+            // 
+            // pic_SLogo
+            // 
+            this.pic_SLogo.Image = ((System.Drawing.Image)(resources.GetObject("pic_SLogo.Image")));
+            this.pic_SLogo.Location = new System.Drawing.Point(8, 8);
+            this.pic_SLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.pic_SLogo.Name = "pic_SLogo";
+            this.pic_SLogo.Size = new System.Drawing.Size(129, 76);
+            this.pic_SLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pic_SLogo.TabIndex = 40;
+            this.pic_SLogo.TabStop = false;
             // 
             // bt_LogOut
             // 
@@ -210,7 +177,7 @@
             this.bt_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_LogOut.ForeColor = System.Drawing.Color.White;
-            this.bt_LogOut.Location = new System.Drawing.Point(10, 323);
+            this.bt_LogOut.Location = new System.Drawing.Point(8, 319);
             this.bt_LogOut.Margin = new System.Windows.Forms.Padding(2);
             this.bt_LogOut.Name = "bt_LogOut";
             this.bt_LogOut.Size = new System.Drawing.Size(129, 37);
@@ -231,7 +198,7 @@
             this.bt_Log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Log.ForeColor = System.Drawing.Color.White;
-            this.bt_Log.Location = new System.Drawing.Point(10, 285);
+            this.bt_Log.Location = new System.Drawing.Point(8, 281);
             this.bt_Log.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Log.Name = "bt_Log";
             this.bt_Log.Size = new System.Drawing.Size(129, 37);
@@ -252,7 +219,7 @@
             this.bt_Revenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Revenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Revenue.ForeColor = System.Drawing.Color.White;
-            this.bt_Revenue.Location = new System.Drawing.Point(10, 209);
+            this.bt_Revenue.Location = new System.Drawing.Point(8, 205);
             this.bt_Revenue.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Revenue.Name = "bt_Revenue";
             this.bt_Revenue.Size = new System.Drawing.Size(129, 37);
@@ -273,7 +240,7 @@
             this.bt_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Search.ForeColor = System.Drawing.Color.White;
-            this.bt_Search.Location = new System.Drawing.Point(10, 171);
+            this.bt_Search.Location = new System.Drawing.Point(8, 167);
             this.bt_Search.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Search.Name = "bt_Search";
             this.bt_Search.Size = new System.Drawing.Size(129, 37);
@@ -294,7 +261,7 @@
             this.bt_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_VIP.ForeColor = System.Drawing.Color.White;
-            this.bt_VIP.Location = new System.Drawing.Point(10, 133);
+            this.bt_VIP.Location = new System.Drawing.Point(8, 129);
             this.bt_VIP.Margin = new System.Windows.Forms.Padding(2);
             this.bt_VIP.Name = "bt_VIP";
             this.bt_VIP.Size = new System.Drawing.Size(129, 37);
@@ -315,7 +282,7 @@
             this.bt_InOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_InOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_InOut.ForeColor = System.Drawing.Color.White;
-            this.bt_InOut.Location = new System.Drawing.Point(10, 95);
+            this.bt_InOut.Location = new System.Drawing.Point(8, 91);
             this.bt_InOut.Margin = new System.Windows.Forms.Padding(2);
             this.bt_InOut.Name = "bt_InOut";
             this.bt_InOut.Size = new System.Drawing.Size(129, 37);
@@ -561,6 +528,39 @@
             this.bt_datlai.TextColor = System.Drawing.Color.White;
             this.bt_datlai.UseVisualStyleBackColor = false;
             this.bt_datlai.Click += new System.EventHandler(this.bt_datlai_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(184, 270);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 16);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Mốc thời gian 3:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(184, 227);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(115, 16);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Mốc thời gian 2:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(184, 185);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 16);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Mốc thời gian 1:";
             // 
             // bt_luu
             // 

@@ -123,10 +123,16 @@ namespace QuanLyBaiXe
             add.MocThoiGian1 = int.Parse(cb_mocthoigian1.Texts);
             add.MocThoiGian2 = int.Parse(cb_mocthoigian2.Texts);
             add.MocThoiGian3 = int.Parse(cb_mocthoigian3.Texts);
-            if(ThamSoDAO.Instance.UpdateThamSo(add) != 0 )
+            DialogResult result = MessageBox.Show("Bạn muốn thay đổi các giá trị này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            LoggDAO.Instance.LogDangXuat();
+            if (result == DialogResult.Yes)
             {
-                MessageBox.Show("Update thành công!");
-            }    
+                if (ThamSoDAO.Instance.UpdateThamSo(add) != 0)
+                {
+                    MessageBox.Show("Update thành công!");
+                }
+            }
+   
         }
     }
 }

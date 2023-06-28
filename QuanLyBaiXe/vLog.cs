@@ -37,6 +37,7 @@ namespace QuanLyBaiXe
             this.FormClosing += new FormClosingEventHandler(vLog_FormClosing);
             this.FormClosed += new FormClosedEventHandler(vLog_FormClosed);
         }
+
         #endregion
 
         #region Event
@@ -70,7 +71,10 @@ namespace QuanLyBaiXe
 
         private void bt_tim_Log_Click(object sender, EventArgs e)
         {
-
+            DateTime first = dt_ngaycantrichxuat1.Value;
+            DateTime second = dt_ngaycantrichxuat2.Value;
+            data_Logg.DataSource = LoggDAO.Instance.GetLogg(first, second);
+            DataProvider.Instance.AutoFitColumns(data_Logg);
         }
 
         private void bt_Money_Click(object sender, EventArgs e)

@@ -97,23 +97,12 @@ namespace QuanLyBaiXe.DAO
             }
         }
 
-
-
-
-        public List<Logg> GetLogg(DateTime? First, DateTime? Second)
+        public DataTable GetLogg(DateTime First, DateTime Second)
         {
-            List<Logg> LoggList = new List<Logg>();
-
-            DataTable data = DataProvider.Instance.ExecuteQuery("exec PDGetLOGG @First , @Second", new object[] { First, Second });
-
-            foreach (DataRow item in data.Rows)
-            {
-                Logg Logg = new Logg(item);
-                LoggList.Add(Logg);
-            }
-
-            return LoggList;
+            string query = string.Format("exec PDGetLOGG '{0}' , '{1}'", First, Second);
+            return DataProvider.Instance.ExecuteQuery(query);
         }
+
 
         public DataTable LoadLogTable()
         {

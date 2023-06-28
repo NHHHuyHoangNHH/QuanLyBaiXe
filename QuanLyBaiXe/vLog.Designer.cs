@@ -94,7 +94,7 @@
             this.dt_ngaycantrichxuat1.BorderSize = 2;
             this.dt_ngaycantrichxuat1.CustomFormat = "dd/MM/yyyy";
             this.dt_ngaycantrichxuat1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dt_ngaycantrichxuat1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_ngaycantrichxuat1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_ngaycantrichxuat1.Location = new System.Drawing.Point(239, 2);
             this.dt_ngaycantrichxuat1.Margin = new System.Windows.Forms.Padding(2);
             this.dt_ngaycantrichxuat1.MinimumSize = new System.Drawing.Size(4, 30);
@@ -103,6 +103,7 @@
             this.dt_ngaycantrichxuat1.SkinColor = System.Drawing.Color.White;
             this.dt_ngaycantrichxuat1.TabIndex = 33;
             this.dt_ngaycantrichxuat1.TextColor = System.Drawing.Color.DimGray;
+            this.dt_ngaycantrichxuat1.Value = new System.DateTime(2023, 6, 28, 21, 36, 10, 0);
             // 
             // data_Logg
             // 
@@ -121,7 +122,7 @@
             this.dt_ngaycantrichxuat2.BorderSize = 2;
             this.dt_ngaycantrichxuat2.CustomFormat = "dd/MM/yyyy";
             this.dt_ngaycantrichxuat2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dt_ngaycantrichxuat2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_ngaycantrichxuat2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_ngaycantrichxuat2.Location = new System.Drawing.Point(434, 2);
             this.dt_ngaycantrichxuat2.Margin = new System.Windows.Forms.Padding(2);
             this.dt_ngaycantrichxuat2.MinimumSize = new System.Drawing.Size(4, 30);
@@ -158,7 +159,7 @@
             this.bt_Money.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Money.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Money.ForeColor = System.Drawing.Color.White;
-            this.bt_Money.Location = new System.Drawing.Point(0, 235);
+            this.bt_Money.Location = new System.Drawing.Point(0, 233);
             this.bt_Money.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Money.Name = "bt_Money";
             this.bt_Money.Size = new System.Drawing.Size(129, 37);
@@ -190,7 +191,7 @@
             this.bt_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_LogOut.ForeColor = System.Drawing.Color.White;
-            this.bt_LogOut.Location = new System.Drawing.Point(0, 311);
+            this.bt_LogOut.Location = new System.Drawing.Point(0, 309);
             this.bt_LogOut.Margin = new System.Windows.Forms.Padding(2);
             this.bt_LogOut.Name = "bt_LogOut";
             this.bt_LogOut.Size = new System.Drawing.Size(129, 37);
@@ -211,7 +212,7 @@
             this.bt_Log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Log.ForeColor = System.Drawing.Color.White;
-            this.bt_Log.Location = new System.Drawing.Point(0, 273);
+            this.bt_Log.Location = new System.Drawing.Point(0, 271);
             this.bt_Log.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Log.Name = "bt_Log";
             this.bt_Log.Size = new System.Drawing.Size(129, 37);
@@ -231,7 +232,7 @@
             this.bt_Revenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Revenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Revenue.ForeColor = System.Drawing.Color.White;
-            this.bt_Revenue.Location = new System.Drawing.Point(0, 197);
+            this.bt_Revenue.Location = new System.Drawing.Point(0, 195);
             this.bt_Revenue.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Revenue.Name = "bt_Revenue";
             this.bt_Revenue.Size = new System.Drawing.Size(129, 37);
@@ -252,7 +253,7 @@
             this.bt_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Search.ForeColor = System.Drawing.Color.White;
-            this.bt_Search.Location = new System.Drawing.Point(0, 159);
+            this.bt_Search.Location = new System.Drawing.Point(0, 157);
             this.bt_Search.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Search.Name = "bt_Search";
             this.bt_Search.Size = new System.Drawing.Size(129, 37);
@@ -273,7 +274,7 @@
             this.bt_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_VIP.ForeColor = System.Drawing.Color.White;
-            this.bt_VIP.Location = new System.Drawing.Point(0, 121);
+            this.bt_VIP.Location = new System.Drawing.Point(0, 119);
             this.bt_VIP.Margin = new System.Windows.Forms.Padding(2);
             this.bt_VIP.Name = "bt_VIP";
             this.bt_VIP.Size = new System.Drawing.Size(129, 37);
@@ -294,7 +295,7 @@
             this.bt_InOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_InOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_InOut.ForeColor = System.Drawing.Color.White;
-            this.bt_InOut.Location = new System.Drawing.Point(0, 83);
+            this.bt_InOut.Location = new System.Drawing.Point(0, 81);
             this.bt_InOut.Margin = new System.Windows.Forms.Padding(2);
             this.bt_InOut.Name = "bt_InOut";
             this.bt_InOut.Size = new System.Drawing.Size(129, 37);
@@ -363,6 +364,7 @@
             this.bt_tim_Log.TabIndex = 6;
             this.bt_tim_Log.TextColor = System.Drawing.Color.White;
             this.bt_tim_Log.UseVisualStyleBackColor = false;
+            this.bt_tim_Log.Click += new System.EventHandler(this.bt_tim_Log_Click);
             // 
             // button6
             // 
