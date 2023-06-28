@@ -76,42 +76,39 @@
             // 
             this.data_VIP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.data_VIP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_VIP.Location = new System.Drawing.Point(134, 136);
-            this.data_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.data_VIP.Location = new System.Drawing.Point(179, 167);
+            this.data_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.data_VIP.Name = "data_VIP";
             this.data_VIP.ReadOnly = true;
             this.data_VIP.RowHeadersWidth = 51;
             this.data_VIP.RowTemplate.Height = 24;
-            this.data_VIP.Size = new System.Drawing.Size(444, 210);
+            this.data_VIP.Size = new System.Drawing.Size(592, 258);
             this.data_VIP.TabIndex = 27;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(129, 76);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(172, 94);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 13);
+            this.label7.Size = new System.Drawing.Size(106, 16);
             this.label7.TabIndex = 15;
             this.label7.Text = "Tên khách hàng:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(358, 43);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(477, 53);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 13);
+            this.label5.Size = new System.Drawing.Size(89, 16);
             this.label5.TabIndex = 25;
             this.label5.Text = "Ngày hết hạn:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(129, 43);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(172, 53);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.Size = new System.Drawing.Size(37, 16);
             this.label3.TabIndex = 23;
             this.label3.Text = "SĐT:";
             // 
@@ -131,10 +128,10 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Location = new System.Drawing.Point(7, 8);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(9, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(582, 348);
+            this.panel1.Size = new System.Drawing.Size(776, 428);
             this.panel1.TabIndex = 9;
             // 
             // dt_ngayhethan_VIP
@@ -144,11 +141,11 @@
             this.dt_ngayhethan_VIP.CustomFormat = "dd/MM/yyyy";
             this.dt_ngayhethan_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dt_ngayhethan_VIP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_ngayhethan_VIP.Location = new System.Drawing.Point(439, 43);
-            this.dt_ngayhethan_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.dt_ngayhethan_VIP.Location = new System.Drawing.Point(585, 53);
+            this.dt_ngayhethan_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dt_ngayhethan_VIP.MinimumSize = new System.Drawing.Size(4, 30);
             this.dt_ngayhethan_VIP.Name = "dt_ngayhethan_VIP";
-            this.dt_ngayhethan_VIP.Size = new System.Drawing.Size(141, 30);
+            this.dt_ngayhethan_VIP.Size = new System.Drawing.Size(187, 30);
             this.dt_ngayhethan_VIP.SkinColor = System.Drawing.Color.White;
             this.dt_ngayhethan_VIP.TabIndex = 34;
             this.dt_ngayhethan_VIP.TextColor = System.Drawing.Color.DimGray;
@@ -160,11 +157,11 @@
             this.dt_ngaylamve_VIP.CustomFormat = "dd/MM/yyyy";
             this.dt_ngaylamve_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dt_ngaylamve_VIP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_ngaylamve_VIP.Location = new System.Drawing.Point(437, 2);
-            this.dt_ngaylamve_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.dt_ngaylamve_VIP.Location = new System.Drawing.Point(583, 2);
+            this.dt_ngaylamve_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dt_ngaylamve_VIP.MinimumSize = new System.Drawing.Size(4, 30);
             this.dt_ngaylamve_VIP.Name = "dt_ngaylamve_VIP";
-            this.dt_ngaylamve_VIP.Size = new System.Drawing.Size(141, 30);
+            this.dt_ngaylamve_VIP.Size = new System.Drawing.Size(187, 30);
             this.dt_ngaylamve_VIP.SkinColor = System.Drawing.Color.White;
             this.dt_ngaylamve_VIP.TabIndex = 33;
             this.dt_ngaylamve_VIP.TextColor = System.Drawing.Color.DimGray;
@@ -177,15 +174,15 @@
             this.tb_tenkh_VIP.BorderRadius = 0;
             this.tb_tenkh_VIP.BorderSize = 2;
             this.tb_tenkh_VIP.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_tenkh_VIP.Location = new System.Drawing.Point(213, 66);
-            this.tb_tenkh_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_tenkh_VIP.Location = new System.Drawing.Point(284, 81);
+            this.tb_tenkh_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_tenkh_VIP.Multiline = false;
             this.tb_tenkh_VIP.Name = "tb_tenkh_VIP";
-            this.tb_tenkh_VIP.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tb_tenkh_VIP.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.tb_tenkh_VIP.PasswordChar = false;
             this.tb_tenkh_VIP.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tb_tenkh_VIP.PlaceholderText = "";
-            this.tb_tenkh_VIP.Size = new System.Drawing.Size(138, 26);
+            this.tb_tenkh_VIP.Size = new System.Drawing.Size(184, 31);
             this.tb_tenkh_VIP.TabIndex = 31;
             this.tb_tenkh_VIP.Texts = "";
             this.tb_tenkh_VIP.UnderlinedStyle = false;
@@ -198,15 +195,15 @@
             this.tb_sdt_VIP.BorderRadius = 0;
             this.tb_sdt_VIP.BorderSize = 2;
             this.tb_sdt_VIP.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_sdt_VIP.Location = new System.Drawing.Point(213, 34);
-            this.tb_sdt_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_sdt_VIP.Location = new System.Drawing.Point(284, 42);
+            this.tb_sdt_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_sdt_VIP.Multiline = false;
             this.tb_sdt_VIP.Name = "tb_sdt_VIP";
-            this.tb_sdt_VIP.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tb_sdt_VIP.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.tb_sdt_VIP.PasswordChar = false;
             this.tb_sdt_VIP.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tb_sdt_VIP.PlaceholderText = "";
-            this.tb_sdt_VIP.Size = new System.Drawing.Size(138, 26);
+            this.tb_sdt_VIP.Size = new System.Drawing.Size(184, 31);
             this.tb_sdt_VIP.TabIndex = 30;
             this.tb_sdt_VIP.Texts = "";
             this.tb_sdt_VIP.UnderlinedStyle = false;
@@ -219,15 +216,15 @@
             this.tb_biensoxe_VIP.BorderRadius = 0;
             this.tb_biensoxe_VIP.BorderSize = 2;
             this.tb_biensoxe_VIP.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_biensoxe_VIP.Location = new System.Drawing.Point(213, 2);
-            this.tb_biensoxe_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_biensoxe_VIP.Location = new System.Drawing.Point(284, 2);
+            this.tb_biensoxe_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_biensoxe_VIP.Multiline = false;
             this.tb_biensoxe_VIP.Name = "tb_biensoxe_VIP";
-            this.tb_biensoxe_VIP.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tb_biensoxe_VIP.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.tb_biensoxe_VIP.PasswordChar = false;
             this.tb_biensoxe_VIP.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tb_biensoxe_VIP.PlaceholderText = "";
-            this.tb_biensoxe_VIP.Size = new System.Drawing.Size(138, 26);
+            this.tb_biensoxe_VIP.Size = new System.Drawing.Size(184, 31);
             this.tb_biensoxe_VIP.TabIndex = 29;
             this.tb_biensoxe_VIP.Texts = "";
             this.tb_biensoxe_VIP.UnderlinedStyle = false;
@@ -243,9 +240,9 @@
             this.panel3.Controls.Add(this.bt_VIP);
             this.panel3.Controls.Add(this.bt_InOut);
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(129, 346);
+            this.panel3.Size = new System.Drawing.Size(172, 426);
             this.panel3.TabIndex = 28;
             // 
             // bt_Money
@@ -259,10 +256,10 @@
             this.bt_Money.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Money.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Money.ForeColor = System.Drawing.Color.White;
-            this.bt_Money.Location = new System.Drawing.Point(0, 233);
-            this.bt_Money.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_Money.Location = new System.Drawing.Point(0, 287);
+            this.bt_Money.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Money.Name = "bt_Money";
-            this.bt_Money.Size = new System.Drawing.Size(129, 37);
+            this.bt_Money.Size = new System.Drawing.Size(172, 46);
             this.bt_Money.TabIndex = 13;
             this.bt_Money.Text = "Giá trị tiền";
             this.bt_Money.TextColor = System.Drawing.Color.White;
@@ -273,9 +270,9 @@
             // 
             this.pic_SLogo.Image = ((System.Drawing.Image)(resources.GetObject("pic_SLogo.Image")));
             this.pic_SLogo.Location = new System.Drawing.Point(0, 0);
-            this.pic_SLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.pic_SLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic_SLogo.Name = "pic_SLogo";
-            this.pic_SLogo.Size = new System.Drawing.Size(129, 76);
+            this.pic_SLogo.Size = new System.Drawing.Size(172, 94);
             this.pic_SLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pic_SLogo.TabIndex = 12;
             this.pic_SLogo.TabStop = false;
@@ -291,10 +288,10 @@
             this.bt_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_LogOut.ForeColor = System.Drawing.Color.White;
-            this.bt_LogOut.Location = new System.Drawing.Point(0, 309);
-            this.bt_LogOut.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_LogOut.Location = new System.Drawing.Point(0, 380);
+            this.bt_LogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_LogOut.Name = "bt_LogOut";
-            this.bt_LogOut.Size = new System.Drawing.Size(129, 37);
+            this.bt_LogOut.Size = new System.Drawing.Size(172, 46);
             this.bt_LogOut.TabIndex = 11;
             this.bt_LogOut.Text = "Đăng Xuất";
             this.bt_LogOut.TextColor = System.Drawing.Color.White;
@@ -312,10 +309,10 @@
             this.bt_Log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Log.ForeColor = System.Drawing.Color.White;
-            this.bt_Log.Location = new System.Drawing.Point(0, 271);
-            this.bt_Log.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_Log.Location = new System.Drawing.Point(0, 334);
+            this.bt_Log.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Log.Name = "bt_Log";
-            this.bt_Log.Size = new System.Drawing.Size(129, 37);
+            this.bt_Log.Size = new System.Drawing.Size(172, 46);
             this.bt_Log.TabIndex = 10;
             this.bt_Log.Text = "Log";
             this.bt_Log.TextColor = System.Drawing.Color.White;
@@ -333,10 +330,10 @@
             this.bt_Revenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Revenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Revenue.ForeColor = System.Drawing.Color.White;
-            this.bt_Revenue.Location = new System.Drawing.Point(0, 195);
-            this.bt_Revenue.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_Revenue.Location = new System.Drawing.Point(0, 240);
+            this.bt_Revenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Revenue.Name = "bt_Revenue";
-            this.bt_Revenue.Size = new System.Drawing.Size(129, 37);
+            this.bt_Revenue.Size = new System.Drawing.Size(172, 46);
             this.bt_Revenue.TabIndex = 9;
             this.bt_Revenue.Text = "Doanh Thu";
             this.bt_Revenue.TextColor = System.Drawing.Color.White;
@@ -354,10 +351,10 @@
             this.bt_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Search.ForeColor = System.Drawing.Color.White;
-            this.bt_Search.Location = new System.Drawing.Point(0, 157);
-            this.bt_Search.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_Search.Location = new System.Drawing.Point(0, 193);
+            this.bt_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Search.Name = "bt_Search";
-            this.bt_Search.Size = new System.Drawing.Size(129, 37);
+            this.bt_Search.Size = new System.Drawing.Size(172, 46);
             this.bt_Search.TabIndex = 8;
             this.bt_Search.Text = "Tìm Kiếm";
             this.bt_Search.TextColor = System.Drawing.Color.White;
@@ -375,10 +372,10 @@
             this.bt_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_VIP.ForeColor = System.Drawing.Color.White;
-            this.bt_VIP.Location = new System.Drawing.Point(0, 119);
-            this.bt_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_VIP.Location = new System.Drawing.Point(0, 146);
+            this.bt_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_VIP.Name = "bt_VIP";
-            this.bt_VIP.Size = new System.Drawing.Size(129, 37);
+            this.bt_VIP.Size = new System.Drawing.Size(172, 46);
             this.bt_VIP.TabIndex = 7;
             this.bt_VIP.Text = "Vé VIP";
             this.bt_VIP.TextColor = System.Drawing.Color.White;
@@ -395,10 +392,10 @@
             this.bt_InOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_InOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_InOut.ForeColor = System.Drawing.Color.White;
-            this.bt_InOut.Location = new System.Drawing.Point(0, 81);
-            this.bt_InOut.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_InOut.Location = new System.Drawing.Point(0, 100);
+            this.bt_InOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_InOut.Name = "bt_InOut";
-            this.bt_InOut.Size = new System.Drawing.Size(129, 37);
+            this.bt_InOut.Size = new System.Drawing.Size(172, 46);
             this.bt_InOut.TabIndex = 6;
             this.bt_InOut.Text = "Xe Ra Vào";
             this.bt_InOut.TextColor = System.Drawing.Color.White;
@@ -408,20 +405,18 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(358, 12);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(477, 15);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.Size = new System.Drawing.Size(86, 16);
             this.label6.TabIndex = 8;
             this.label6.Text = "Ngày làm vé:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(129, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(172, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = "Biển số xe:";
             // 
@@ -433,10 +428,10 @@
             this.panel7.Controls.Add(this.bt_tim_VIP);
             this.panel7.Controls.Add(this.bt_xoa_VIP);
             this.panel7.Controls.Add(this.bt_them_VIP);
-            this.panel7.Location = new System.Drawing.Point(131, 96);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Location = new System.Drawing.Point(175, 118);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(448, 34);
+            this.panel7.Size = new System.Drawing.Size(597, 42);
             this.panel7.TabIndex = 4;
             // 
             // bt_dongtien_VIP
@@ -451,10 +446,10 @@
             this.bt_dongtien_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_dongtien_VIP.ForeColor = System.Drawing.Color.White;
             this.bt_dongtien_VIP.Image = global::QuanLyBaiXe.Properties.Resources.money;
-            this.bt_dongtien_VIP.Location = new System.Drawing.Point(382, 2);
-            this.bt_dongtien_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_dongtien_VIP.Location = new System.Drawing.Point(509, 2);
+            this.bt_dongtien_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_dongtien_VIP.Name = "bt_dongtien_VIP";
-            this.bt_dongtien_VIP.Size = new System.Drawing.Size(52, 32);
+            this.bt_dongtien_VIP.Size = new System.Drawing.Size(69, 39);
             this.bt_dongtien_VIP.TabIndex = 6;
             this.bt_dongtien_VIP.TextColor = System.Drawing.Color.White;
             this.bt_dongtien_VIP.UseVisualStyleBackColor = false;
@@ -471,11 +466,11 @@
             this.bt_xem_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_xem_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_xem_VIP.ForeColor = System.Drawing.Color.White;
-            this.bt_xem_VIP.Image = global::QuanLyBaiXe.Properties.Resources.view;
-            this.bt_xem_VIP.Location = new System.Drawing.Point(310, 2);
-            this.bt_xem_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_xem_VIP.Image = global::QuanLyBaiXe.Properties.Resources.reload;
+            this.bt_xem_VIP.Location = new System.Drawing.Point(413, 2);
+            this.bt_xem_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_xem_VIP.Name = "bt_xem_VIP";
-            this.bt_xem_VIP.Size = new System.Drawing.Size(52, 32);
+            this.bt_xem_VIP.Size = new System.Drawing.Size(69, 39);
             this.bt_xem_VIP.TabIndex = 5;
             this.bt_xem_VIP.TextColor = System.Drawing.Color.White;
             this.bt_xem_VIP.UseVisualStyleBackColor = false;
@@ -493,10 +488,10 @@
             this.bt_sua_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_sua_VIP.ForeColor = System.Drawing.Color.White;
             this.bt_sua_VIP.Image = global::QuanLyBaiXe.Properties.Resources.pen;
-            this.bt_sua_VIP.Location = new System.Drawing.Point(160, 1);
-            this.bt_sua_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_sua_VIP.Location = new System.Drawing.Point(213, 1);
+            this.bt_sua_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_sua_VIP.Name = "bt_sua_VIP";
-            this.bt_sua_VIP.Size = new System.Drawing.Size(52, 32);
+            this.bt_sua_VIP.Size = new System.Drawing.Size(69, 39);
             this.bt_sua_VIP.TabIndex = 4;
             this.bt_sua_VIP.TextColor = System.Drawing.Color.White;
             this.bt_sua_VIP.UseVisualStyleBackColor = false;
@@ -514,10 +509,10 @@
             this.bt_tim_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_tim_VIP.ForeColor = System.Drawing.Color.White;
             this.bt_tim_VIP.Image = global::QuanLyBaiXe.Properties.Resources.search;
-            this.bt_tim_VIP.Location = new System.Drawing.Point(236, 1);
-            this.bt_tim_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_tim_VIP.Location = new System.Drawing.Point(315, 1);
+            this.bt_tim_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_tim_VIP.Name = "bt_tim_VIP";
-            this.bt_tim_VIP.Size = new System.Drawing.Size(52, 32);
+            this.bt_tim_VIP.Size = new System.Drawing.Size(69, 39);
             this.bt_tim_VIP.TabIndex = 3;
             this.bt_tim_VIP.TextColor = System.Drawing.Color.White;
             this.bt_tim_VIP.UseVisualStyleBackColor = false;
@@ -535,10 +530,10 @@
             this.bt_xoa_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_xoa_VIP.ForeColor = System.Drawing.Color.White;
             this.bt_xoa_VIP.Image = global::QuanLyBaiXe.Properties.Resources.delete;
-            this.bt_xoa_VIP.Location = new System.Drawing.Point(83, 1);
-            this.bt_xoa_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_xoa_VIP.Location = new System.Drawing.Point(111, 1);
+            this.bt_xoa_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_xoa_VIP.Name = "bt_xoa_VIP";
-            this.bt_xoa_VIP.Size = new System.Drawing.Size(52, 32);
+            this.bt_xoa_VIP.Size = new System.Drawing.Size(69, 39);
             this.bt_xoa_VIP.TabIndex = 2;
             this.bt_xoa_VIP.TextColor = System.Drawing.Color.White;
             this.bt_xoa_VIP.UseVisualStyleBackColor = false;
@@ -556,10 +551,10 @@
             this.bt_them_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_them_VIP.ForeColor = System.Drawing.Color.White;
             this.bt_them_VIP.Image = global::QuanLyBaiXe.Properties.Resources.plus;
-            this.bt_them_VIP.Location = new System.Drawing.Point(10, 1);
-            this.bt_them_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_them_VIP.Location = new System.Drawing.Point(13, 1);
+            this.bt_them_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_them_VIP.Name = "bt_them_VIP";
-            this.bt_them_VIP.Size = new System.Drawing.Size(52, 32);
+            this.bt_them_VIP.Size = new System.Drawing.Size(69, 39);
             this.bt_them_VIP.TabIndex = 1;
             this.bt_them_VIP.TextColor = System.Drawing.Color.White;
             this.bt_them_VIP.UseVisualStyleBackColor = false;
@@ -573,81 +568,81 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
-            this.panel2.Location = new System.Drawing.Point(9, 10);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(128, 346);
+            this.panel2.Size = new System.Drawing.Size(171, 426);
             this.panel2.TabIndex = 10;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(0, 299);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Location = new System.Drawing.Point(0, 368);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(127, 46);
+            this.button6.Size = new System.Drawing.Size(169, 57);
             this.button6.TabIndex = 5;
             this.button6.Text = "Đăng xuất";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(0, 125);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(0, 154);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 46);
+            this.button2.Size = new System.Drawing.Size(169, 57);
             this.button2.TabIndex = 1;
             this.button2.Text = "Vé VIP";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(0, 256);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Location = new System.Drawing.Point(0, 315);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(127, 46);
+            this.button5.Size = new System.Drawing.Size(169, 57);
             this.button5.TabIndex = 4;
             this.button5.Text = "Log";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(0, 81);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(0, 100);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 46);
+            this.button1.Size = new System.Drawing.Size(169, 57);
             this.button1.TabIndex = 0;
             this.button1.Text = "Xe ra vào";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(0, 212);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Location = new System.Drawing.Point(0, 261);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(127, 46);
+            this.button4.Size = new System.Drawing.Size(169, 57);
             this.button4.TabIndex = 3;
             this.button4.Text = "Doanh thu";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(0, 169);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(0, 208);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 46);
+            this.button3.Size = new System.Drawing.Size(169, 57);
             this.button3.TabIndex = 2;
             this.button3.Text = "Tìm kiếm";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // vVIP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "vVIP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vé VIP";

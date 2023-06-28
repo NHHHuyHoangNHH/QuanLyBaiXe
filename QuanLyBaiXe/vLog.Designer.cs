@@ -71,20 +71,19 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Location = new System.Drawing.Point(7, 9);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(9, 11);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(582, 346);
+            this.panel1.Size = new System.Drawing.Size(776, 426);
             this.panel1.TabIndex = 13;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(393, 1);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(524, 1);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(17, 18);
+            this.label2.Size = new System.Drawing.Size(21, 22);
             this.label2.TabIndex = 34;
             this.label2.Text = "_";
             // 
@@ -95,11 +94,11 @@
             this.dt_ngaycantrichxuat1.CustomFormat = "dd/MM/yyyy";
             this.dt_ngaycantrichxuat1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dt_ngaycantrichxuat1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_ngaycantrichxuat1.Location = new System.Drawing.Point(239, 2);
-            this.dt_ngaycantrichxuat1.Margin = new System.Windows.Forms.Padding(2);
+            this.dt_ngaycantrichxuat1.Location = new System.Drawing.Point(319, 2);
+            this.dt_ngaycantrichxuat1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dt_ngaycantrichxuat1.MinimumSize = new System.Drawing.Size(4, 30);
             this.dt_ngaycantrichxuat1.Name = "dt_ngaycantrichxuat1";
-            this.dt_ngaycantrichxuat1.Size = new System.Drawing.Size(129, 30);
+            this.dt_ngaycantrichxuat1.Size = new System.Drawing.Size(171, 30);
             this.dt_ngaycantrichxuat1.SkinColor = System.Drawing.Color.White;
             this.dt_ngaycantrichxuat1.TabIndex = 33;
             this.dt_ngaycantrichxuat1.TextColor = System.Drawing.Color.DimGray;
@@ -109,11 +108,12 @@
             // 
             this.data_Logg.AllowUserToOrderColumns = true;
             this.data_Logg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_Logg.Location = new System.Drawing.Point(136, 79);
+            this.data_Logg.Location = new System.Drawing.Point(181, 97);
+            this.data_Logg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.data_Logg.Name = "data_Logg";
             this.data_Logg.ReadOnly = true;
             this.data_Logg.RowHeadersWidth = 51;
-            this.data_Logg.Size = new System.Drawing.Size(445, 264);
+            this.data_Logg.Size = new System.Drawing.Size(593, 325);
             this.data_Logg.TabIndex = 32;
             // 
             // dt_ngaycantrichxuat2
@@ -123,11 +123,11 @@
             this.dt_ngaycantrichxuat2.CustomFormat = "dd/MM/yyyy";
             this.dt_ngaycantrichxuat2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dt_ngaycantrichxuat2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_ngaycantrichxuat2.Location = new System.Drawing.Point(434, 2);
-            this.dt_ngaycantrichxuat2.Margin = new System.Windows.Forms.Padding(2);
+            this.dt_ngaycantrichxuat2.Location = new System.Drawing.Point(579, 2);
+            this.dt_ngaycantrichxuat2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dt_ngaycantrichxuat2.MinimumSize = new System.Drawing.Size(4, 30);
             this.dt_ngaycantrichxuat2.Name = "dt_ngaycantrichxuat2";
-            this.dt_ngaycantrichxuat2.Size = new System.Drawing.Size(129, 30);
+            this.dt_ngaycantrichxuat2.Size = new System.Drawing.Size(171, 30);
             this.dt_ngaycantrichxuat2.SkinColor = System.Drawing.Color.White;
             this.dt_ngaycantrichxuat2.TabIndex = 30;
             this.dt_ngaycantrichxuat2.TextColor = System.Drawing.Color.DimGray;
@@ -143,9 +143,9 @@
             this.panel3.Controls.Add(this.bt_VIP);
             this.panel3.Controls.Add(this.bt_InOut);
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(129, 346);
+            this.panel3.Size = new System.Drawing.Size(172, 426);
             this.panel3.TabIndex = 29;
             // 
             // bt_Money
@@ -159,10 +159,10 @@
             this.bt_Money.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Money.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Money.ForeColor = System.Drawing.Color.White;
-            this.bt_Money.Location = new System.Drawing.Point(0, 233);
-            this.bt_Money.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_Money.Location = new System.Drawing.Point(0, 287);
+            this.bt_Money.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Money.Name = "bt_Money";
-            this.bt_Money.Size = new System.Drawing.Size(129, 37);
+            this.bt_Money.Size = new System.Drawing.Size(172, 46);
             this.bt_Money.TabIndex = 13;
             this.bt_Money.Text = "Giá trị tiền";
             this.bt_Money.TextColor = System.Drawing.Color.White;
@@ -173,9 +173,9 @@
             // 
             this.pic_SLogo.Image = ((System.Drawing.Image)(resources.GetObject("pic_SLogo.Image")));
             this.pic_SLogo.Location = new System.Drawing.Point(0, 0);
-            this.pic_SLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.pic_SLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic_SLogo.Name = "pic_SLogo";
-            this.pic_SLogo.Size = new System.Drawing.Size(129, 76);
+            this.pic_SLogo.Size = new System.Drawing.Size(172, 94);
             this.pic_SLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pic_SLogo.TabIndex = 12;
             this.pic_SLogo.TabStop = false;
@@ -191,10 +191,10 @@
             this.bt_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_LogOut.ForeColor = System.Drawing.Color.White;
-            this.bt_LogOut.Location = new System.Drawing.Point(0, 309);
-            this.bt_LogOut.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_LogOut.Location = new System.Drawing.Point(0, 380);
+            this.bt_LogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_LogOut.Name = "bt_LogOut";
-            this.bt_LogOut.Size = new System.Drawing.Size(129, 37);
+            this.bt_LogOut.Size = new System.Drawing.Size(172, 46);
             this.bt_LogOut.TabIndex = 11;
             this.bt_LogOut.Text = "Đăng Xuất";
             this.bt_LogOut.TextColor = System.Drawing.Color.White;
@@ -212,10 +212,10 @@
             this.bt_Log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Log.ForeColor = System.Drawing.Color.White;
-            this.bt_Log.Location = new System.Drawing.Point(0, 271);
-            this.bt_Log.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_Log.Location = new System.Drawing.Point(0, 334);
+            this.bt_Log.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Log.Name = "bt_Log";
-            this.bt_Log.Size = new System.Drawing.Size(129, 37);
+            this.bt_Log.Size = new System.Drawing.Size(172, 46);
             this.bt_Log.TabIndex = 10;
             this.bt_Log.Text = "Log";
             this.bt_Log.TextColor = System.Drawing.Color.White;
@@ -232,10 +232,10 @@
             this.bt_Revenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Revenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Revenue.ForeColor = System.Drawing.Color.White;
-            this.bt_Revenue.Location = new System.Drawing.Point(0, 195);
-            this.bt_Revenue.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_Revenue.Location = new System.Drawing.Point(0, 240);
+            this.bt_Revenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Revenue.Name = "bt_Revenue";
-            this.bt_Revenue.Size = new System.Drawing.Size(129, 37);
+            this.bt_Revenue.Size = new System.Drawing.Size(172, 46);
             this.bt_Revenue.TabIndex = 9;
             this.bt_Revenue.Text = "Doanh Thu";
             this.bt_Revenue.TextColor = System.Drawing.Color.White;
@@ -253,10 +253,10 @@
             this.bt_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Search.ForeColor = System.Drawing.Color.White;
-            this.bt_Search.Location = new System.Drawing.Point(0, 157);
-            this.bt_Search.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_Search.Location = new System.Drawing.Point(0, 193);
+            this.bt_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Search.Name = "bt_Search";
-            this.bt_Search.Size = new System.Drawing.Size(129, 37);
+            this.bt_Search.Size = new System.Drawing.Size(172, 46);
             this.bt_Search.TabIndex = 8;
             this.bt_Search.Text = "Tìm Kiếm";
             this.bt_Search.TextColor = System.Drawing.Color.White;
@@ -274,10 +274,10 @@
             this.bt_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_VIP.ForeColor = System.Drawing.Color.White;
-            this.bt_VIP.Location = new System.Drawing.Point(0, 119);
-            this.bt_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_VIP.Location = new System.Drawing.Point(0, 146);
+            this.bt_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_VIP.Name = "bt_VIP";
-            this.bt_VIP.Size = new System.Drawing.Size(129, 37);
+            this.bt_VIP.Size = new System.Drawing.Size(172, 46);
             this.bt_VIP.TabIndex = 7;
             this.bt_VIP.Text = "Vé VIP";
             this.bt_VIP.TextColor = System.Drawing.Color.White;
@@ -295,10 +295,10 @@
             this.bt_InOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_InOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_InOut.ForeColor = System.Drawing.Color.White;
-            this.bt_InOut.Location = new System.Drawing.Point(0, 81);
-            this.bt_InOut.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_InOut.Location = new System.Drawing.Point(0, 100);
+            this.bt_InOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_InOut.Name = "bt_InOut";
-            this.bt_InOut.Size = new System.Drawing.Size(129, 37);
+            this.bt_InOut.Size = new System.Drawing.Size(172, 46);
             this.bt_InOut.TabIndex = 6;
             this.bt_InOut.Text = "Xe Ra Vào";
             this.bt_InOut.TextColor = System.Drawing.Color.White;
@@ -308,10 +308,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(133, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(177, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 13);
+            this.label1.Size = new System.Drawing.Size(122, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = "Ngày cần trích xuất:";
             // 
@@ -319,10 +318,10 @@
             // 
             this.panel7.Controls.Add(this.bt_xem_Log);
             this.panel7.Controls.Add(this.bt_tim_Log);
-            this.panel7.Location = new System.Drawing.Point(131, 41);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Location = new System.Drawing.Point(175, 50);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(448, 34);
+            this.panel7.Size = new System.Drawing.Size(597, 42);
             this.panel7.TabIndex = 4;
             // 
             // bt_xem_Log
@@ -336,11 +335,11 @@
             this.bt_xem_Log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_xem_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_xem_Log.ForeColor = System.Drawing.Color.White;
-            this.bt_xem_Log.Image = global::QuanLyBaiXe.Properties.Resources.view;
-            this.bt_xem_Log.Location = new System.Drawing.Point(231, 1);
-            this.bt_xem_Log.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_xem_Log.Image = global::QuanLyBaiXe.Properties.Resources.reload;
+            this.bt_xem_Log.Location = new System.Drawing.Point(308, 1);
+            this.bt_xem_Log.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_xem_Log.Name = "bt_xem_Log";
-            this.bt_xem_Log.Size = new System.Drawing.Size(60, 32);
+            this.bt_xem_Log.Size = new System.Drawing.Size(80, 39);
             this.bt_xem_Log.TabIndex = 7;
             this.bt_xem_Log.TextColor = System.Drawing.Color.White;
             this.bt_xem_Log.UseVisualStyleBackColor = false;
@@ -357,10 +356,10 @@
             this.bt_tim_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_tim_Log.ForeColor = System.Drawing.Color.White;
             this.bt_tim_Log.Image = global::QuanLyBaiXe.Properties.Resources.search;
-            this.bt_tim_Log.Location = new System.Drawing.Point(154, 1);
-            this.bt_tim_Log.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_tim_Log.Location = new System.Drawing.Point(205, 1);
+            this.bt_tim_Log.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_tim_Log.Name = "bt_tim_Log";
-            this.bt_tim_Log.Size = new System.Drawing.Size(60, 32);
+            this.bt_tim_Log.Size = new System.Drawing.Size(80, 39);
             this.bt_tim_Log.TabIndex = 6;
             this.bt_tim_Log.TextColor = System.Drawing.Color.White;
             this.bt_tim_Log.UseVisualStyleBackColor = false;
@@ -368,10 +367,10 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(0, 299);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Location = new System.Drawing.Point(0, 368);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(127, 46);
+            this.button6.Size = new System.Drawing.Size(169, 57);
             this.button6.TabIndex = 5;
             this.button6.Text = "Đăng xuất";
             this.button6.UseVisualStyleBackColor = true;
@@ -384,71 +383,71 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
-            this.panel2.Location = new System.Drawing.Point(7, 9);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(9, 11);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(128, 346);
+            this.panel2.Size = new System.Drawing.Size(171, 426);
             this.panel2.TabIndex = 14;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(0, 125);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(0, 154);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 46);
+            this.button2.Size = new System.Drawing.Size(169, 57);
             this.button2.TabIndex = 1;
             this.button2.Text = "Vé VIP";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(0, 256);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Location = new System.Drawing.Point(0, 315);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(127, 46);
+            this.button5.Size = new System.Drawing.Size(169, 57);
             this.button5.TabIndex = 4;
             this.button5.Text = "Log";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(0, 81);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(0, 100);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 46);
+            this.button1.Size = new System.Drawing.Size(169, 57);
             this.button1.TabIndex = 0;
             this.button1.Text = "Xe ra vào";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(0, 212);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Location = new System.Drawing.Point(0, 261);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(127, 46);
+            this.button4.Size = new System.Drawing.Size(169, 57);
             this.button4.TabIndex = 3;
             this.button4.Text = "Doanh thu";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(0, 169);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(0, 208);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 46);
+            this.button3.Size = new System.Drawing.Size(169, 57);
             this.button3.TabIndex = 2;
             this.button3.Text = "Tìm kiếm";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // vLog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "vLog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log";
