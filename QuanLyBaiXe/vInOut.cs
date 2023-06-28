@@ -43,7 +43,7 @@ namespace QuanLyBaiXe
             ClosedForm();
         }
 
-        
+        #region Method
         void Loading()
         {
             GetCurrentDate();
@@ -63,12 +63,14 @@ namespace QuanLyBaiXe
 
             dt_date.Texts = dateTimePicker1.Value.ToString(dateTimePicker1.CustomFormat);
         }
+        #endregion
+
+        #region Event
         private void bt_VIP_Click(object sender, EventArgs e)
         {
             vVIP v = new vVIP();
             this.Hide();
             v.ShowDialog();
-
         }
 
         private void bt_Search_Click(object sender, EventArgs e)
@@ -82,7 +84,6 @@ namespace QuanLyBaiXe
         {
             vRevenue v = new vRevenue();
             this.Hide();
-
             v.ShowDialog();
         }
 
@@ -126,6 +127,7 @@ namespace QuanLyBaiXe
         private void bt_xevao_Click(object sender, EventArgs e)
         {
             GetCurrentDate();
+
             string bienso = tb_biensoxevao.Texts;
 
             string gifFilePath = AppDomain.CurrentDomain.BaseDirectory;
@@ -166,7 +168,15 @@ namespace QuanLyBaiXe
                 pic_CamXeVao.Image = new Bitmap(imgFilePath);
             }
 
+
+            while (string.IsNullOrEmpty(bienso))
+            {
+                Application.DoEvents();///////////////them event vo 
+                bienso = tb_biensoxevao.Text;
+            }
+
             LoggDAO.Instance.LogInOut(bienso, 0);
+            XeDAO.Instance.AddXe(bienso);
         }
 
         private void bt_xera_Click(object sender, EventArgs e)
@@ -274,5 +284,8 @@ namespace QuanLyBaiXe
             enterLicensePlate.ShowDialog();
             tb_biensoxevao.Texts = enterLicensePlate.getNewLicensePlate();
         }
+
+
+        #endregion
     }
 }

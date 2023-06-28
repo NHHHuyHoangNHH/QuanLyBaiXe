@@ -57,7 +57,7 @@ namespace QuanLyBaiXe.DAO
 
         public DataTable LoadXeTable()
         {
-            string query = "SELECT BienSo, CONVERT(nvarchar(19), ThoiGian, 103) + ' ' + CONVERT(nvarchar(8), ThoiGian, 108) AS ThoiGian FROM Xe ORDER BY ThoiGian DESC";
+            string query = "SELECT BienSo, CONVERT(nvarchar(19), ThoiGian, 103) + ' ' + CONVERT(nvarchar(8), ThoiGian, 108) AS ThoiGian  FROM Xe ORDER BY MONTH(ThoiGian) DESC, DAY(ThoiGian) DESC";
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }

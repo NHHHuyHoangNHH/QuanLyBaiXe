@@ -57,17 +57,12 @@ namespace QuanLyBaiXe
         }
 
         public void DeleteExpiredXe()
-        {
-            int count =0;
-            while(VIPDAO.Instance.DeleteExpiredXe())
+        {   
+            if(VIPDAO.Instance.DeleteExpiredXe())
             {
-                count ++;
-            }    
-            if(count > 0)
-            {
-                MessageBox.Show("Có xe hết hạn hoặc chưa đóng tiền => Đã xóa");
+                MessageBox.Show("Có xe hết hạn hoặc chưa đóng tiền");
                 LoadVIP();
-            }  
+            }   
         }
 
         List<VIP> SearchVIP(string bienso)
@@ -197,7 +192,7 @@ namespace QuanLyBaiXe
         {
             Environment.Exit(0);
         }
-
+        
         private void bt_LogOut_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
