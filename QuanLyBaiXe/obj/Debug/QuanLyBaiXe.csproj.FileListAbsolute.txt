@@ -104,3 +104,12 @@ D:\zUIT\2_HKII\Software\UITParking\QuanLyBaiXe\QuanLyBaiXe\bin\Debug\AForge.Vide
 D:\zUIT\2_HKII\Software\UITParking\QuanLyBaiXe\QuanLyBaiXe\bin\Debug\AForge.Video.DirectShow.xml
 D:\zUIT\2_HKII\Software\UITParking\QuanLyBaiXe\QuanLyBaiXe\bin\Debug\AForge.xml
 D:\zUIT\2_HKII\Software\UITParking\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.CopyComplete
+D:\VS\Project\QuanLyBaiXe\QuanLyBaiXe\bin\Debug\AForge.dll
+D:\VS\Project\QuanLyBaiXe\QuanLyBaiXe\bin\Debug\AForge.Video.xml
+D:\VS\Project\QuanLyBaiXe\QuanLyBaiXe\bin\Debug\AForge.Video.DirectShow.xml
+D:\VS\Project\QuanLyBaiXe\QuanLyBaiXe\bin\Debug\AForge.xml
+D:\VS\Project\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vChangeLicensePlate.resources
+D:\VS\Project\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vThamSo.resources
+D:\VS\Project\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vDetail.resources
+D:\VS\Project\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vLoading.resources
+D:\VS\Project\QuanLyBaiXe\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.CopyComplete
