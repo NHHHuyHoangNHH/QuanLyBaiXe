@@ -94,19 +94,17 @@ namespace QuanLyBaiXe
         private void vThamSo_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            LoggDAO.Instance.LogDangXuat();
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
             }
+            LoggDAO.Instance.LogDangXuat();
         }
 
         private void vThamSo_FormClosed(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(0);
         }
-
-        #endregion
 
         private void bt_datlai_Click(object sender, EventArgs e)
         {
@@ -124,7 +122,6 @@ namespace QuanLyBaiXe
             add.MocThoiGian2 = int.Parse(cb_mocthoigian2.Texts);
             add.MocThoiGian3 = int.Parse(cb_mocthoigian3.Texts);
             DialogResult result = MessageBox.Show("Bạn muốn thay đổi các giá trị này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            LoggDAO.Instance.LogDangXuat();
             if (result == DialogResult.Yes)
             {
                 if (ThamSoDAO.Instance.UpdateThamSo(add) != 0)
@@ -134,5 +131,6 @@ namespace QuanLyBaiXe
             }
    
         }
+        #endregion
     }
 }

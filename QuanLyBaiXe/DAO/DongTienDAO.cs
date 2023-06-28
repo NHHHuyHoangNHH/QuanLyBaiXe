@@ -18,9 +18,6 @@ namespace QuanLyBaiXe.DAO
             private set { DongTienDAO.instance = value; }
         }
 
-        public static int Width = 90;
-        public static int Height = 90;
-
         private DongTienDAO() { }
 
         public bool AddDONGTIEN(string bienso, int sothang)
@@ -45,7 +42,6 @@ namespace QuanLyBaiXe.DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
-
         }
 
     }

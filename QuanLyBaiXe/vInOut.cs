@@ -113,11 +113,11 @@ namespace QuanLyBaiXe
         private void vInOut_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            LoggDAO.Instance.LogDangXuat();
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
             }
+            LoggDAO.Instance.LogDangXuat();
         }
 
         private void vInOut_FormClosed(object sender, FormClosedEventArgs e)

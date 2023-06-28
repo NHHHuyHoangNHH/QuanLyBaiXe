@@ -56,9 +56,9 @@ namespace QuanLyBaiXe
             return dt_ngayhethan_VIP.Value;
         }
 
-        public void DeleteExpiredXe()
+        public void CheckExpiredXe()
         {   
-            if(VIPDAO.Instance.DeleteExpiredXe())
+            if(VIPDAO.Instance.CheckExpiredXe())
             {
                 MessageBox.Show("Có xe hết hạn hoặc chưa đóng tiền");
                 LoadVIP();
@@ -124,7 +124,6 @@ namespace QuanLyBaiXe
             string sdt = tb_sdt_VIP.Texts;
 
             DialogResult result = MessageBox.Show("Bạn có chắc chắn thêm?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            LoggDAO.Instance.LogDangXuat();
             if (result == DialogResult.Yes)
             {
                 if (VIPDAO.Instance.AddVIP(bienso, hoten, sdt))
@@ -148,7 +147,6 @@ namespace QuanLyBaiXe
             DongTienDAO.Instance.DeteleDONGTIEN(bienso);
 
             DialogResult result = MessageBox.Show("Bạn có chắc chắn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            LoggDAO.Instance.LogDangXuat();
             if (result == DialogResult.Yes)
             {
                 if (VIPDAO.Instance.DeteleVIP(bienso))
@@ -175,7 +173,6 @@ namespace QuanLyBaiXe
             string sdt = tb_sdt_VIP.Texts;
 
             DialogResult result = MessageBox.Show("Bạn có chắc chắn sửa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            LoggDAO.Instance.LogDangXuat();
             if (result == DialogResult.Yes)
             {
                     if (VIPDAO.Instance.UpdateVIP(bienso, hoten, sdt))
@@ -199,8 +196,9 @@ namespace QuanLyBaiXe
 
         private void bt_luu_VIP_Click(object sender, EventArgs e)
         {
-            LoadVIP();
-            DeleteExpiredXe();
+            CheckExpiredXe();
+            VIPDAO.Instance.DeleteExpiredXe30Days();
+            LoadVIP(); 
         }
 
         //Dang xuat + Thoat
@@ -222,11 +220,11 @@ namespace QuanLyBaiXe
         private void vVIP_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            LoggDAO.Instance.LogDangXuat();
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
             }
+            LoggDAO.Instance.LogDangXuat();
         }
 
         #endregion

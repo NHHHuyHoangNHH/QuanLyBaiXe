@@ -44,12 +44,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dt_exdateold = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Controls.Add(this.dt_exdateold);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.cb_sothang);
             this.panel1.Controls.Add(this.tb_tongtien);
             this.panel1.Controls.Add(this.label7);
@@ -88,25 +92,25 @@
             "10",
             "11",
             "12"});
-            this.cb_sothang.Location = new System.Drawing.Point(136, 138);
+            this.cb_sothang.Location = new System.Drawing.Point(275, 114);
             this.cb_sothang.Name = "cb_sothang";
-            this.cb_sothang.Size = new System.Drawing.Size(121, 21);
+            this.cb_sothang.Size = new System.Drawing.Size(131, 21);
             this.cb_sothang.TabIndex = 14;
             // 
             // tb_tongtien
             // 
-            this.tb_tongtien.Location = new System.Drawing.Point(340, 141);
+            this.tb_tongtien.Enabled = false;
+            this.tb_tongtien.Location = new System.Drawing.Point(340, 177);
             this.tb_tongtien.Name = "tb_tongtien";
             this.tb_tongtien.ReadOnly = true;
             this.tb_tongtien.Size = new System.Drawing.Size(140, 20);
             this.tb_tongtien.TabIndex = 15;
-            this.tb_tongtien.Text = "150000";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(266, 141);
+            this.label7.Location = new System.Drawing.Point(337, 161);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 13);
@@ -117,7 +121,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(27, 138);
+            this.label6.Location = new System.Drawing.Point(210, 122);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 13);
@@ -131,7 +135,7 @@
             this.dt_expireddate.Enabled = false;
             this.dt_expireddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_expireddate.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.dt_expireddate.Location = new System.Drawing.Point(136, 178);
+            this.dt_expireddate.Location = new System.Drawing.Point(192, 177);
             this.dt_expireddate.Name = "dt_expireddate";
             this.dt_expireddate.Size = new System.Drawing.Size(108, 20);
             this.dt_expireddate.TabIndex = 9;
@@ -143,7 +147,7 @@
             this.dt_date.Enabled = false;
             this.dt_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_date.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.dt_date.Location = new System.Drawing.Point(136, 95);
+            this.dt_date.Location = new System.Drawing.Point(76, 116);
             this.dt_date.Name = "dt_date";
             this.dt_date.Size = new System.Drawing.Size(108, 20);
             this.dt_date.TabIndex = 3;
@@ -151,7 +155,8 @@
             // 
             // tb_sdt
             // 
-            this.tb_sdt.Location = new System.Drawing.Point(136, 62);
+            this.tb_sdt.Enabled = false;
+            this.tb_sdt.Location = new System.Drawing.Point(119, 69);
             this.tb_sdt.Name = "tb_sdt";
             this.tb_sdt.ReadOnly = true;
             this.tb_sdt.Size = new System.Drawing.Size(164, 20);
@@ -159,6 +164,7 @@
             // 
             // tb_bienso
             // 
+            this.tb_bienso.Enabled = false;
             this.tb_bienso.Location = new System.Drawing.Point(380, 28);
             this.tb_bienso.Name = "tb_bienso";
             this.tb_bienso.ReadOnly = true;
@@ -167,6 +173,7 @@
             // 
             // tb_tenkh
             // 
+            this.tb_tenkh.Enabled = false;
             this.tb_tenkh.Location = new System.Drawing.Point(136, 28);
             this.tb_tenkh.Name = "tb_tenkh";
             this.tb_tenkh.ReadOnly = true;
@@ -198,7 +205,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(27, 184);
+            this.label5.Location = new System.Drawing.Point(189, 161);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 13);
@@ -209,7 +216,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(27, 102);
+            this.label4.Location = new System.Drawing.Point(27, 122);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
@@ -220,7 +227,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 69);
+            this.label3.Location = new System.Drawing.Point(27, 76);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 13);
@@ -248,6 +255,30 @@
             this.label1.Size = new System.Drawing.Size(104, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên khách hàng:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(27, 161);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Ngày hết hạn cũ:";
+            // 
+            // dt_exdateold
+            // 
+            this.dt_exdateold.AllowDrop = true;
+            this.dt_exdateold.CustomFormat = "dd/MM/yyyy";
+            this.dt_exdateold.Enabled = false;
+            this.dt_exdateold.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dt_exdateold.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.dt_exdateold.Location = new System.Drawing.Point(30, 177);
+            this.dt_exdateold.Name = "dt_exdateold";
+            this.dt_exdateold.Size = new System.Drawing.Size(108, 20);
+            this.dt_exdateold.TabIndex = 17;
+            this.dt_exdateold.Value = new System.DateTime(2023, 6, 26, 0, 0, 0, 0);
             // 
             // vDetail
             // 
@@ -282,5 +313,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dt_exdateold;
+        private System.Windows.Forms.Label label8;
     }
 }

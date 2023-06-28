@@ -61,12 +61,17 @@ namespace QuanLyBaiXe.DAO
             return result > 0;
         }
 
-        public bool DeleteExpiredXe()
+        public bool CheckExpiredXe()
         {
-            string query = string.Format("EXEC PDDeleteExpiredXe");
+            string query = string.Format("EXEC PDCheckExpiredXe");
             int result = (int)DataProvider.Instance.ExecuteScalar(query);
-
             return result > 0;
+        }
+
+        public void DeleteExpiredXe30Days()
+        {
+            string query = string.Format("EXEC PDDeleteExpiredXe30Days");
+            DataProvider.Instance.ExecuteNonQuery(query);
         }
 
         public DataTable LoadVIPtable()

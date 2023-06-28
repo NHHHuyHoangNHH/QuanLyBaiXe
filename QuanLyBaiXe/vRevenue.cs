@@ -38,7 +38,6 @@ namespace QuanLyBaiXe
             DataProvider.Instance.AutoFitColumns(data_Revenue);
         }
 
-        //        List<vRevenue> SearchVenenue(string )
         #endregion
 
         #region Events
@@ -89,11 +88,11 @@ namespace QuanLyBaiXe
         private void vRevenue_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            LoggDAO.Instance.LogDangXuat();
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
             }
+            LoggDAO.Instance.LogDangXuat();
         }
 
         private void bt_tim_Revenue_Click(object sender, EventArgs e)

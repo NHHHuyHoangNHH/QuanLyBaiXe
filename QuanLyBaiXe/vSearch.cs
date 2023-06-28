@@ -49,13 +49,6 @@ namespace QuanLyBaiXe
             tb_biensoxe_Search.DataBindings.Add(new Binding("Texts", data_Search.DataSource, "BienSo", true, DataSourceUpdateMode.Never));
         }
 
-        //List<Xe> SearchXe(string bienso)
-        //{
-        //    List<Xe> ListXe = XeDAO.Instance.FindXe(bienso);
-
-        //    return ListXe;
-        //}
-
         void SearchXe(string bienso)
         {
             XELIST.DataSource = XeDAO.Instance.SearchXe(bienso);
@@ -111,11 +104,11 @@ namespace QuanLyBaiXe
         private void vSearch_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            LoggDAO.Instance.LogDangXuat();
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
             }
+            LoggDAO.Instance.LogDangXuat();
         }
         private void vSearch_FormClosed(object sender, FormClosedEventArgs e)
         {
