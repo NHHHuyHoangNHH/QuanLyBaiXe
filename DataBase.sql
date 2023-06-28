@@ -495,53 +495,51 @@ end
 go
 
 create procedure PDDeleteExpiredXe
+	@output		int = NULL output
 as
 begin
 	declare @cnt int = 0;
-	while 1 = 1
-	begin
-		delete from DONGTIEN
-		where BienSo = (
-			select top(1) BienSo from VIP
-			where CONVERT(date, NgayHH) < GETDATE()
-		)
-		delete from VIP
-		where BienSo not in (
-			select BienSo from DONGTIEN
-		)
-		set @cnt = @cnt + @@ROWCOUNT
-		if (@cnt = @cnt)
-		begin
-			break;
-		end
-	end
+
+	delete from DONGTIEN
+	where BienSo in (
+		select BienSo from VIP
+		where CONVERT(date, NgayHH) < GETDATE()
+	)
+
+	set @cnt = @@ROWCOUNT
+
+	update VIP
+	set NgayHH = GETDATE(), NgayDK = GETDATE()
+	where CONVERT(date, NgayHH) < GETDATE()
+
 	if (@cnt = 0 )
-		return 0;
-	return 1;
+		return 0
+	return 1
 end
 go
 
+exec PDDeleteExpiredXe
 select * from DONGTIEN
-select * from DOANHTHU
+
 -----------XE--------------
 insert into XE values ('69E-336.69', '5/27/2023 6:48:53') 
 insert into XE values ('52M-577.52', '6/1/2023 10:8:41')
-insert into XE values ('28P-749.28', '12/11/2023 2:32:5')
+insert into XE values ('28P-749.28', '1/11/2023 2:32:5')
 insert into XE values ('37U-530.37', '4/28/2023 16:24:45')
 insert into XE values ('8U-354.8', '2/10/2023 7:4:34')
-insert into XE values ('35G-123.35', '11/26/2023 11:52:48')
-insert into XE values ('57V-603.57', '10/14/2023 21:4:53')
-insert into XE values ('26Q-272.26', '12/4/2023 1:8:12') 
-insert into XE values ('26I-927.26', '10/22/2023 19:10:37')
+insert into XE values ('35G-123.35', '1/26/2023 11:52:48')
+insert into XE values ('57V-603.57', '2/14/2023 21:4:53')
+insert into XE values ('26Q-272.26', '2/4/2023 1:8:12') 
+insert into XE values ('26I-927.26', '1/22/2023 19:10:37')
 insert into XE values ('58J-300.58', '3/16/2023 2:36:45')
 insert into XE values ('26T-370.26', '3/25/2023 19:40:7')
 insert into XE values ('54O-378.54', '3/1/2023 13:9:22')
 insert into XE values ('5M-270.5', '1/15/2023 6:46:30')
-insert into XE values ('31X-741.31', '7/11/2023 12:28:33')
+insert into XE values ('31X-741.31', '6/11/2023 12:28:33')
 insert into XE values ('87L-739.87', '5/1/2023 13:24:26') 
-insert into XE values ('69W-601.69', '7/22/2023 6:54:42')
-insert into XE values ('80C-47.80', '12/20/2023 14:32:12')
-insert into XE values ('24T-680.24', '7/11/2023 9:14:1')
+insert into XE values ('69W-601.69', '5/22/2023 6:54:42')
+insert into XE values ('80C-47.80', '2/20/2023 14:32:12')
+insert into XE values ('24T-680.24', '4/11/2023 9:14:1')
 insert into XE values ('38M-826.38', '5/21/2023 6:32:52')
 insert into XE values ('14X-882.14', '4/8/2023 20:12:58')
 
