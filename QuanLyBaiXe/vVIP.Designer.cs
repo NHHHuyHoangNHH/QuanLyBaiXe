@@ -34,6 +34,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dt_ngayhethan_VIP = new QuanLyBaiXe.VControls.VDateTimePicker();
+            this.dt_ngaylamve_VIP = new QuanLyBaiXe.VControls.VDateTimePicker();
             this.tb_tenkh_VIP = new QuanLyBaiXe.VControls.VTextbox();
             this.tb_sdt_VIP = new QuanLyBaiXe.VControls.VTextbox();
             this.tb_biensoxe_VIP = new QuanLyBaiXe.VControls.VTextbox();
@@ -62,8 +64,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dt_ngaylamve_VIP = new QuanLyBaiXe.VControls.VDateTimePicker();
-            this.dt_ngayhethan_VIP = new QuanLyBaiXe.VControls.VDateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.data_VIP)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -135,6 +135,38 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(582, 346);
             this.panel1.TabIndex = 9;
+            // 
+            // dt_ngayhethan_VIP
+            // 
+            this.dt_ngayhethan_VIP.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.dt_ngayhethan_VIP.BorderSize = 2;
+            this.dt_ngayhethan_VIP.CustomFormat = "dd/MM/yyyy";
+            this.dt_ngayhethan_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dt_ngayhethan_VIP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dt_ngayhethan_VIP.Location = new System.Drawing.Point(439, 43);
+            this.dt_ngayhethan_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.dt_ngayhethan_VIP.MinimumSize = new System.Drawing.Size(4, 30);
+            this.dt_ngayhethan_VIP.Name = "dt_ngayhethan_VIP";
+            this.dt_ngayhethan_VIP.Size = new System.Drawing.Size(141, 30);
+            this.dt_ngayhethan_VIP.SkinColor = System.Drawing.Color.White;
+            this.dt_ngayhethan_VIP.TabIndex = 34;
+            this.dt_ngayhethan_VIP.TextColor = System.Drawing.Color.DimGray;
+            // 
+            // dt_ngaylamve_VIP
+            // 
+            this.dt_ngaylamve_VIP.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.dt_ngaylamve_VIP.BorderSize = 2;
+            this.dt_ngaylamve_VIP.CustomFormat = "dd/MM/yyyy";
+            this.dt_ngaylamve_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dt_ngaylamve_VIP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dt_ngaylamve_VIP.Location = new System.Drawing.Point(437, 2);
+            this.dt_ngaylamve_VIP.Margin = new System.Windows.Forms.Padding(2);
+            this.dt_ngaylamve_VIP.MinimumSize = new System.Drawing.Size(4, 30);
+            this.dt_ngaylamve_VIP.Name = "dt_ngaylamve_VIP";
+            this.dt_ngaylamve_VIP.Size = new System.Drawing.Size(141, 30);
+            this.dt_ngaylamve_VIP.SkinColor = System.Drawing.Color.White;
+            this.dt_ngaylamve_VIP.TabIndex = 33;
+            this.dt_ngaylamve_VIP.TextColor = System.Drawing.Color.DimGray;
             // 
             // tb_tenkh_VIP
             // 
@@ -226,7 +258,7 @@
             this.bt_Money.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Money.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Money.ForeColor = System.Drawing.Color.White;
-            this.bt_Money.Location = new System.Drawing.Point(0, 234);
+            this.bt_Money.Location = new System.Drawing.Point(0, 235);
             this.bt_Money.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Money.Name = "bt_Money";
             this.bt_Money.Size = new System.Drawing.Size(129, 37);
@@ -258,7 +290,7 @@
             this.bt_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_LogOut.ForeColor = System.Drawing.Color.White;
-            this.bt_LogOut.Location = new System.Drawing.Point(0, 309);
+            this.bt_LogOut.Location = new System.Drawing.Point(0, 311);
             this.bt_LogOut.Margin = new System.Windows.Forms.Padding(2);
             this.bt_LogOut.Name = "bt_LogOut";
             this.bt_LogOut.Size = new System.Drawing.Size(129, 37);
@@ -279,7 +311,7 @@
             this.bt_Log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Log.ForeColor = System.Drawing.Color.White;
-            this.bt_Log.Location = new System.Drawing.Point(0, 271);
+            this.bt_Log.Location = new System.Drawing.Point(0, 273);
             this.bt_Log.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Log.Name = "bt_Log";
             this.bt_Log.Size = new System.Drawing.Size(129, 37);
@@ -342,7 +374,7 @@
             this.bt_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_VIP.ForeColor = System.Drawing.Color.White;
-            this.bt_VIP.Location = new System.Drawing.Point(0, 122);
+            this.bt_VIP.Location = new System.Drawing.Point(0, 121);
             this.bt_VIP.Margin = new System.Windows.Forms.Padding(2);
             this.bt_VIP.Name = "bt_VIP";
             this.bt_VIP.Size = new System.Drawing.Size(129, 37);
@@ -362,7 +394,7 @@
             this.bt_InOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_InOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_InOut.ForeColor = System.Drawing.Color.White;
-            this.bt_InOut.Location = new System.Drawing.Point(0, 84);
+            this.bt_InOut.Location = new System.Drawing.Point(0, 83);
             this.bt_InOut.Margin = new System.Windows.Forms.Padding(2);
             this.bt_InOut.Name = "bt_InOut";
             this.bt_InOut.Size = new System.Drawing.Size(129, 37);
@@ -605,38 +637,6 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Tìm kiếm";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // dt_ngaylamve_VIP
-            // 
-            this.dt_ngaylamve_VIP.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.dt_ngaylamve_VIP.BorderSize = 2;
-            this.dt_ngaylamve_VIP.CustomFormat = "dd/MM/yyyy";
-            this.dt_ngaylamve_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dt_ngaylamve_VIP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_ngaylamve_VIP.Location = new System.Drawing.Point(437, 2);
-            this.dt_ngaylamve_VIP.Margin = new System.Windows.Forms.Padding(2);
-            this.dt_ngaylamve_VIP.MinimumSize = new System.Drawing.Size(4, 30);
-            this.dt_ngaylamve_VIP.Name = "dt_ngaylamve_VIP";
-            this.dt_ngaylamve_VIP.Size = new System.Drawing.Size(141, 30);
-            this.dt_ngaylamve_VIP.SkinColor = System.Drawing.Color.White;
-            this.dt_ngaylamve_VIP.TabIndex = 33;
-            this.dt_ngaylamve_VIP.TextColor = System.Drawing.Color.DimGray;
-            // 
-            // dt_ngayhethan_VIP
-            // 
-            this.dt_ngayhethan_VIP.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.dt_ngayhethan_VIP.BorderSize = 2;
-            this.dt_ngayhethan_VIP.CustomFormat = "dd/MM/yyyy";
-            this.dt_ngayhethan_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dt_ngayhethan_VIP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_ngayhethan_VIP.Location = new System.Drawing.Point(439, 43);
-            this.dt_ngayhethan_VIP.Margin = new System.Windows.Forms.Padding(2);
-            this.dt_ngayhethan_VIP.MinimumSize = new System.Drawing.Size(4, 30);
-            this.dt_ngayhethan_VIP.Name = "dt_ngayhethan_VIP";
-            this.dt_ngayhethan_VIP.Size = new System.Drawing.Size(141, 30);
-            this.dt_ngayhethan_VIP.SkinColor = System.Drawing.Color.White;
-            this.dt_ngayhethan_VIP.TabIndex = 34;
-            this.dt_ngayhethan_VIP.TextColor = System.Drawing.Color.DimGray;
             // 
             // vVIP
             // 

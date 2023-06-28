@@ -74,6 +74,7 @@ namespace QuanLyBaiXe
         private void bt_Money_Click(object sender, EventArgs e)
         {
             vThamSo v = new vThamSo();
+            this.Hide();
             v.ShowDialog();
         }
 

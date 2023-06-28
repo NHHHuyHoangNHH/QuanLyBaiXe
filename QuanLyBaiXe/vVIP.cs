@@ -99,6 +99,7 @@ namespace QuanLyBaiXe
         private void bt_Money_Click(object sender, EventArgs e)
         {
             vThamSo v = new vThamSo();
+            this.Hide();
             v.ShowDialog();
         }
 
@@ -177,8 +178,6 @@ namespace QuanLyBaiXe
         private void bt_tim_VIP_Click(object sender, EventArgs e)
         {
             VIPLIST.DataSource = SearchVIP(tb_biensoxe_VIP.Texts);
-            string query = string.Format("exec PDInsertLOGG 'Tìm xe có biển số là {0} '", tb_biensoxe_VIP.Texts);
-            DataProvider.Instance.ExecuteQuery(query);
         }
 
         private void bt_luu_VIP_Click(object sender, EventArgs e)

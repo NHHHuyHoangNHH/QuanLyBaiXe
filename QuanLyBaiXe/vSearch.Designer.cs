@@ -69,7 +69,7 @@
             this.panel2.Controls.Add(this.bt_VIP);
             this.panel2.Controls.Add(this.bt_InOut);
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(129, 346);
             this.panel2.TabIndex = 12;
@@ -85,8 +85,8 @@
             this.bt_Money.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Money.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Money.ForeColor = System.Drawing.Color.White;
-            this.bt_Money.Location = new System.Drawing.Point(0, 234);
-            this.bt_Money.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Money.Location = new System.Drawing.Point(0, 235);
+            this.bt_Money.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Money.Name = "bt_Money";
             this.bt_Money.Size = new System.Drawing.Size(129, 37);
             this.bt_Money.TabIndex = 21;
@@ -99,7 +99,7 @@
             // 
             this.pic_SLogo.Image = ((System.Drawing.Image)(resources.GetObject("pic_SLogo.Image")));
             this.pic_SLogo.Location = new System.Drawing.Point(0, 0);
-            this.pic_SLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_SLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pic_SLogo.Name = "pic_SLogo";
             this.pic_SLogo.Size = new System.Drawing.Size(129, 76);
             this.pic_SLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -117,8 +117,8 @@
             this.bt_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_LogOut.ForeColor = System.Drawing.Color.White;
-            this.bt_LogOut.Location = new System.Drawing.Point(0, 309);
-            this.bt_LogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_LogOut.Location = new System.Drawing.Point(0, 311);
+            this.bt_LogOut.Margin = new System.Windows.Forms.Padding(2);
             this.bt_LogOut.Name = "bt_LogOut";
             this.bt_LogOut.Size = new System.Drawing.Size(129, 37);
             this.bt_LogOut.TabIndex = 19;
@@ -138,8 +138,8 @@
             this.bt_Log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Log.ForeColor = System.Drawing.Color.White;
-            this.bt_Log.Location = new System.Drawing.Point(0, 271);
-            this.bt_Log.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Log.Location = new System.Drawing.Point(0, 273);
+            this.bt_Log.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Log.Name = "bt_Log";
             this.bt_Log.Size = new System.Drawing.Size(129, 37);
             this.bt_Log.TabIndex = 18;
@@ -160,7 +160,7 @@
             this.bt_Revenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Revenue.ForeColor = System.Drawing.Color.White;
             this.bt_Revenue.Location = new System.Drawing.Point(0, 197);
-            this.bt_Revenue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Revenue.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Revenue.Name = "bt_Revenue";
             this.bt_Revenue.Size = new System.Drawing.Size(129, 37);
             this.bt_Revenue.TabIndex = 17;
@@ -181,7 +181,7 @@
             this.bt_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Search.ForeColor = System.Drawing.Color.White;
             this.bt_Search.Location = new System.Drawing.Point(0, 159);
-            this.bt_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Search.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Search.Name = "bt_Search";
             this.bt_Search.Size = new System.Drawing.Size(129, 37);
             this.bt_Search.TabIndex = 16;
@@ -200,8 +200,8 @@
             this.bt_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_VIP.ForeColor = System.Drawing.Color.White;
-            this.bt_VIP.Location = new System.Drawing.Point(0, 122);
-            this.bt_VIP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_VIP.Location = new System.Drawing.Point(0, 121);
+            this.bt_VIP.Margin = new System.Windows.Forms.Padding(2);
             this.bt_VIP.Name = "bt_VIP";
             this.bt_VIP.Size = new System.Drawing.Size(129, 37);
             this.bt_VIP.TabIndex = 15;
@@ -221,8 +221,8 @@
             this.bt_InOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_InOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_InOut.ForeColor = System.Drawing.Color.White;
-            this.bt_InOut.Location = new System.Drawing.Point(0, 84);
-            this.bt_InOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_InOut.Location = new System.Drawing.Point(0, 83);
+            this.bt_InOut.Margin = new System.Windows.Forms.Padding(2);
             this.bt_InOut.Name = "bt_InOut";
             this.bt_InOut.Size = new System.Drawing.Size(129, 37);
             this.bt_InOut.TabIndex = 14;
@@ -245,7 +245,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Location = new System.Drawing.Point(9, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(582, 346);
             this.panel1.TabIndex = 11;
@@ -268,7 +268,7 @@
             this.tb_biensoxe_Search.BorderSize = 2;
             this.tb_biensoxe_Search.ForeColor = System.Drawing.Color.DimGray;
             this.tb_biensoxe_Search.Location = new System.Drawing.Point(294, 4);
-            this.tb_biensoxe_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_biensoxe_Search.Margin = new System.Windows.Forms.Padding(2);
             this.tb_biensoxe_Search.Multiline = false;
             this.tb_biensoxe_Search.Name = "tb_biensoxe_Search";
             this.tb_biensoxe_Search.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -283,7 +283,7 @@
             // button9
             // 
             this.button9.Location = new System.Drawing.Point(2, 299);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(127, 46);
             this.button9.TabIndex = 22;
@@ -293,7 +293,7 @@
             // button10
             // 
             this.button10.Location = new System.Drawing.Point(2, 125);
-            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(127, 46);
             this.button10.TabIndex = 18;
@@ -303,7 +303,7 @@
             // button11
             // 
             this.button11.Location = new System.Drawing.Point(2, 256);
-            this.button11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(127, 46);
             this.button11.TabIndex = 21;
@@ -313,7 +313,7 @@
             // button12
             // 
             this.button12.Location = new System.Drawing.Point(2, 81);
-            this.button12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(127, 46);
             this.button12.TabIndex = 17;
@@ -323,7 +323,7 @@
             // button13
             // 
             this.button13.Location = new System.Drawing.Point(2, 212);
-            this.button13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(127, 46);
             this.button13.TabIndex = 20;
@@ -333,7 +333,7 @@
             // button14
             // 
             this.button14.Location = new System.Drawing.Point(2, 169);
-            this.button14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button14.Margin = new System.Windows.Forms.Padding(2);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(127, 46);
             this.button14.TabIndex = 19;
@@ -355,7 +355,7 @@
             this.panel7.Controls.Add(this.bt_Reload_Search);
             this.panel7.Controls.Add(this.bt_tim_Search);
             this.panel7.Location = new System.Drawing.Point(130, 40);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(448, 34);
             this.panel7.TabIndex = 4;
@@ -373,7 +373,7 @@
             this.bt_Reload_Search.ForeColor = System.Drawing.Color.White;
             this.bt_Reload_Search.Image = global::QuanLyBaiXe.Properties.Resources.view;
             this.bt_Reload_Search.Location = new System.Drawing.Point(233, 1);
-            this.bt_Reload_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Reload_Search.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Reload_Search.Name = "bt_Reload_Search";
             this.bt_Reload_Search.Size = new System.Drawing.Size(60, 32);
             this.bt_Reload_Search.TabIndex = 8;
@@ -394,7 +394,7 @@
             this.bt_tim_Search.ForeColor = System.Drawing.Color.White;
             this.bt_tim_Search.Image = global::QuanLyBaiXe.Properties.Resources.search;
             this.bt_tim_Search.Location = new System.Drawing.Point(155, 1);
-            this.bt_tim_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_tim_Search.Margin = new System.Windows.Forms.Padding(2);
             this.bt_tim_Search.Name = "bt_tim_Search";
             this.bt_tim_Search.Size = new System.Drawing.Size(60, 32);
             this.bt_tim_Search.TabIndex = 4;
@@ -409,7 +409,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "vSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tìm kiếm";

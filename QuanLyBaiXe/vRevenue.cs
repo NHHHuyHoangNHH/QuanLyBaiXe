@@ -67,12 +67,13 @@ namespace QuanLyBaiXe
         {
             vLog v = new vLog();
             this.Hide();
-            v.ShowDialog(); ;
+            v.ShowDialog();
         }
 
         private void bt_Money_Click(object sender, EventArgs e)
         {
             vThamSo v = new vThamSo();
+            this.Hide();
             v.ShowDialog();
         }
         private void bt_LogOut_Click(object sender, EventArgs e)

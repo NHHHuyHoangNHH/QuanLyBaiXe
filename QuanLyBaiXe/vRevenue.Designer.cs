@@ -87,7 +87,7 @@
             this.bt_Money.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Money.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Money.ForeColor = System.Drawing.Color.White;
-            this.bt_Money.Location = new System.Drawing.Point(0, 234);
+            this.bt_Money.Location = new System.Drawing.Point(0, 235);
             this.bt_Money.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Money.Name = "bt_Money";
             this.bt_Money.Size = new System.Drawing.Size(129, 37);
@@ -119,7 +119,7 @@
             this.bt_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_LogOut.ForeColor = System.Drawing.Color.White;
-            this.bt_LogOut.Location = new System.Drawing.Point(0, 309);
+            this.bt_LogOut.Location = new System.Drawing.Point(0, 311);
             this.bt_LogOut.Margin = new System.Windows.Forms.Padding(2);
             this.bt_LogOut.Name = "bt_LogOut";
             this.bt_LogOut.Size = new System.Drawing.Size(129, 37);
@@ -140,7 +140,7 @@
             this.bt_Log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Log.ForeColor = System.Drawing.Color.White;
-            this.bt_Log.Location = new System.Drawing.Point(0, 271);
+            this.bt_Log.Location = new System.Drawing.Point(0, 273);
             this.bt_Log.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Log.Name = "bt_Log";
             this.bt_Log.Size = new System.Drawing.Size(129, 37);
@@ -202,7 +202,7 @@
             this.bt_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_VIP.ForeColor = System.Drawing.Color.White;
-            this.bt_VIP.Location = new System.Drawing.Point(0, 122);
+            this.bt_VIP.Location = new System.Drawing.Point(0, 121);
             this.bt_VIP.Margin = new System.Windows.Forms.Padding(2);
             this.bt_VIP.Name = "bt_VIP";
             this.bt_VIP.Size = new System.Drawing.Size(129, 37);
@@ -223,7 +223,7 @@
             this.bt_InOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_InOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_InOut.ForeColor = System.Drawing.Color.White;
-            this.bt_InOut.Location = new System.Drawing.Point(0, 84);
+            this.bt_InOut.Location = new System.Drawing.Point(0, 83);
             this.bt_InOut.Margin = new System.Windows.Forms.Padding(2);
             this.bt_InOut.Name = "bt_InOut";
             this.bt_InOut.Size = new System.Drawing.Size(129, 37);
@@ -236,10 +236,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(370, 12);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(366, 12);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 24;
             this.label2.Text = "Tháng:";
             // 
@@ -283,12 +284,12 @@
             this.cb_year.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.cb_year.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cb_year.ListTextColor = System.Drawing.Color.DimGray;
-            this.cb_year.Location = new System.Drawing.Point(167, 9);
+            this.cb_year.Location = new System.Drawing.Point(170, 4);
             this.cb_year.Margin = new System.Windows.Forms.Padding(2);
             this.cb_year.MinimumSize = new System.Drawing.Size(150, 24);
             this.cb_year.Name = "cb_year";
             this.cb_year.Padding = new System.Windows.Forms.Padding(1);
-            this.cb_year.Size = new System.Drawing.Size(150, 24);
+            this.cb_year.Size = new System.Drawing.Size(150, 33);
             this.cb_year.TabIndex = 6;
             this.cb_year.Texts = "";
             // 
@@ -303,12 +304,12 @@
             this.cb_month.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.cb_month.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cb_month.ListTextColor = System.Drawing.Color.DimGray;
-            this.cb_month.Location = new System.Drawing.Point(414, 9);
+            this.cb_month.Location = new System.Drawing.Point(414, 4);
             this.cb_month.Margin = new System.Windows.Forms.Padding(2);
             this.cb_month.MinimumSize = new System.Drawing.Size(150, 24);
             this.cb_month.Name = "cb_month";
             this.cb_month.Padding = new System.Windows.Forms.Padding(1);
-            this.cb_month.Size = new System.Drawing.Size(150, 24);
+            this.cb_month.Size = new System.Drawing.Size(150, 31);
             this.cb_month.TabIndex = 7;
             this.cb_month.Texts = "";
             // 
@@ -375,10 +376,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(134, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Năm:";
             // 

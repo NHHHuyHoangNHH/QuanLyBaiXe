@@ -15,15 +15,21 @@ namespace QuanLyBaiXe.DTO
             this.MocTien2 = moctien2;
             this.TienVip = tienvip;
             this.TienCocVip = tiencocvip;
+            this.MocThoiGian1 = moctg1;
+            this.MocThoiGian2 = moctg2;
+            this.MocThoiGian3 = moctg3;
 
         }
 
         public ThamSo(DataRow row)
         {
-            this.MocTien1 = (float)row["MocTien1"];
-            this.MocTien2 = (float)row["MocTien2"];
-            this.TienVip = (float)row["TienVIP"];
-            this.TienCocVip = (float)row["TienCocVIP"];
+            this.MocTien1 = (int)row["MocTien1"];
+            this.MocTien2 = (int)row["MocTien2"];
+            this.TienVip = (int)row["TienVIP"];
+            this.TienCocVip = (int)row["TienCocVIP"];
+            this.MocThoiGian1 = (int)row["MocTG1"];
+            this.MocThoiGian2 = (int)row["MocTG2"];
+            this.MocThoiGian3 = (int)row["MocTG3"];
         }
 
         private float moctien1;
@@ -56,6 +62,27 @@ namespace QuanLyBaiXe.DTO
         {
             get { return tiencocvip; }
             set { tiencocvip = value; }
+        }
+
+        private float moctg1;
+        public float MocThoiGian1
+        {
+            get { return moctg1; }
+            set { moctg1 = value; }
+        }
+
+        private float moctg2;
+        public float MocThoiGian2
+        {
+            get { return moctg2; }
+            set { moctg2 = value; }
+        }
+
+        private float moctg3;
+        public float MocThoiGian3
+        {
+            get { return moctg3; }
+            set { moctg3 = value; }
         }
     }
 }

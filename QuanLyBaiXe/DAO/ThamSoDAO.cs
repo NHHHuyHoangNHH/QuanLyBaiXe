@@ -22,8 +22,9 @@ namespace QuanLyBaiXe.DAO
 
         public int UpdateThamSo(ThamSo add)
         {
-            DataProvider.Instance.ExecuteNonQuery("exec PDInsertLogg @ThongTin", new object[] { "Sửa giá tiền: " + add.MocTien1 + " " + add.MocTien2 + " " + add.TienVip + " " + add.TienCocVip + " " });
-            return DataProvider.Instance.ExecuteNonQuery("exec PDUpdateTHAMSO @MocTien1 , @MocTien2, @TienVIP , @TienCocVIP", new object[] { add.MocTien1, add.MocTien2, add.TienVip, add.TienCocVip });
+            DataProvider.Instance.ExecuteNonQuery("exec PDInsertLogg @ThongTin", new object[] { "Sửa giá tiền: " + add.MocTien1 + " " + add.MocTien2 + " " + add.TienVip + " " + add.TienCocVip + " " + add.MocThoiGian1 + " " + add.MocThoiGian2 + " " + add.MocThoiGian3 });
+            string query = string.Format("exec PDUpdateTHAMSO {0}, {1}, {2} , {3}, {4}, {5}, {6}", add.MocTien1, add.MocTien2, add.TienVip, add.TienCocVip, add.MocThoiGian1, add.MocThoiGian2, add.MocThoiGian3);
+            return DataProvider.Instance.ExecuteNonQuery(query);
         }
 
         public ThamSo GetThamSo()

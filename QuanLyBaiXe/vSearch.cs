@@ -49,14 +49,18 @@ namespace QuanLyBaiXe
             tb_biensoxe_Search.DataBindings.Add(new Binding("Texts", data_Search.DataSource, "BienSo", true, DataSourceUpdateMode.Never));
         }
 
-        List<Xe> SearchXe(string bienso)
+        //List<Xe> SearchXe(string bienso)
+        //{
+        //    List<Xe> ListXe = XeDAO.Instance.FindXe(bienso);
+
+        //    return ListXe;
+        //}
+
+        void SearchXe(string bienso)
         {
-            List<Xe> ListXe = XeDAO.Instance.FindXe(bienso);
-
-            return ListXe;
+            XELIST.DataSource = XeDAO.Instance.SearchXe(bienso);
+            DataProvider.Instance.AutoFitColumns(data_Search);
         }
-
-
         #endregion
 
         #region Events
@@ -91,6 +95,7 @@ namespace QuanLyBaiXe
         private void bt_Money_Click(object sender, EventArgs e)
         {
             vThamSo v = new vThamSo();
+            this.Hide();
             v.ShowDialog();
         }
         private void bt_LogOut_Click(object sender, EventArgs e)
@@ -119,8 +124,7 @@ namespace QuanLyBaiXe
 
         private void bt_tim_Search_Click(object sender, EventArgs e)
         {
-            XELIST.DataSource = SearchXe(tb_biensoxe_Search.Texts);
-            DataProvider.Instance.AutoFitColumns(data_Search);
+            SearchXe(tb_biensoxe_Search.Texts);
         }
 
         private void bt_Reload_Search_Click(object sender, EventArgs e)
