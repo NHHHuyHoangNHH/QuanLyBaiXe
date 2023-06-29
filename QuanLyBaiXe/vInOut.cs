@@ -47,6 +47,8 @@ namespace QuanLyBaiXe
         void Loading()
         {
             GetCurrentDate();
+            cb_vevip.CheckedChanged += cb_vevip_CheckedChanged;
+            tb_biensoxera.TextChanged += tb_biensoxera_TextChanged;
         }
 
         void ClosedForm()
@@ -288,5 +290,26 @@ namespace QuanLyBaiXe
 
 
         #endregion
+
+        private void cb_vevip_CheckedChanged(object sender, EventArgs e)
+        {
+            string bienso = tb_biensoxera.Texts;
+            if(VIPDAO.Instance.CheckVIP(bienso) == 1)
+            {
+                cb_vevip.Checked = true;
+            }    
+        }
+
+        private void tb_biensoxera_TextChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("haha");
+            string bienso = tb_biensoxera.Texts;
+            if (VIPDAO.Instance.CheckVIP(bienso) == 1)
+            {
+                cb_vevip.CheckState = CheckState.Checked;
+            }
+        }
+
+
     }
 }

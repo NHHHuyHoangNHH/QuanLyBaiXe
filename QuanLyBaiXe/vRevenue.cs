@@ -58,7 +58,7 @@ namespace QuanLyBaiXe
         private void bt_Search_Click(object sender, EventArgs e)
         {
             vSearch v = new vSearch();
-            this.Hide();
+            this.Hide(); 
             v.ShowDialog();
         }
 

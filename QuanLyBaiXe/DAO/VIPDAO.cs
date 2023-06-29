@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -77,6 +78,13 @@ namespace QuanLyBaiXe.DAO
         public DataTable LoadVIPtable()
         {
             return DataProvider.Instance.ExecuteQuery("SELECT * FROM VIP ORDER BY MONTH(NgayDK) DESC, DAY(NgayDK) DESC");
+        }
+
+        public int CheckVIP(string bienso)
+        {
+            string query = string.Format("select count(BienSo) from vip where BienSo = '{0}' and NgayHH > NgayDK ", bienso);
+            int result = (int)DataProvider.Instance.ExecuteScalar(query);
+            return result;
         }
     }
 }

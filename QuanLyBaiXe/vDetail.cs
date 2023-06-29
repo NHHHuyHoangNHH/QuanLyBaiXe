@@ -39,6 +39,7 @@ namespace QuanLyBaiXe
             dt_exdateold.Value = ((vVIP)Application.OpenForms["vVIP"]).GetNgayHetHan();
             GetExpiredDate();
             tb_tongtien.Text = DataProvider.Instance.ExecuteScalar("select tienvip from ThamSo").ToString();
+
         }
 
         void GetTongTienValue()

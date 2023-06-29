@@ -78,36 +78,37 @@ namespace QuanLyBaiXe
         private void bt_InOut_Click(object sender, EventArgs e)
         {
             vInOut v = new vInOut();
-            this.Hide();
+            this.Dispose();
             v.ShowDialog();
         }
 
         private void bt_Search_Click(object sender, EventArgs e)
         {
             vSearch v = new vSearch();
-            this.Hide();
+            this.Dispose();
             v.ShowDialog();
         }
 
         private void bt_Revenue_Click(object sender, EventArgs e)
         {
             vRevenue v = new vRevenue();
-            this.Hide();
+            this.Dispose();
             v.ShowDialog();
         }
 
         private void bt_Money_Click(object sender, EventArgs e)
         {
             vThamSo v = new vThamSo();
-            this.Hide();
+            this.Dispose();
             v.ShowDialog();
         }
 
         private void bt_Log_Click(object sender, EventArgs e)
         {
             vLog v = new vLog();
-            this.Hide();
+            this.Dispose();
             v.ShowDialog();
+
         }
         private void bt_dongtien_VIP_Click(object sender, EventArgs e)
         {
@@ -178,13 +179,13 @@ namespace QuanLyBaiXe
                     if (VIPDAO.Instance.UpdateVIP(bienso, hoten, sdt))
                 {
                     MessageBox.Show("Sửa VIP thành công");
-                    LoggDAO.Instance.LogVIP(bienso, 1, 1);
+                    LoggDAO.Instance.LogVIP(bienso, 2, 0);
                     LoadVIP();
                 }
                 else
                 {
                     MessageBox.Show("Có lỗi khi sửa VIP");
-                    LoggDAO.Instance.LogVIP(bienso, 1, 1);
+                    LoggDAO.Instance.LogVIP(bienso, 2, 1);
                 }
             }
         }

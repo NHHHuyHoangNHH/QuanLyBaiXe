@@ -108,8 +108,12 @@ namespace QuanLyBaiXe
         {
             Environment.Exit(0);
         }
+
         #endregion
 
-
+        private void bt_xem_Log_Click(object sender, EventArgs e)
+        {
+            LoadLogg();
+        }
     }
 }

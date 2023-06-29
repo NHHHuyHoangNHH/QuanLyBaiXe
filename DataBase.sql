@@ -485,6 +485,13 @@ begin
 
 	delete from VIP 
 	where DATEDIFF(day, CONVERT(date, NgayHH), GETDATE()) >= 30
+	
+	
+	if (@@ROWCOUNT > 0)
+	begin
+		insert into LOGG(ThongTin) values ( N'Xóa  VIP quá hạn 30 ngày')
+	end
+
 end
 go 
 
