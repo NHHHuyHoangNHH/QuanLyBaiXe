@@ -205,6 +205,7 @@ namespace QuanLyBaiXe
         //Dang xuat + Thoat
         private void vVIP_FormClosed(object sender, FormClosedEventArgs e)
         {
+            LoggDAO.Instance.LogDangXuat();
             Environment.Exit(0);
         }
         
@@ -224,8 +225,8 @@ namespace QuanLyBaiXe
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
-            }
-            LoggDAO.Instance.LogDangXuat();
+            }  
+
         }
 
         #endregion

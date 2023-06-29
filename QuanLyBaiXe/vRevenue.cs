@@ -92,7 +92,7 @@ namespace QuanLyBaiXe
             {
                 e.Cancel = true;
             }
-            LoggDAO.Instance.LogDangXuat();
+
         }
 
         private void bt_tim_Revenue_Click(object sender, EventArgs e)
@@ -102,6 +102,7 @@ namespace QuanLyBaiXe
 
         private void vRevenue_FormClosed(object sender, FormClosedEventArgs e)
         {
+            LoggDAO.Instance.LogDangXuat();
             Environment.Exit(0);
         }
 

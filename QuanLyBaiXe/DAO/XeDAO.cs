@@ -31,16 +31,12 @@ namespace QuanLyBaiXe.DAO
             return result > 0;
         }
 
-        public int DeteleXe(string bienso)
+        public bool DeleteXe(string bienso)
         {
-            DataProvider.Instance.ExecuteNonQuery("exec PDInsertLogg @ThongTin", new object[] { "Xóa " + bienso });
-            return DataProvider.Instance.ExecuteNonQuery("exec PDInsertXE @bienso", new object[] { bienso });
-        }
+            string query = string.Format("EXEC PDDeleteXE '{0}'", bienso);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
 
-        public int UpdateXe(string biensofind, string biensoupdate)
-        {
-            DataProvider.Instance.ExecuteNonQuery("exec PDInsertLogg @ThongTin", new object[] { "Sửa " + biensofind + " thành " + biensoupdate });
-            return DataProvider.Instance.ExecuteNonQuery("exec PDUpdateXE @BienSoFind , @BienSoUpdate", new object[] { biensofind, biensoupdate });
+            return result > 0;
         }
 
         public Xe FindXe(string bienso)

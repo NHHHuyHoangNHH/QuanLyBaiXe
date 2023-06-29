@@ -562,3 +562,5 @@ FROM sys.procedures
 ----Bat/Tat khoa----
 EXEC sp_MSforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT all'
 EXEC sp_MSforeachtable 'ALTER TABLE ? CHECK CONSTRAINT all'
+
+

@@ -108,10 +108,11 @@ namespace QuanLyBaiXe
             {
                 e.Cancel = true;
             }
-            LoggDAO.Instance.LogDangXuat();
+
         }
         private void vSearch_FormClosed(object sender, FormClosedEventArgs e)
         {
+            LoggDAO.Instance.LogDangXuat();
             Environment.Exit(0);
         }
 

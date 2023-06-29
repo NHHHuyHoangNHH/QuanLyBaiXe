@@ -130,7 +130,6 @@ namespace QuanLyBaiXe
         private void vInOut_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            LoggDAO.Instance.LogDangXuat();
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
@@ -139,6 +138,7 @@ namespace QuanLyBaiXe
 
         private void vInOut_FormClosed(object sender, FormClosedEventArgs e)
         {
+            LoggDAO.Instance.LogDangXuat();
             Environment.Exit(0);
         }
 
@@ -156,11 +156,12 @@ namespace QuanLyBaiXe
             string newImgPath = Path.Combine(Application.StartupPath, "AnhXeVao", bienso + ".jpg");
 
             File.Copy(oldImgPath, newImgPath, true);
+            if(XeDAO.Instance.AddXe(bienso))
+            {
+                MessageBox.Show("Xe " + bienso + " vào bãi", "Thông báo");
+                LoggDAO.Instance.LogInOut(bienso, 0);
+            }    
 
-            bool xe = XeDAO.Instance.AddXe(bienso);
-
-            LoggDAO.Instance.LogInOut(bienso, 0);
-            XeDAO.Instance.AddXe(bienso);
         }
 
 
@@ -177,7 +178,11 @@ namespace QuanLyBaiXe
             string deleteImgPath = Path.Combine(Application.StartupPath, "AnhXeVao", bienso + ".jpg");
 
             XoaAnh(pic_AnhXeVao, deleteImgPath, tempImgPath);
-            LoggDAO.Instance.LogInOut(bienso, 1);
+            if (XeDAO.Instance.DeleteXe(bienso))
+            {
+                MessageBox.Show("Xe " + bienso + " ra bãi", "Thông báo");
+                LoggDAO.Instance.LogInOut(bienso, 1);
+            }
         }
 
         // đọc biển số xe + camera
@@ -241,7 +246,6 @@ namespace QuanLyBaiXe
             pic_CamXeRa.Image = bm;
         }
 
-        #endregion
         private void KiemTraBienXe(String str)
         {
             string imgFolder = Path.Combine(Application.StartupPath, "AnhXeVao");
@@ -439,5 +443,6 @@ namespace QuanLyBaiXe
             Thread.Sleep(1000);
             KiemTraBienXe(tb_biensoxera.Texts);
         }
+        #endregion
     }
 }
