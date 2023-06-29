@@ -519,7 +519,6 @@ begin
 end 
 go
 
-exec GetMoney '80C4780'
 set dateformat dmy
 -----------XE--------------
 insert into XE values ('91S92691', '29/6/2023 6:48:53') 

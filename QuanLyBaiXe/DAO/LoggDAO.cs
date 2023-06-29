@@ -97,6 +97,20 @@ namespace QuanLyBaiXe.DAO
             }
         }
 
+        public void LogXe(string bienso, int i)
+        {
+            if (i == 0)
+            {
+                string query = string.Format("exec PDInsertLOGG N'Xe {0} vào'", bienso);
+                DataProvider.Instance.ExecuteQuery(query);
+            }
+            if (i == 1)
+            {
+                string query = string.Format("exec PDInsertLOGG N'Xe {0} ra", bienso);
+                DataProvider.Instance.ExecuteQuery(query);
+            }
+        }
+
         public DataTable GetLogg(DateTime First, DateTime Second)
         {
             string query = string.Format("exec PDGetLOGG '{0}' , '{1}'", First, Second);

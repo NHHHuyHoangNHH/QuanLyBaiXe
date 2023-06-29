@@ -26,21 +26,15 @@ namespace QuanLyBaiXe.DAO
         public int AddXe(string bienso)
         {
             string query = string.Format("EXEC PDInsertXE '{0}'", bienso);
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+
+        public bool DeteleXe(string bienso)
+        {
+            string query = string.Format("exec PDDeleteXE {0}", bienso);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
-        }
-
-        public int DeteleXe(string bienso)
-        {
-            DataProvider.Instance.ExecuteNonQuery("exec PDInsertLogg @ThongTin", new object[] { "Xóa " + bienso });
-            return DataProvider.Instance.ExecuteNonQuery("exec PDInsertXE @bienso", new object[] { bienso });
-        }
-
-        public int UpdateXe(string biensofind, string biensoupdate)
-        {
-            DataProvider.Instance.ExecuteNonQuery("exec PDInsertLogg @ThongTin", new object[] { "Sửa " + biensofind + " thành " + biensoupdate });
-            return DataProvider.Instance.ExecuteNonQuery("exec PDUpdateXE @BienSoFind , @BienSoUpdate", new object[] { biensofind, biensoupdate });
         }
 
         public List<Xe> FindXe(string bienso)
@@ -67,6 +61,12 @@ namespace QuanLyBaiXe.DAO
         {
             string query = "SELECT BienSo, CONVERT(nvarchar(19), ThoiGian, 103) + ' ' + CONVERT(nvarchar(8), ThoiGian, 108) AS ThoiGian  FROM Xe ORDER BY MONTH(ThoiGian) DESC, DAY(ThoiGian) DESC";
             return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public int GetMoney(string BienSo)
+        {
+            string query =string.Format("exec GetMoney '{0}'", BienSo);
+            return (int)DataProvider.Instance.ExecuteScalar(query);
         }
     }
 }

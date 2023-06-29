@@ -56,7 +56,7 @@ namespace QuanLyBaiXe
             this.FormClosing += new FormClosingEventHandler(vInOut_FormClosing);
             this.FormClosed += new FormClosedEventHandler(vInOut_FormClosed);
         }
-        public void GetCurrentDate()
+        void GetCurrentDate()
         {
             DateTimePicker dateTimePicker1 = new DateTimePicker();
 
@@ -65,6 +65,7 @@ namespace QuanLyBaiXe
 
             dt_date.Texts = dateTimePicker1.Value.ToString(dateTimePicker1.CustomFormat);
         }
+
         #endregion
 
         #region Event
@@ -302,14 +303,38 @@ namespace QuanLyBaiXe
 
         private void tb_biensoxera_TextChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("haha");
-            string bienso = tb_biensoxera.Texts;
+
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string bienso = textBox1.Text;
             if (VIPDAO.Instance.CheckVIP(bienso) == 1)
             {
                 cb_vevip.CheckState = CheckState.Checked;
             }
+            else
+            {
+                cb_vevip.CheckState = CheckState.Unchecked;
+            }    
+
+            tb_tienthu.Texts = XeDAO.Instance.GetMoney(bienso).ToString();
         }
 
-
+        public void CLick()
+        {
+            string bienso = textBox1.Text;
+            int tien = int.Parse(tb_tienthu.Text);
+            if (XeDAO.Instance.DeteleXe(bienso))
+            {
+                DoanhThuDAO.Instance.UpdateDoanhThu(tien);
+                LoggDAO.Instance.LogXe(bienso, 1);
+            }
+            else
+            {
+                MessageBox.Show("Lỗi ");
+            }
+        }        
     }
 }
