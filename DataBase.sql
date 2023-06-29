@@ -19,7 +19,7 @@ go
 create table XE
 (
 	BienSo		varchar(15)		not null,
-	ThoiGian	datetime		not null	default getdate(),
+	ThoiGian	datetime		not null	default DATEADD(ms, -DATEPART(ms, getdate()), getdate()),
 	constraint	pk_xe primary key(BienSo)
 )
 
@@ -36,22 +36,22 @@ create table VIP
 	BienSo		varchar(15)		not null,
 	HoTen		nvarchar(50)	not null,
 	SDT			varchar(15)		not null,
-	NgayDK		date			not null	default getdate(),
-	NgayHH		date			default getdate(),
+	NgayDK		datetime			not null	default DATEADD(ms, -DATEPART(ms, getdate()), getdate()),
+	NgayHH		datetime			default DATEADD(ms, -DATEPART(ms, getdate()), getdate()),
 	constraint pk_vip primary key(BienSo)
 )
 
 create table DONGTIEN
 (
 	BienSo		varchar(15)		not null,
-	NgayDong	smalldatetime	not null	default getdate(),
+	NgayDong	datetime	not null	default DATEADD(ms, -DATEPART(ms, getdate()), getdate()),
 	SoThang		int				not null,
 	constraint pk_dti primary key(BienSo, NgayDong)
 )
 
 create table LOGG
 (
-	ThoiGian	datetime		not null	default getdate(),
+	ThoiGian	datetime		not null	default DATEADD(ms, -DATEPART(ms, getdate()), getdate()),
 	ThongTin	nvarchar(200)	not null,
 )
 
@@ -495,30 +495,6 @@ begin
 end
 go 
 
-create procedure GetMoney
-	@BienSo		nvarchar(15)
-as
-begin
-	declare @ThoiGianRa	datetime
-	declare @tien int = 0;
-	declare @moctg1 int, @moctg2 int, @moctg3 int
-	declare @tgvao datetime
-
-	set @moctg1 = (select MocTG1 from THAMSO) 
-	set @moctg2 = (select MocTG2 from THAMSO) 
-	set @moctg3 = (select MocTG3 from THAMSO) 
-	set @tgvao = (select datepart(hour, ThoiGian) from XE where BienSo = @BienSo)
-	set @ThoiGianRa = DATEPART(hour, GETDATE())
-
-	if ((@tgvao < @moctg2 and @ThoiGianRa < @moctg2) or (@tgvao >= @moctg2 and @ThoiGianRa < @moctg3) )
-		set @tien = (select MocTien1 from THAMSO)
-	else if((@tgvao < @moctg2 and @ThoiGianRa >= @moctg2) or (@tgvao >= @moctg2 and @ThoiGianRa >= @moctg3) )
-		set @tien = (select MocTien2 from THAMSO)
-
-	select @tien as Tien
-end 
-go
-
 set dateformat dmy
 -----------XE--------------
 insert into XE values ('91S92691', '29/6/2023 6:48:53') 
@@ -574,17 +550,6 @@ insert into DONGTIEN values ('26Z39626', '5/5/2023 10:1:32', 3)
 insert into DONGTIEN values ('67O80767', '13/2/2023 13:9:21', 1)
 insert into DONGTIEN values ('62D97262', '14/2/2023 20:12:37', 4)
 
-insert into LOGG values ('5/5/2023 10:1:32', 'HAHAHAHAHAHAHAHAH')
-insert into LOGG values ('5/3/2023 12:1:32', 'HDGSFFASDFASDFASFAHAHAHAHAHAHAHAH')
-insert into LOGG values ('5/4/2023 12:1:32', 'HDGSFFASDFASDFASFAHAHSFDGFDGDFAHAHAHAHAHAH')
-insert into LOGG values ('28/6/2023 12:1:32', 'HDGSFFASDFASDFASFAHAHSFDGFDGDFAHAHAHAHAHAH')
-insert into LOGG values ('28/6/2023 12:1:32', 'HDGSFFASDFASDFASFAHAHSFDGFDGDFAHAHAHAHAHAH')
-insert into LOGG values ('28/6/2023 12:1:32', 'HDGSFFASDFASDFASFAHAHSFDGFDGDFAHAHAHAHAHAH')
-insert into LOGG values ('28/6/2023 12:1:32', 'HDGSFFASDFASDFASFAHAHSFDGFDGDFAHAHAHAHAHAH')
-insert into LOGG values ('28/6/2023 12:1:32', 'HDGSFFASDFASDFASFAHAHSFDGFDGDFAHAHAHAHAHAH')
-insert into LOGG values ('28/6/2023 12:1:32', 'HDGSFFASDFASDFASFAHAHSFDGFDGDFAHAHAHAHAHAH')
-insert into LOGG values ('28/6/2023 12:1:32', 'HDGSFFASDFASDFASFAHAHSFDGFDGDFAHAHAHAHAHAH')
-insert into LOGG values ('28/6/2023 12:1:32', 'HDGSFFASDFASDFASFAHAHSFDGFDGDFAHAHAHAHAHAH')
 -------------------------------------------------Cac lenh lien quan----------------------------
 ----Xem dang bat hay tat----
 select name,

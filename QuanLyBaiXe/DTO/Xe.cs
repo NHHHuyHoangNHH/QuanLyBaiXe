@@ -18,7 +18,7 @@ namespace QuanLyBaiXe.DTO
         public Xe(DataRow row)
         {
             this.BienSo = row["BIENSO"].ToString();
-            this.NgayVao = (DateTime) row["ThoiGian"];
+            this.NgayVao = (DateTime)row["ThoiGian"];
         }
 
         private string bienso;

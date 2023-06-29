@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.pic_AnhXeCanSua = new System.Windows.Forms.PictureBox();
+            this.tb_NhapBienSo = new QuanLyBaiXe.VControls.VTextbox();
             this.lb_ThongBao1 = new System.Windows.Forms.Label();
             this.lb_ThongBao2 = new System.Windows.Forms.Label();
-            this.tb_NhapBienSo = new QuanLyBaiXe.VControls.VTextbox();
             this.btn_XacNhan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhXeCanSua)).BeginInit();
             this.SuspendLayout();
@@ -44,24 +44,6 @@
             this.pic_AnhXeCanSua.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_AnhXeCanSua.TabIndex = 0;
             this.pic_AnhXeCanSua.TabStop = false;
-            // 
-            // lb_ThongBao1
-            // 
-            this.lb_ThongBao1.AutoSize = true;
-            this.lb_ThongBao1.Location = new System.Drawing.Point(70, 40);
-            this.lb_ThongBao1.Name = "lb_ThongBao1";
-            this.lb_ThongBao1.Size = new System.Drawing.Size(120, 16);
-            this.lb_ThongBao1.TabIndex = 1;
-            this.lb_ThongBao1.Text = "Xe cần sửa biển số";
-            // 
-            // lb_ThongBao2
-            // 
-            this.lb_ThongBao2.AutoSize = true;
-            this.lb_ThongBao2.Location = new System.Drawing.Point(555, 129);
-            this.lb_ThongBao2.Name = "lb_ThongBao2";
-            this.lb_ThongBao2.Size = new System.Drawing.Size(104, 16);
-            this.lb_ThongBao2.TabIndex = 2;
-            this.lb_ThongBao2.Text = "Nhập biển số xe";
             // 
             // tb_NhapBienSo
             // 
@@ -83,12 +65,33 @@
             this.tb_NhapBienSo.Texts = "";
             this.tb_NhapBienSo.UnderlinedStyle = false;
             // 
+            // lb_ThongBao1
+            // 
+            this.lb_ThongBao1.AutoSize = true;
+            this.lb_ThongBao1.Font = new System.Drawing.Font("MS Reference Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ThongBao1.Location = new System.Drawing.Point(63, 27);
+            this.lb_ThongBao1.Name = "lb_ThongBao1";
+            this.lb_ThongBao1.Size = new System.Drawing.Size(351, 40);
+            this.lb_ThongBao1.TabIndex = 4;
+            this.lb_ThongBao1.Text = "Xe cần sửa biển số";
+            // 
+            // lb_ThongBao2
+            // 
+            this.lb_ThongBao2.AutoSize = true;
+            this.lb_ThongBao2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ThongBao2.Location = new System.Drawing.Point(551, 146);
+            this.lb_ThongBao2.Name = "lb_ThongBao2";
+            this.lb_ThongBao2.Size = new System.Drawing.Size(129, 20);
+            this.lb_ThongBao2.TabIndex = 5;
+            this.lb_ThongBao2.Text = "Nhập biển số xe";
+            // 
             // btn_XacNhan
             // 
-            this.btn_XacNhan.Location = new System.Drawing.Point(555, 262);
+            this.btn_XacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_XacNhan.Location = new System.Drawing.Point(555, 274);
             this.btn_XacNhan.Name = "btn_XacNhan";
             this.btn_XacNhan.Size = new System.Drawing.Size(104, 42);
-            this.btn_XacNhan.TabIndex = 4;
+            this.btn_XacNhan.TabIndex = 6;
             this.btn_XacNhan.Text = "Xác nhận";
             this.btn_XacNhan.UseVisualStyleBackColor = true;
             this.btn_XacNhan.Click += new System.EventHandler(this.btn_XacNhan_Click);
@@ -99,9 +102,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_XacNhan);
-            this.Controls.Add(this.tb_NhapBienSo);
             this.Controls.Add(this.lb_ThongBao2);
             this.Controls.Add(this.lb_ThongBao1);
+            this.Controls.Add(this.tb_NhapBienSo);
             this.Controls.Add(this.pic_AnhXeCanSua);
             this.Name = "vChangeLicensePlate";
             this.Text = "vChangeLicensePlate";
@@ -114,9 +117,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pic_AnhXeCanSua;
+        private VControls.VTextbox tb_NhapBienSo;
         private System.Windows.Forms.Label lb_ThongBao1;
         private System.Windows.Forms.Label lb_ThongBao2;
-        private VControls.VTextbox tb_NhapBienSo;
         private System.Windows.Forms.Button btn_XacNhan;
     }
 }
