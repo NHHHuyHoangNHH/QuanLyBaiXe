@@ -18,6 +18,7 @@ namespace QuanLyBaiXe
         public vDetail()
         {
             InitializeComponent();
+            Icon = Properties.Resources.icon;
 
             Loading();
         }

@@ -85,14 +85,14 @@
             this.bt_Money.BorderSize = 1;
             this.bt_Money.FlatAppearance.BorderSize = 0;
             this.bt_Money.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Money.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Money.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Money.ForeColor = System.Drawing.Color.White;
-            this.bt_Money.Location = new System.Drawing.Point(0, 287);
+            this.bt_Money.Location = new System.Drawing.Point(0, 288);
             this.bt_Money.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Money.Name = "bt_Money";
             this.bt_Money.Size = new System.Drawing.Size(172, 46);
             this.bt_Money.TabIndex = 14;
-            this.bt_Money.Text = "Giá trị tiền";
+            this.bt_Money.Text = "Giá Trị Tiền";
             this.bt_Money.TextColor = System.Drawing.Color.White;
             this.bt_Money.UseVisualStyleBackColor = false;
             this.bt_Money.Click += new System.EventHandler(this.bt_Money_Click);
@@ -117,7 +117,7 @@
             this.bt_LogOut.BorderSize = 1;
             this.bt_LogOut.FlatAppearance.BorderSize = 0;
             this.bt_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_LogOut.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_LogOut.ForeColor = System.Drawing.Color.White;
             this.bt_LogOut.Location = new System.Drawing.Point(0, 380);
             this.bt_LogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -138,7 +138,7 @@
             this.bt_Log.BorderSize = 1;
             this.bt_Log.FlatAppearance.BorderSize = 0;
             this.bt_Log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Log.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Log.ForeColor = System.Drawing.Color.White;
             this.bt_Log.Location = new System.Drawing.Point(0, 334);
             this.bt_Log.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -159,9 +159,9 @@
             this.bt_Revenue.BorderSize = 1;
             this.bt_Revenue.FlatAppearance.BorderSize = 0;
             this.bt_Revenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Revenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Revenue.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Revenue.ForeColor = System.Drawing.Color.White;
-            this.bt_Revenue.Location = new System.Drawing.Point(0, 240);
+            this.bt_Revenue.Location = new System.Drawing.Point(0, 242);
             this.bt_Revenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Revenue.Name = "bt_Revenue";
             this.bt_Revenue.Size = new System.Drawing.Size(172, 46);
@@ -179,9 +179,9 @@
             this.bt_Search.BorderSize = 1;
             this.bt_Search.FlatAppearance.BorderSize = 0;
             this.bt_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Search.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Search.ForeColor = System.Drawing.Color.White;
-            this.bt_Search.Location = new System.Drawing.Point(0, 193);
+            this.bt_Search.Location = new System.Drawing.Point(0, 196);
             this.bt_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Search.Name = "bt_Search";
             this.bt_Search.Size = new System.Drawing.Size(172, 46);
@@ -200,9 +200,9 @@
             this.bt_VIP.BorderSize = 1;
             this.bt_VIP.FlatAppearance.BorderSize = 0;
             this.bt_VIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_VIP.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_VIP.ForeColor = System.Drawing.Color.White;
-            this.bt_VIP.Location = new System.Drawing.Point(0, 146);
+            this.bt_VIP.Location = new System.Drawing.Point(0, 150);
             this.bt_VIP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_VIP.Name = "bt_VIP";
             this.bt_VIP.Size = new System.Drawing.Size(172, 46);
@@ -221,9 +221,9 @@
             this.bt_InOut.BorderSize = 1;
             this.bt_InOut.FlatAppearance.BorderSize = 0;
             this.bt_InOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_InOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_InOut.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_InOut.ForeColor = System.Drawing.Color.White;
-            this.bt_InOut.Location = new System.Drawing.Point(0, 100);
+            this.bt_InOut.Location = new System.Drawing.Point(0, 104);
             this.bt_InOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_InOut.Name = "bt_InOut";
             this.bt_InOut.Size = new System.Drawing.Size(172, 46);
@@ -267,7 +267,7 @@
             // 
             this.data_Revenue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_Revenue.Location = new System.Drawing.Point(179, 102);
-            this.data_Revenue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.data_Revenue.Margin = new System.Windows.Forms.Padding(4);
             this.data_Revenue.Name = "data_Revenue";
             this.data_Revenue.ReadOnly = true;
             this.data_Revenue.RowHeadersWidth = 51;

@@ -314,6 +314,8 @@
     <Content Include="LicensePlateRecognization\src\data_utils.py" />
     <Content Include="LicensePlateRecognization\src\lp_detection\detect.py" />
     <Content Include="LicensePlateRecognization\src\lp_recognition.py" />
+    <None Include="Resources\camera.png" />
+    <None Include="Resources\pen_2.png" />
     <None Include="Resources\reload.png" />
     <None Include="Resources\loading.gif" />
     <None Include="Resources\delete.png" />

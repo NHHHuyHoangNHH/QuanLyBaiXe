@@ -17,6 +17,7 @@ namespace QuanLyBaiXe
         public vThamSo()
         {
             InitializeComponent();
+            Icon = Properties.Resources.icon;
 
             Loading();
             ClosedForm();

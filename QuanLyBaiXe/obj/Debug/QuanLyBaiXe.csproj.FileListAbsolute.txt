@@ -167,3 +167,29 @@ D:\DoAn_CNPM\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.CoreCompileInputs.cache
 D:\DoAn_CNPM\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.CopyComplete
 D:\DoAn_CNPM\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.exe
 D:\DoAn_CNPM\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.pdb
+D:\New folder\QuanLyBaiXe\bin\Debug\QuanLyBaiXe.exe.config
+D:\New folder\QuanLyBaiXe\bin\Debug\QuanLyBaiXe.exe
+D:\New folder\QuanLyBaiXe\bin\Debug\QuanLyBaiXe.pdb
+D:\New folder\QuanLyBaiXe\bin\Debug\AForge.dll
+D:\New folder\QuanLyBaiXe\bin\Debug\AForge.Video.xml
+D:\New folder\QuanLyBaiXe\bin\Debug\AForge.Video.DirectShow.xml
+D:\New folder\QuanLyBaiXe\bin\Debug\AForge.xml
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.AssemblyReference.cache
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.SuggestedBindingRedirects.cache
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vChangeLicensePlate.resources
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vThamSo.resources
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.Properties.Resources.resources
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.VControls.VTextbox.resources
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vDetail.resources
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vInOut.resources
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vLoading.resources
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vLog.resources
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vLogin.resources
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vRevenue.resources
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vSearch.resources
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.vVIP.resources
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.GenerateResource.cache
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.CoreCompileInputs.cache
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.csproj.CopyComplete
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.exe
+D:\New folder\QuanLyBaiXe\obj\Debug\QuanLyBaiXe.pdb

@@ -68,27 +68,27 @@
             // lb_ThongBao1
             // 
             this.lb_ThongBao1.AutoSize = true;
-            this.lb_ThongBao1.Font = new System.Drawing.Font("MS Reference Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ThongBao1.Location = new System.Drawing.Point(63, 27);
+            this.lb_ThongBao1.Font = new System.Drawing.Font("UTM Avo", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ThongBao1.Location = new System.Drawing.Point(80, 26);
             this.lb_ThongBao1.Name = "lb_ThongBao1";
-            this.lb_ThongBao1.Size = new System.Drawing.Size(351, 40);
+            this.lb_ThongBao1.Size = new System.Drawing.Size(357, 50);
             this.lb_ThongBao1.TabIndex = 4;
             this.lb_ThongBao1.Text = "Xe cần sửa biển số";
             // 
             // lb_ThongBao2
             // 
             this.lb_ThongBao2.AutoSize = true;
-            this.lb_ThongBao2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ThongBao2.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_ThongBao2.Location = new System.Drawing.Point(551, 146);
             this.lb_ThongBao2.Name = "lb_ThongBao2";
-            this.lb_ThongBao2.Size = new System.Drawing.Size(129, 20);
+            this.lb_ThongBao2.Size = new System.Drawing.Size(153, 24);
             this.lb_ThongBao2.TabIndex = 5;
             this.lb_ThongBao2.Text = "Nhập biển số xe";
             // 
             // btn_XacNhan
             // 
-            this.btn_XacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_XacNhan.Location = new System.Drawing.Point(555, 274);
+            this.btn_XacNhan.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_XacNhan.Location = new System.Drawing.Point(574, 258);
             this.btn_XacNhan.Name = "btn_XacNhan";
             this.btn_XacNhan.Size = new System.Drawing.Size(104, 42);
             this.btn_XacNhan.TabIndex = 6;
@@ -107,7 +107,7 @@
             this.Controls.Add(this.tb_NhapBienSo);
             this.Controls.Add(this.pic_AnhXeCanSua);
             this.Name = "vChangeLicensePlate";
-            this.Text = "vChangeLicensePlate";
+            this.Text = "Sửa biển số xe";
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhXeCanSua)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

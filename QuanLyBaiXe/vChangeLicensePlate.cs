@@ -18,6 +18,7 @@ namespace QuanLyBaiXe
         public vChangeLicensePlate(string imgPath)
         {
             InitializeComponent();
+            Icon = Properties.Resources.icon;
             imgPathFormIO = imgPath;
             pic_AnhXeCanSua.Image = new Bitmap(imgPathFormIO);
             btn_XacNhan.Text = "Xác nhận";
