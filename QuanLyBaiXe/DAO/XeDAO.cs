@@ -25,8 +25,10 @@ namespace QuanLyBaiXe.DAO
 
         public int AddXe(string bienso)
         {
-            DataProvider.Instance.ExecuteNonQuery("exec PDInsertLogg @ThongTin", new object[] { "Thêm " + bienso });
-            return DataProvider.Instance.ExecuteNonQuery("exec PDInsertXE @bienso", new object[] { bienso });
+            string query = string.Format("EXEC PDInsertXE '{0}'", bienso);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
         }
 
         public int DeteleXe(string bienso)

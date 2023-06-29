@@ -495,28 +495,53 @@ begin
 end
 go 
 
+create procedure GetMoney
+	@BienSo		nvarchar(15)
+as
+begin
+	declare @ThoiGianRa	datetime
+	declare @tien int = 0;
+	declare @moctg1 int, @moctg2 int, @moctg3 int
+	declare @tgvao datetime
+
+	set @moctg1 = (select MocTG1 from THAMSO) 
+	set @moctg2 = (select MocTG2 from THAMSO) 
+	set @moctg3 = (select MocTG3 from THAMSO) 
+	set @tgvao = (select datepart(hour, ThoiGian) from XE where BienSo = @BienSo)
+	set @ThoiGianRa = DATEPART(hour, GETDATE())
+
+	if ((@tgvao < @moctg2 and @ThoiGianRa < @moctg2) or (@tgvao >= @moctg2 and @ThoiGianRa < @moctg3) )
+		set @tien = (select MocTien1 from THAMSO)
+	else if((@tgvao < @moctg2 and @ThoiGianRa >= @moctg2) or (@tgvao >= @moctg2 and @ThoiGianRa >= @moctg3) )
+		set @tien = (select MocTien2 from THAMSO)
+
+	select @tien as Tien
+end 
+go
+
+exec GetMoney '80C4780'
 set dateformat dmy
 -----------XE--------------
-insert into XE values ('69E-336.69', '27/5/2023 6:48:53') 
-insert into XE values ('52M-577.52', '6/1/2023 10:8:41')
-insert into XE values ('28P-749.28', '11/1/2023 2:32:5')
-insert into XE values ('37U-530.37', '28/4/2023 16:24:45')
-insert into XE values ('8U-354.8', '22/1/2023 7:4:34')
-insert into XE values ('35G-123.35', '13/4/2023 11:52:48')
-insert into XE values ('57V-603.57', '24/4/2023 21:4:53')
-insert into XE values ('26Q-272.26', '24/4/2023 1:8:12') 
-insert into XE values ('26I-927.26', '14/2/2023 19:10:37')
-insert into XE values ('58J-300.58', '3/6/2023 2:36:45')
-insert into XE values ('26T-370.26', '3/5/2023 19:40:7')
-insert into XE values ('54O-378.54', '3/1/2023 13:9:22')
-insert into XE values ('5M-270.5', '1/5/2023 6:46:30')
-insert into XE values ('31X-741.31', '6/1/2023 12:28:33')
-insert into XE values ('87L-739.87', '5/1/2023 13:24:26') 
-insert into XE values ('69W-601.69', '5/2/2023 6:54:42')
-insert into XE values ('80C-47.80', '23/2/2023 14:32:12')
-insert into XE values ('24T-680.24', '24/1/2023 9:14:1')
-insert into XE values ('38M-826.38', '15/2/2023 6:32:52')
-insert into XE values ('14X-882.14', '4/8/2023 20:12:58')
+insert into XE values ('91S92691', '29/6/2023 6:48:53') 
+insert into XE values ('52M57752', '29/6/2023 10:8:41')
+insert into XE values ('28P74928', '29/6/2023 2:32:5')
+insert into XE values ('37U53037', '29/6/2023 16:24:45')
+insert into XE values ('8U358', '29/6/2023 7:4:34')
+insert into XE values ('35G12335', '29/6/2023 14:52:48')
+insert into XE values ('57V60357', '29/6/2023 21:4:53')
+insert into XE values ('26Q27226', '29/6/2023 1:8:12') 
+insert into XE values ('26I92726', '29/6/2023 19:10:37')
+insert into XE values ('58J30058', '29/6/2023 2:36:45')
+insert into XE values ('26T37026', '29/6/2023 19:40:7')
+insert into XE values ('54OV7854', '29/6/2023 13:9:22')
+insert into XE values ('5M2705', '29/6/2023 6:46:30')
+insert into XE values ('31X74131', '29/6/2023 12:28:33')
+insert into XE values ('87L73987', '29/6/2023 13:24:26') 
+insert into XE values ('69W60169', '29/6/2023 6:54:42')
+insert into XE values ('80C4780', '29/6/2023 14:32:12')
+insert into XE values ('24T68024', '29/6/2023 9:14:1')
+insert into XE values ('26Z39626', '29/6/2023 6:32:52')
+insert into XE values ('59L85659', '29/6/2023 20:12:58')
 
 ----------DOANHTHU---------------------
 insert into DOANHTHU values (2023, 1, 3885000)
@@ -527,28 +552,28 @@ insert into DOANHTHU values (2023, 5, 2190000)
 insert into DOANHTHU values (2023, 6, 284000)
 
 -----------VIP-------------------
-insert into VIP values ('98K-689.98', 'Nguyen Quoc C', '0461376424', '21/2/2023 3:16:39', '21/5/2023 3:16:39') 
-insert into VIP values ('79Q-630.79', 'Hoang Quy Q', '0443360695', '2/1/2023 4:8:45', '3/2/2023 4:8:45')
-insert into VIP values ('91S-926.91', 'Ly Quoc F', '0560384724', '5/2/2023 2:49:20', '5/8/2023 2:49:20')
-insert into VIP values ('59L-856.59', 'Nguyen Van M', '0377369816', '4/2/2023 1:52:50', '4/8/2023 1:52:50') 
-insert into VIP values ('15I-665.15', 'Ly Quoc F', '0626373873', '3/4/2023 20:56:22', '3/7/2023 20:56:22')
-insert into VIP values ('62S-224.62', 'Nguyen Quy P', '0521371563', '12/2/2023 7:39:45',  '12/3/2023 7:39:45')
-insert into VIP values ('40L-829.40', 'Nguyen Van P', '0530359163', '13/3/2023 17:26:17', '13/5/2023 17:26:17') 
-insert into VIP values ('26Z-396.26', 'Hoang Van O', '0443362499', '5/5/2023 10:1:32', '5/8/2023 10:1:32')
-insert into VIP values ('67O-807.67', 'Hoang Van W', '0545385475', '13/2/2023 13:9:21', '13/3/2023 13:9:21')
-insert into VIP values ('62D-972.62', 'Nguyen Van D', '0359370781', '14/2/2023 20:12:37', '14/6/2023 20:12:37')
+insert into VIP values ('98K68998', 'Nguyen Quoc C', '0461376424', '21/2/2023 3:16:39', '21/5/2023 3:16:39') 
+insert into VIP values ('79Q63079', 'Hoang Quy Q', '0443360695', '2/1/2023 4:8:45', '3/2/2023 4:8:45')
+insert into VIP values ('91S92691', 'Ly Quoc F', '0560384724', '5/2/2023 2:49:20', '5/8/2023 2:49:20')
+insert into VIP values ('59L85659', 'Nguyen Van M', '0377369816', '4/2/2023 1:52:50', '4/8/2023 1:52:50') 
+insert into VIP values ('15I66515', 'Ly Quoc F', '0626373873', '3/4/2023 20:56:22', '3/7/2023 20:56:22')
+insert into VIP values ('62S22462', 'Nguyen Quy P', '0521371563', '12/2/2023 7:39:45',  '12/3/2023 7:39:45')
+insert into VIP values ('40L82940', 'Nguyen Van P', '0530359163', '13/3/2023 17:26:17', '13/5/2023 17:26:17') 
+insert into VIP values ('26Z39626', 'Hoang Van O', '0443362499', '5/5/2023 10:1:32', '5/8/2023 10:1:32')
+insert into VIP values ('67O80767', 'Hoang Van W', '0545385475', '13/2/2023 13:9:21', '13/3/2023 13:9:21')
+insert into VIP values ('62D97262', 'Nguyen Van D', '0359370781', '14/2/2023 20:12:37', '14/6/2023 20:12:37')
 
 ----------DONGTIEN----------------
-insert into DONGTIEN values ('98K-689.98', '21/2/2023 3:16:39', 3)
-insert into DONGTIEN values ('79Q-630.79', '2/1/2023 4:8:45', 1)
-insert into DONGTIEN values ('91S-926.91', '5/2/2023 2:49:20', 6)
-insert into DONGTIEN values ('59L-856.59', '4/2/2023 1:52:50', 6)
-insert into DONGTIEN values ('15I-665.15', '3/4/2023 20:56:22', 3)
-insert into DONGTIEN values ('62S-224.62', '12/5/2023 7:39:45', 1)
-insert into DONGTIEN values ('40L-829.40', '13/1/2023 17:26:17', 2)
-insert into DONGTIEN values ('26Z-396.26', '5/5/2023 10:1:32', 3)
-insert into DONGTIEN values ('67O-807.67', '13/2/2023 13:9:21', 1)
-insert into DONGTIEN values ('62D-972.62', '14/2/2023 20:12:37', 4)
+insert into DONGTIEN values ('98K68998', '21/2/2023 3:16:39', 3)
+insert into DONGTIEN values ('79Q63079', '2/1/2023 4:8:45', 1)
+insert into DONGTIEN values ('91S92691', '5/2/2023 2:49:20', 6)
+insert into DONGTIEN values ('59L85659', '4/2/2023 1:52:50', 6)
+insert into DONGTIEN values ('15I66515', '3/4/2023 20:56:22', 3)
+insert into DONGTIEN values ('62S22462', '12/5/2023 7:39:45', 1)
+insert into DONGTIEN values ('40L82940', '13/1/2023 17:26:17', 2)
+insert into DONGTIEN values ('26Z39626', '5/5/2023 10:1:32', 3)
+insert into DONGTIEN values ('67O80767', '13/2/2023 13:9:21', 1)
+insert into DONGTIEN values ('62D97262', '14/2/2023 20:12:37', 4)
 
 insert into LOGG values ('5/5/2023 10:1:32', 'HAHAHAHAHAHAHAHAH')
 insert into LOGG values ('5/3/2023 12:1:32', 'HDGSFFASDFASDFASFAHAHAHAHAHAHAHAH')
