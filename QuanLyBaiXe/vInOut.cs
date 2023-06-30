@@ -27,6 +27,8 @@ namespace QuanLyBaiXe
         private VideoCaptureDevice cam;
         private VideoCaptureDevice cam2;
 
+        float tien;
+
         public vInOut()
         {
             InitializeComponent();
@@ -148,19 +150,24 @@ namespace QuanLyBaiXe
             string bienso = tb_biensoxevao.Texts;
             if (bienso == null || bienso.Length == 0)
             {
+                MessageBox.Show("Không có biển số", "Thông báo");
                 return;
             }
 
             // lưu ảnh xe vào qua folder AnhXeVao
             string oldImgPath = Path.Combine(Application.StartupPath, "images", "temp.jpg");
             string newImgPath = Path.Combine(Application.StartupPath, "AnhXeVao", bienso + ".jpg");
-
-            File.Copy(oldImgPath, newImgPath, true);
+ 
             if(XeDAO.Instance.AddXe(bienso))
             {
                 MessageBox.Show("Xe " + bienso + " vào bãi", "Thông báo");
                 LoggDAO.Instance.LogInOut(bienso, 0);
-            }    
+                File.Copy(oldImgPath, newImgPath, true);
+            }
+            else
+            {
+                MessageBox.Show("Xe " + bienso + " Đã tồn tại trong bãi", "Thông báo");
+            }
 
         }
 
@@ -170,6 +177,7 @@ namespace QuanLyBaiXe
             string bienso = tb_biensoxera.Texts;
             if (bienso == null || bienso.Length == 0)
             {
+                MessageBox.Show("Không có biển số", "Thông báo");
                 return;
             }
 
@@ -177,11 +185,16 @@ namespace QuanLyBaiXe
             string tempImgPath = Path.Combine(Application.StartupPath, "images", "temp.jpg");
             string deleteImgPath = Path.Combine(Application.StartupPath, "AnhXeVao", bienso + ".jpg");
 
-            XoaAnh(pic_AnhXeVao, deleteImgPath, tempImgPath);
             if (XeDAO.Instance.DeleteXe(bienso))
             {
                 MessageBox.Show("Xe " + bienso + " ra bãi", "Thông báo");
                 LoggDAO.Instance.LogInOut(bienso, 1);
+                XoaAnh(pic_AnhXeVao, deleteImgPath, tempImgPath);
+                DoanhThuDAO.Instance.UpdateDoanhThu((int)tien);
+            }
+            else
+            {
+                MessageBox.Show("Xe " + bienso + " không có trong bãi", "Thông báo");
             }
         }
 
@@ -270,6 +283,7 @@ namespace QuanLyBaiXe
                     Xe xe = XeDAO.Instance.FindXe(str);
                     DateTime ngay = xe.NgayVao;
                     float TienThu = TinhTienThu(ngay);
+                    tien = TienThu;
                     tb_tienthu.Texts = TienThu.ToString();
                     cb_vevip.Checked = false;
                 }
@@ -336,7 +350,7 @@ namespace QuanLyBaiXe
 
         private bool KiemTraVIP(String bienso)
         {
-            List<VIP> VIPList = VIPDAO.Instance.SearchVIP(bienso);
+            List<VIP> VIPList = VIPDAO.Instance.FindVIP(bienso);
             if (VIPList.Count > 0)
                 return true;
             else

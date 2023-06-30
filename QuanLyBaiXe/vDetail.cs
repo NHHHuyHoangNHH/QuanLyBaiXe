@@ -77,7 +77,7 @@ namespace QuanLyBaiXe
         #region Event
         private void bt_dongtien_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Xác nhậm đóng tiền?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Xác nhận đóng tiền?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 string bienso = tb_bienso.Text;
